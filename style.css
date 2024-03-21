@@ -230,85 +230,76 @@ form .link {
 
 
 /*Cards*/
-.container-card {
-    width: 80%;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    padding: 2rem;
-    gap: 3rem;
-    margin: auto;
-    align-content: center;
+
+
+.container{
+    padding:15px 15%;
+    padding-bottom: 100px;
 }
 
-.container-card a {
-    height: 200px;
+.container .heading{
+    text-align: center;
+    padding-bottom: 15px;
+    font-size: 50px;
+}
+
+.container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap:15px;
+}
+
+.box-container a{
     text-decoration: none;
 }
 
-.card {
-    width: 100%;
-    border-radius: 6px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
-    transition: all 400ms ease-out;
-    cursor: default;
+.container .box-container .box{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    text-align: center;
+    padding:30px 20px;
 }
 
-.card:hover {
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-3%);
-}
-
-.card figure {
-    height: 50%;
-}
-
-
-.card img {
-    width: 100%;
-    height: 100%;
+.container .box-container .box img{
+    width: 80%;
     object-fit: cover;
 }
 
-.card .contenido-card {
-    text-align: center;
+.img-container, .description{
     height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: flex-start;
 }
 
-.card .contenido-card h3 {
-    color: #7a7a7a;
+
+
+.container .box-container .box h3{
+    color:#444;
+    font-size: 22px;
+    padding:10px 0;
 }
 
-.card .contenido-card p {
-
-    color: #6a6a6a;
-    font-size: 14px;
-
+.container .box-container .box p{
+    color:#777;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
-.card .contenido-card a {
-    display: inline-block;
-    padding: 10px;
+.container .box-container .box .btn{
     margin-top: 10px;
-    text-decoration: none;
-    color: rgb(251 254 255);
-    border-radius: 4px;
-    transition: all 400ms ease 0s;
-    background: #2f2f2f;
-    margin-bottom: 5px;
-
+    display: inline-block;
+    background:#333;
+    color:#fff;
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px 25px;
 }
 
+.container .box-container .box .btn:hover{
+    letter-spacing: 1px;
+}
 
-.card .contenido-card a:hover {
-    background: rgb(227, 208, 171);
-    color: #0c0c0c;
+.container .box-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transform: scale(1.03);
 }
 
 footer {
@@ -375,24 +366,6 @@ footer {
 
 /*---MEDIA QUERY--- */
 
-@media screen and (max-width: 700px) {
-
-    /* ---MAIN--- */
-
-
-    /*Cards*/
-    .container-card {
-        width: 100%;
-        grid-template-columns: repeat(2, 1fr);
-        padding: 2rem;
-        gap: 3rem;
-        height: auto;
-    }
-
-    .card {
-        height: 200px;
-    }
-}
 
 @media screen and (max-width: 550px) {
 
@@ -403,16 +376,7 @@ footer {
         top: 0;
     }
 
-    /* ---MAIN--- */
-
-
-    /*Cards*/
-
-    .card:hover {
-        box-shadow: none;
-        transform: none
-    }
-
+    
 
 }
 
@@ -420,24 +384,16 @@ footer {
 
 @media screen and (max-width: 450px) {
 
-    /* ---MAIN--- */
-
-
-    /*Cards*/
-
-    .card {
-        height: 200px;
-    }
-
-    .container-card {
-        grid-template-columns: 1fr;
-        width: 100%;
-        height: auto;
-    }
-
+  
 /* ---LOGIN--- */
 
     .form-container form {
         width: 90%;
     }
+
+
+    .container{
+        padding:15px 10%;
+    }
+
 }
