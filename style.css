@@ -22,11 +22,11 @@
 /* ---Barra de navegacion--- */
 
 
-.container-cart-products{
+.user-options{
     position: absolute;
     display: flex;
     color: white;
-    top: 74px;
+    top: 11vh;
     right: 17px;
     background-color: #67328e;
     width: 150px;
