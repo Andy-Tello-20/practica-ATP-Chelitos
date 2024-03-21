@@ -37,8 +37,8 @@
     flex-direction: column;
 }
 
-.user-options{
-    margin-bottom: 1rem;
+.user-options p {
+    margin-left: 1rem;
 }
 
 .hidden-cart{
@@ -56,6 +56,12 @@
     justify-content: flex-end;
     color: #ececec
 }
+
+.bi-class{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
 
 .user-nav {
     background: #67328E;
@@ -77,6 +83,10 @@
     display: flex;
     gap: 20px;
     align-items: center;
+}
+
+.profile-image a{
+    text-decoration: none;
 }
 
 
@@ -252,7 +262,7 @@ form .link {
 
 .container .box-container .box{
     box-shadow: 0 5px 10px rgba(0,0,0,.2);
-    border-radius: 5px;
+    border-radius: 15px;
     text-align: center;
     padding:30px 20px;
 }
@@ -383,6 +393,10 @@ footer {
 
     .user-options{
         top: 5vh;
+    }
+
+    .bi-class{
+        margin-bottom: 2rem;
     }
 }
 
