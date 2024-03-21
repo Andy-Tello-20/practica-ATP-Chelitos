@@ -26,18 +26,19 @@
     position: absolute;
     display: flex;
     color: white;
-    top: 11vh;
+    top: 7vh;
     right: 17px;
-    background-color: #67328e;
-    width: 150px;
-    height: 100px;
+    background-color: #B89CC9;
+    padding: 1rem 1.25rem;
     z-index: 1;
-    padding: 1rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
     border-radius: 10px;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    
+    flex-direction: column;
+}
+
+.user-options{
+    margin-bottom: 1rem;
 }
 
 .hidden-cart{
@@ -46,14 +47,9 @@
 
 
 
-.logo-nav-tpa {
-    width: 4rem;
-}
-
-
 .bi {
     border: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: transparent;
     cursor: pointer;
     display: flex;
@@ -67,7 +63,7 @@
     padding: 1rem;
     align-items: center;
     justify-content: space-between;
-    height: 10vh;
+    height: 8vh;
 
 }
 
@@ -83,7 +79,8 @@
     align-items: center;
 }
 
-.profile-image img {
+
+.user-nav img {
     border-radius: 50%;
     height: 2.5rem;
     width: 2.5rem;
@@ -376,8 +373,17 @@ footer {
         top: 0;
     }
 
+    .user-nav{
+        height: 6vh;
+    }
     
+    .profile-image{
+        gap: 2rem;
+    }
 
+    .user-options{
+        top: 5vh;
+    }
 }
 
 
