@@ -1,5 +1,5 @@
 
-const btnCart = document.getElementsByClassName('iniciales')[0]
+const btnCart = document.getElementsByClassName('initials')[0]
 
 const containerCartProducts = document.getElementsByClassName('user-options')[0];
 

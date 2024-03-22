@@ -118,7 +118,7 @@
 }
 
 
-.iniciales{
+.initials-container{
     display: flex;
     border-radius: 50%;
     height: 2.5rem;
@@ -132,7 +132,7 @@
 
 }
 
-.iniciales span{
+.initials{
     font-size: 1.5rem;
 }
 
@@ -257,6 +257,11 @@ form .title {
 form .link {
     color: #939393;
     margin-bottom: 15px;
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
 }
 
 .button {
