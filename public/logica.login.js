@@ -4,9 +4,10 @@ const passwordInput = document.getElementById('floatingPassword')
 const errorMessage = document.getElementById('errorMessage')
 
 
+//!
 
-    emailInput.style.border = ''
-    passwordInput.style.border = ''
+emailInput.style.border = ''
+passwordInput.style.border = ''
 
 
 btnAcceder.addEventListener('click', (e) => {
@@ -17,8 +18,8 @@ btnAcceder.addEventListener('click', (e) => {
         errorMessage.textContent = 'Por favor revise su usuario y/o contraseña e intente nuevamente'
 
 
-        emailInput.style.border = '1px solid red'
-        passwordInput.style.border = '1px solid red'
+        emailInput.classList.add ('inError')
+        passwordInput.classList.add ('inError')
 
         e.preventDefault()
     }

@@ -50,8 +50,29 @@
 .hidden-cart {
     display: none;
 }
+ 
 
+.classModelDialog{
+    display: flex;
+    justify-content: flex-end;
+    max-width: none;
+    margin: 0;
 
+}
+
+.contentWidht{
+    width: 300px;
+}
+
+.ModalBodyStyle{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.modalHeaderStyle{
+    align-items: center;
+}
 
 .bi {
     border: 0;
@@ -85,36 +106,33 @@
 
 
 .logo-nav-tpa{
-    border-radius: 50%;
-    height: 2.5rem;
-    width: 2.5rem;
-    object-fit: cover;
+   
+    width: 5.5rem;
+
 }
 
 .user-nav {
     background: #67328E;
     display: flex;
-    padding: 1rem;
+    padding: 0.5rem 10%;
     align-items: center;
     justify-content: space-between;
-    height: 8vh;
+ 
 
 }
 
-.user-name {
-    margin: var(--margin-fonts--);
-    color: white;
-    font-weight: 600;
-}
-
-.profile-image {
+.user-profile{
     display: flex;
-    gap: 5rem;
     align-items: center;
+    gap: 1rem;
+    cursor: pointer;
 }
 
-.profile-image a {
-    text-decoration: none;
+.user-profile p{
+    color: #fff;
+    margin-top: 0; 
+    margin-bottom: 0;
+
 }
 
 
@@ -128,12 +146,14 @@
     background-color: #ffff;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    
 
 }
 
+
+
 .initials{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 nav ul {
@@ -259,6 +279,10 @@ form .link {
     margin-bottom: 15px;
 }
 
+.inError{
+    border: 1px solid red;
+}
+
 .error-message {
     color: red;
     margin-top: 10px;
@@ -283,18 +307,18 @@ form .link {
 /*Cards*/
 
 
-.container {
+.main-container {
     padding: 100px 15%;
 
 }
 
-.container .heading {
+.main-container .heading {
     text-align: center;
     padding-bottom: 15px;
     font-size: 50px;
 }
 
-.container .box-container {
+.main-container .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 3rem;
@@ -304,7 +328,7 @@ form .link {
     text-decoration: none;
 }
 
-.container .box-container .box {
+.main-container .box-container .box {
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     border-radius: 15px;
     text-align: center;
@@ -313,7 +337,7 @@ form .link {
     grid-template-rows: 50% 50%;
 }
 
-.container .box-container .box img {
+.main-container .box-container .box img {
     width: 100%;
     object-fit: cover;
     height: 100%;
@@ -327,19 +351,19 @@ form .link {
     text-align: left;
 }
 
-.container .box-container .box h3 {
+.main-container .box-container .box h3 {
     color: #444;
     font-size: 22px;
     padding: 10px 0;
 }
 
-.container .box-container .box p {
+.main-container .box-container .box p {
     color: #777;
     font-size: 15px;
     line-height: 1.8;
 }
 
-.container .box-container .box .btn {
+.main-container .box-container .box .btn {
     margin-top: 10px;
     display: inline-block;
     background: #333;
@@ -349,11 +373,11 @@ form .link {
     padding: 8px 25px;
 }
 
-.container .box-container .box .btn:hover {
+.main-container .box-container .box .btn:hover {
     letter-spacing: 1px;
 }
 
-.container .box-container .box:hover {
+.main-container .box-container .box:hover {
     box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
     transform: scale(1.03);
 }
@@ -369,11 +393,11 @@ footer {
 /*---MEDIA QUERY--- */
 @media screen and (max-width: 800px) {
 
-    .container .box-container {
+    .main-container .box-container {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
-    .container {
+    .main-container {
         padding: 100px 10%;
     }
 
@@ -386,14 +410,11 @@ footer {
 
     /* ---header--- */
 
-    header {
+    .header-nav {
         position: sticky;
         top: 0;
     }
 
-    .user-nav {
-        height: 6vh;
-    }
 
 
     .user-options {
@@ -404,7 +425,7 @@ footer {
         margin-bottom: 2rem;
     }
 
-    .container .box-container .box:hover {
+    .main-container .box-container .box:hover {
         box-shadow: none;
         transform: none;
     }
@@ -416,17 +437,26 @@ footer {
 @media screen and (max-width: 450px) {
 
 
+/* ---HEADER--- */
+
+.user-nav {
+    padding: 0.5rem 5%;
+}
+
+
+
+
     /* ---LOGIN--- */
 
     .form-container form {
         width: 90%;
     }
 
-    .container .box-container {
+    .main-container .box-container {
         grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
     }
 
-    .container {
+    .main-container {
         padding: 50px
     }
 
