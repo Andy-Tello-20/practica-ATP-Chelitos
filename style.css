@@ -57,6 +57,7 @@
     justify-content: flex-end;
     max-width: none;
     margin: 0;
+ 
 
 }
 
@@ -71,7 +72,7 @@
 }
 
 .modalHeaderStyle{
-    align-items: center;
+    justify-content: space-between;
 }
 
 .bi {
@@ -89,7 +90,7 @@
     margin-bottom: 1rem;
     font-size: 1.5rem;
     color: #5d5959;;
-    align-items: center;
+   
 }
 
 .bi-class p {
@@ -280,13 +281,27 @@ form .link {
 }
 
 .inError{
-    border: 1px solid red;
+    border: 1px solid #F06292; 
+   
+ 
+}
+.inError:focus {
+    box-shadow: 0 0 0 .25rem #ffc6c6;
+    border-color: #F06292;
 }
 
 .error-message {
     color: red;
     margin-top: 10px;
 }
+
+.modalTopRight{
+    top: 35px;
+    left: -4%;
+}
+
+
+
 
 .button {
     color: #fff;
@@ -354,8 +369,14 @@ form .link {
 .main-container .box-container .box h3 {
     color: #444;
     font-size: 22px;
-    padding: 10px 0;
+    padding-top: 10px ;
 }
+
+.p-container{
+    height: 50%;
+    overflow: hidden;
+}
+
 
 .main-container .box-container .box p {
     color: #777;
@@ -385,6 +406,15 @@ form .link {
 footer {
     height: 10vh;
     background: #2f2f2f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #fff;
 }
 
 
