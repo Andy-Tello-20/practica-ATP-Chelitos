@@ -376,6 +376,11 @@ form .link {
 .description {
     padding: 1rem;
     text-align: left;
+    padding: 1rem;
+    text-align: left;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
 }
 
 .main-container .box-container .box h3 {
@@ -385,7 +390,6 @@ form .link {
 }
 
 .p-container{
-    height: 50%;
     overflow: hidden;
 }
 
@@ -415,6 +419,20 @@ form .link {
     transform: scale(1.03);
 }
 
+
+/* ---Video--- */
+
+
+.container-video{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ---Footer--- */
+
 footer {
     height: 10vh;
     background: #2f2f2f;
@@ -434,6 +452,8 @@ footer p {
 
 
 /*---MEDIA QUERY--- */
+
+
 @media screen and (max-width: 800px) {
 
     .main-container .box-container {
