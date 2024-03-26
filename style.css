@@ -120,7 +120,7 @@
 .user-nav {
     background: #67328E;
     display: flex;
-    padding: 0.5rem 10%;
+    padding: 1rem 10%;
     align-items: center;
     justify-content: space-between;
  
@@ -205,7 +205,10 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #67328E;
+    background-image: url('img/caratula\ fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 
 .logo-login {
@@ -214,7 +217,7 @@ nav ul li a:hover {
 
 
 .logo-login img {
-    width: 5.5rem;
+    width: 7rem;
     object-fit: cover;
     margin-bottom: 1rem;
 }
@@ -305,7 +308,7 @@ form .link {
 }
 
 .modalTopRight{
-    top: 35px;
+    top: 72px;
     left: -4%;
 }
 
@@ -456,11 +459,6 @@ footer p {
     }
 
 
-
-    .user-options {
-        top: 5vh;
-    }
-
     .bi-class {
         margin-bottom: 2rem;
     }
@@ -480,10 +478,12 @@ footer p {
 /* ---HEADER--- */
 
 .user-nav {
-    padding: 0.5rem 5%;
+    padding: 0.8rem 5%;
 }
 
-
+.modalTopRight{
+    top: 65px;
+}
 
 
     /* ---LOGIN--- */
