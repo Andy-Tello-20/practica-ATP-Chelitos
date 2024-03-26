@@ -71,10 +71,51 @@
 
         </div>
 
-        <div class="container-video">
+        <div class="main-container">
 
-            <h1>Estamos trabajando en esta página 🔨</h1>
-    
+            <div class="box-container">
+
+
+                <div class="card" video-id="CIG5gBEKe1Y">
+                    <div class="box">
+                        <div class="img-container">
+                            <img src="https://img.youtube.com/vi/CIG5gBEKe1Y/maxresdefault.jpg" alt="Vista previa del video">
+                        </div>
+                        <div class="description">
+                            <h3>CompuMundoHiperMegaRed</h3>
+                            <p>DESCRIPCIÓN DEL VIDEO</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <script>
+                    // Obtener todas las tarjetas
+                    const cards = document.querySelectorAll('.card');
+                
+                    // Iterar sobre cada tarjeta
+                    cards.forEach(card => {
+                        // Agregar evento de clic a cada tarjeta
+                        card.addEventListener('click', function() {
+                            // Obtener el ID del video desde el atributo video-id
+                            const videoId = this.getAttribute('video-id');
+                            
+                            // Crear un iframe con la URL de embebido de YouTube
+                            const iframe = document.createElement('iframe');
+                            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+                            iframe.width = '700';
+                            iframe.height = '315';
+                            iframe.allowFullscreen = true;
+                            iframe.frameBorder = '0';
+                
+                            // Reemplazar el contenido de la tarjeta con el iframe
+                            this.innerHTML = '';
+                            this.appendChild(iframe);
+                        });
+                    });
+                </script>
+
+
+            </div>
         </div>
     </main>
 
@@ -85,9 +126,9 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-<script src="../public/logica.js"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../public/logica.js"></script>
 
 </body>
 

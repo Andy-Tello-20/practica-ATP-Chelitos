@@ -118,11 +118,16 @@
 }
 
 .user-nav {
+
     background: #67328E;
-    display: flex;
-    padding: 1rem 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 1rem 0%;
     align-items: center;
-    justify-content: space-between;
+    justify-items: center;
+
+   
+    
  
 
 }
@@ -376,10 +381,9 @@ form .link {
 .description {
     padding: 1rem;
     text-align: left;
-    padding: 1rem;
-    text-align: left;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    overflow: hidden;
 
 }
 
@@ -499,7 +503,11 @@ footer p {
 /* ---HEADER--- */
 
 .user-nav {
+    display: flex;
     padding: 0.8rem 5%;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
 .modalTopRight{
