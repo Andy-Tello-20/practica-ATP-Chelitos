@@ -89,27 +89,27 @@
                 </div>
                 
                 <script>
-                    // Obtener todas las tarjetas
-                    const cards = document.querySelectorAll('.card');
+                    
+                    const cards = document.querySelectorAll('.card')
                 
-                    // Iterar sobre cada tarjeta
+               
                     cards.forEach(card => {
-                        // Agregar evento de clic a cada tarjeta
+                     
                         card.addEventListener('click', function() {
-                            // Obtener el ID del video desde el atributo video-id
-                            const videoId = this.getAttribute('video-id');
+                           
+                            const videoId = this.getAttribute('video-id')
                             
-                            // Crear un iframe con la URL de embebido de YouTube
-                            const iframe = document.createElement('iframe');
-                            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-                            iframe.width = '700';
-                            iframe.height = '315';
-                            iframe.allowFullscreen = true;
-                            iframe.frameBorder = '0';
+                           
+                            const iframe = document.createElement('iframe')
+                            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`
+                            iframe.width = '700'
+                            iframe.height = '315'
+                            iframe.allowFullscreen = true
+                            iframe.frameBorder = '0'
                 
-                            // Reemplazar el contenido de la tarjeta con el iframe
-                            this.innerHTML = '';
-                            this.appendChild(iframe);
+                          
+                            this.innerHTML = ''
+                            this.appendChild(iframe)
                         });
                     });
                 </script>
