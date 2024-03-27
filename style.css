@@ -50,33 +50,33 @@
 .hidden-cart {
     display: none;
 }
- 
 
-.classModelDialog{
+
+.classModelDialog {
     display: flex;
     justify-content: flex-end;
     max-width: none;
     margin: 0;
- 
+
 
 }
 
-.contentWidht{
+.contentWidht {
     width: 300px;
 }
 
-.ModalBodyStyle{
+.ModalBodyStyle {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.ModalBodyStyle a{
+.ModalBodyStyle a {
     text-decoration: none;
 }
 
 
-.modalHeaderStyle{
+.modalHeaderStyle {
     justify-content: space-between;
 }
 
@@ -94,8 +94,17 @@
     display: flex;
     margin-bottom: 1rem;
     font-size: 1.5rem;
-    color: #5d5959;;
-   
+    color: #5d5959;
+    ;
+
+}
+
+.ModalBodyStyle a:last-of-type i {
+    margin-bottom: 0;
+}
+
+.ModalBodyStyle a:last-child p:last-of-type {
+    margin-bottom: 0;
 }
 
 .bi-class p {
@@ -111,8 +120,8 @@
 }
 
 
-.logo-nav-tpa{
-   
+.logo-nav-tpa {
+
     width: 5.5rem;
 
 }
@@ -126,9 +135,9 @@
     align-items: center;
     justify-items: center;
 
-   
-    
- 
+
+
+
 
 }
 
@@ -136,22 +145,22 @@
     text-decoration: none;
 }
 
-.user-profile{
+.user-profile {
     display: flex;
     align-items: center;
     gap: 1rem;
     cursor: pointer;
 }
 
-.user-profile p{
+.user-profile p {
     color: #fff;
-    margin-top: 0; 
+    margin-top: 0;
     margin-bottom: 0;
 
 }
 
 
-.initials-container{
+.initials-container {
     display: flex;
     border-radius: 50%;
     height: 2.5rem;
@@ -161,13 +170,13 @@
     background-color: #ffff;
     justify-content: center;
     align-items: center;
-    
+
 
 }
 
 
 
-.initials{
+.initials {
     font-size: 1.3rem;
 }
 
@@ -210,7 +219,7 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url('img/caratula\ fondo.jpg');
+    background-image: url('img/caratula-fondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -297,11 +306,12 @@ form .link {
     margin-bottom: 15px;
 }
 
-.inError{
-    border: 1px solid #F06292; 
-   
- 
+.inError {
+    border: 1px solid #F06292;
+
+
 }
+
 .inError:focus {
     box-shadow: 0 0 0 .25rem #ffc6c6;
     border-color: #F06292;
@@ -312,7 +322,7 @@ form .link {
     margin-top: 10px;
 }
 
-.modalTopRight{
+.modalTopRight {
     top: 72px;
     left: -4%;
 }
@@ -344,6 +354,8 @@ form .link {
 
 }
 
+
+
 .main-container .heading {
     text-align: center;
     padding-bottom: 15px;
@@ -360,7 +372,7 @@ form .link {
     text-decoration: none;
 }
 
-.main-container .box-container .box {
+.box {
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
     border-radius: 15px;
     text-align: center;
@@ -369,12 +381,14 @@ form .link {
     grid-template-rows: 50% 50%;
 }
 
-.main-container .box-container .box img {
+.box img {
     width: 100%;
     object-fit: cover;
     height: 100%;
     border-radius: 15px 15px 0px 0px;
 }
+
+
 
 
 
@@ -390,10 +404,10 @@ form .link {
 .main-container .box-container .box h3 {
     color: #444;
     font-size: 22px;
-    padding-top: 10px ;
+    padding-top: 10px;
 }
 
-.p-container{
+.p-container {
     overflow: hidden;
 }
 
@@ -427,12 +441,61 @@ form .link {
 /* ---Video--- */
 
 
-.container-video{
-    height: 100vh;
+.player-container {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    gap: 1rem;
+    height: 350px;
+    margin-bottom: 5rem;
+
+}
+
+.video-player {
+    width: 60%;
+}
+
+.info-video-container {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 1rem;
+}
+
+.info-video-container h2 {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+.info-video-container p {
+    margin-top: 100px;
+}
+
+.video-box-style {
+    box-shadow: none;
+    height: 200px;
+    grid-template-rows: 70% 30%;
+}
+
+.box .box-img {
+
+    border-radius: 8px;
+}
+
+.mc-padding {
+    padding: 100px 5%
+}
+
+.hr-line {
+    margin: 2rem 0;
+    border: solid 1px #000000;
+    width: 100%;
+}
+
+.hrl-style {
+    width: 80%;
 }
 
 
@@ -469,7 +532,26 @@ footer p {
         padding: 100px 10%;
     }
 
+    .mc-padding {
+        padding: 100px 5%
+    }
 
+    /* ---Video--- */
+
+    .player-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+    }
+
+    .video-player {
+        width: 100%;
+    }
+
+    .info-video-container {
+        width: 100%;
+    }
 
 }
 
@@ -500,19 +582,19 @@ footer p {
 @media screen and (max-width: 450px) {
 
 
-/* ---HEADER--- */
+    /* ---HEADER--- */
 
-.user-nav {
-    display: flex;
-    padding: 0.8rem 5%;
-    align-items: center;
-    justify-content: space-between;
-    
-}
+    .user-nav {
+        display: flex;
+        padding: 0.8rem 5%;
+        align-items: center;
+        justify-content: space-between;
 
-.modalTopRight{
-    top: 65px;
-}
+    }
+
+    .modalTopRight {
+        top: 65px;
+    }
 
 
     /* ---LOGIN--- */

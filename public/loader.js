@@ -15,6 +15,6 @@ window.addEventListener('load', async () => {
 
   setTimeout(() => {
     preloaderWrapper.style.display = 'none';
-  }, 1000);
+  }, 500);
   
 });
