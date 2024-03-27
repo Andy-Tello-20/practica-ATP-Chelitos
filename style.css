@@ -553,6 +553,10 @@ footer p {
         width: 100%;
     }
 
+    .info-video-container p {
+        margin-top: 10px;
+    }
+
 }
 
 
