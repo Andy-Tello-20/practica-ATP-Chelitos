@@ -15,5 +15,10 @@
     
     if (!contenedor.classList.contains('oculto')) {
       contenedor.classList.add('oculto');
+
     }
+    else if(window.pageYOffset === 0){
+      contenedor.classList.remove('oculto')
+  }
+
   })
