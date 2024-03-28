@@ -475,6 +475,7 @@ form .link {
     border-radius: 10px;
     justify-content: center;
     text-align: left;
+    transition: max-height 0.5s ease
 }
 
 
@@ -623,23 +624,26 @@ footer p {
         margin-bottom: 2rem;
     }
 
-    .oculto {
-        opacity: 0;
-        display: none;
-    }
+    
 
     .info-video-container {
-
-
+        transition: height 0.5s ease;
+        height: 160px;
         padding: 0;
         width: 100%;
         background: #fff;
         overflow: hidden;
+        
     }
 
-    .info-video-container p {
-        margin-top: 10px;
+    .oculto {
+        
+        height: 0
+       
     }
+
+    
+
 
     .info-controler {
         display: block;
