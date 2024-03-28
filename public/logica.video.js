@@ -1,4 +1,4 @@
-  const contenedor = document.getElementsByClassName('description-video')[0]
+  const contenedor = document.getElementsByClassName('info-video-container')[0]
   const toggleBtn = document.getElementsByClassName('info-controler')[0]
 
  
