@@ -21,25 +21,26 @@
     color: #67328E !important
 }
 
-
 /* ---Video--- */
 
-.h1-style{
+.h1-style {
     margin-bottom: 1rem;
 }
 
-.selected{
+.selected {
     border: solid 3px #75797A;
     font-weight: bold;
 }
 
 .player-container {
+    display: flex;
     width: 100%;
     gap: 1rem;
     height: 350px;
     margin-bottom: 3rem;
     padding: 1rem;
     background: #fff;
+
 
 }
 
@@ -56,6 +57,7 @@
     border-radius: 10px;
     justify-content: center;
     text-align: left;
+    transition: max-height 0.5s ease
 }
 
 
@@ -63,6 +65,7 @@
 .info-video-container h2 {
     font-size: 1rem;
     font-weight: 600;
+    padding-top: 0.5rem
 }
 
 
@@ -88,9 +91,39 @@
     font-size: 1.2rem;
 }
 
-.description-style{
+.description-style {
     border-radius: 0 0 15px 15px;
     background: #fff;
+}
+
+.ver-mas {
+    border: none;
+    background: none;
+}
+
+.description-video {
+    transition: opacity 0.5s ease
+}
+
+
+
+
+
+
+
+
+.info-controler {
+    text-decoration: none;
+    display: none;
+    width: 100%;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 0.5rem;
+    padding-bottom: 0.5rem;
+
 }
 
 .mc-padding {
@@ -145,21 +178,32 @@ footer p {
 
     /* ---Video--- */
 
+    .h1-style {
+        margin: 1rem 0;
+        font-size: 1rem;
+        padding: 0 0.5rem;
+        font-weight: bold;
+    }
+
     .player-container {
+        height: auto;
+        gap: 0;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        height: 200px;
+        grid-template-rows: 1fr;
         margin-bottom: 0px;
         position: sticky;
         top: 59.65px;
         padding: 0px;
+        margin-bottom: 1rem;
+
 
     }
 
     .video-player {
         width: 100%;
-        height: 90%;
+        height: 200px;
+
     }
 
     .ivc-hidden {
@@ -169,19 +213,37 @@ footer p {
         margin-bottom: 2rem;
     }
 
-    .info-video-container{
-        padding: 1rem;
-        width: 90%;
-        border: solid 2px gray;
-        margin: auto;
-        background: #fff;
+
+
+    .info-video-container {
+        transition: height 0.5s ease;
+        height: 160px;
+        padding: 0 0.5rem;
+        width: 100%;
+        background: #dadada;
+        overflow: hidden;
+        margin-top: 1rem;
+        border-radius: 15px;
     }
 
     .info-video-container p {
-        margin-top: 10px;
+        font-size: 14px
+    }
+
+    .ver-mas{
+        color: #67328e
+    }
+    .oculto {
+
+        height: 0
     }
 
 
+
+
+    .info-controler {
+        display: block;
+    }
 
     .box .box-img {
 

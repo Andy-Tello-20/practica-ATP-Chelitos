@@ -596,6 +596,10 @@ footer p {
 
     /* ---Video--- */
 
+    .h1-style{
+        margin: 1rem 0;
+    }
+
     .player-container {
         height: auto;
         gap: 0;
@@ -633,7 +637,7 @@ footer p {
         width: 100%;
         background: #fff;
         overflow: hidden;
-        
+        margin-top: 1rem;
     }
 
     .oculto {
