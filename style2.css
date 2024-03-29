@@ -71,6 +71,7 @@
 
 .info-video-container p {
     margin-top: 10px;
+    color: #4d4d4d;
 }
 
 
@@ -85,11 +86,21 @@
     border-radius: 8px;
 }
 
+.h2-container{
+    display: flex;
+}
+
+.play-icon{
+    color: black;
+}
+
 .h2-style {
     color: #444;
     padding: 0;
     font-size: 1.2rem;
+    margin-left: 1rem;
 }
+
 
 .description-style {
     border-radius: 0 0 15px 15px;
@@ -220,7 +231,6 @@ footer p {
         height: 160px;
         padding: 0 0.5rem;
         width: 100%;
-        background: #dadada;
         overflow: hidden;
         margin-top: 1rem;
         border-radius: 15px;
@@ -238,6 +248,9 @@ footer p {
         height: 0
     }
 
+    .oculto2{
+        display: none;
+    }
 
 
 
@@ -251,7 +264,8 @@ footer p {
     }
 
     .mc-padding {
-        padding: 0px 0%
+        padding: 0px 0%;
+        background: #ffff;
     }
 
     .hr-line {
