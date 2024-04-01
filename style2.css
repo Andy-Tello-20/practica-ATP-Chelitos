@@ -75,6 +75,23 @@
 }
 
 
+.img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+
+.bi-class-play {
+    position: absolute;
+    content: "\f4f3";
+    font-size: 3rem;
+    color: #8057c7;
+    background: #fff;
+    border-radius: 50%;
+}
+
+
 .video-box-style {
     box-shadow: none;
     height: 230px;
@@ -98,7 +115,7 @@
     color: #444;
     padding: 0;
     font-size: 1.2rem;
-    margin-left: 1rem;
+    
 }
 
 
@@ -207,6 +224,7 @@ footer p {
         top: 59.65px;
         padding: 0px;
         margin-bottom: 1rem;
+        z-index: 1;
 
 
     }
@@ -281,6 +299,7 @@ footer p {
     .header-nav {
         position: sticky;
         top: 0;
+        z-index: 1;
     }
 
 
