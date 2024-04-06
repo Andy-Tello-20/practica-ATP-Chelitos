@@ -644,7 +644,7 @@ form .link {
     justify-content: flex-end;
     padding: 0 0.5rem;
     padding-bottom: 0.5rem;
-    background: #f3f0f0;
+  
 
 }
 
@@ -786,6 +786,7 @@ footer p {
 
     .oculto2 {
         display: none;
+        
     }
 
 
