@@ -1,13 +1,6 @@
 @charset "UTF-8";
 
 
-@import url('https://fonts.cdnfonts.com/css/lexend');
-@import url('https://fonts.cdnfonts.com/css/br-segma');
-@import url('https://fonts.cdnfonts.com/css/helvetica-255');
-@import url('https://fonts.cdnfonts.com/css/verdana');
-@import url('https://fonts.cdnfonts.com/css/noto-sans-avestan');
-@import url('https://fonts.cdnfonts.com/css/noto-sans-myanmar');
-
 * {
     margin: 0;
     padding: 0;
@@ -21,15 +14,16 @@
 
     --nav-clr--: black;
     --margin-fonts--: 0 1rem;
-    --ff--: 'br-segma', sans-serif;
-    --ffh--:'helvetica-255', sans-serif;
-    --ffl--: 'Lexend', sans-serif;
-    --ffv--:'verdana', sans-serif;
-    --ffn--:'noto-sans-avestan', sans-serif;
-    --ffnm--:'noto-sans-myanmar', sans-serif;
-    --ffapple--: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
 
 }
+
+
+/* ---bootstrap--- */
+i {
+    font-style: normal;
+}
+
 
 /* ---Barra de navegacion--- */
 
@@ -91,6 +85,8 @@
 .modalHeaderStyle {
     justify-content: space-between;
 }
+
+
 
 .bi {
     border: 0;
@@ -393,7 +389,7 @@ form .link {
     text-align: center;
     height: 250px;
     display: grid;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 60% 40%;
 }
 
 .box img {
@@ -403,9 +399,16 @@ form .link {
     border-radius: 15px 15px 0px 0px;
 }
 
+.h3-container{
+    display: flex;
+}
 
-
-
+.bi-class-colecction{
+    display: flex;
+    align-items: center;
+    color: #67328e;
+   
+}
 
 .description {
     padding: 1rem;
@@ -420,6 +423,7 @@ form .link {
     color: #444;
     font-size: 22px;
     padding-top: 10px;
+    margin-left: 1rem;
 }
 
 .p-container {
@@ -456,11 +460,30 @@ form .link {
 
 /* ---Video--- */
 
-.h1-style {
-    margin-bottom: 1rem;
+
+.breadcrumb{
+    margin-bottom: 2rem;
     margin-left: 1rem;
-    font-size: 1.5rem;
-    font-family:var(--ffapple--)
+    font-size: 1.3rem;
+    font-weight: 500;
+    
+}
+
+.breadcrumb a{
+    color: #67328e;
+    text-decoration: none;
+}
+
+.arrow{
+    margin: 0 0.5rem;
+}
+
+
+
+.h1-style {
+    
+    
+    
 }
 
 
@@ -498,7 +521,7 @@ form .link {
     font-size: 1rem;
     font-weight: 600;
     padding-top: 0.5rem;
-    font-family: var(--ffapple--);
+   
     
 }
 
@@ -506,7 +529,7 @@ form .link {
 .info-video-container p {
     margin-top: 10px;
     color: #4d4d4d;
-    font-family: var(--ffapple--);
+    
 }
 
 
@@ -548,7 +571,7 @@ form .link {
 
 .main-container .box-container .box.selected .h2-style {
     font-weight: 700;
-    font-family: var(--ffapple--);
+ 
 }
 
 .main-container .box-container .box.selected .bi-class-play {
@@ -585,7 +608,7 @@ form .link {
     white-space: nowrap;
     text-overflow: ellipsis;
     width: 250px;
-    font-family: var(--ffapple--);
+   
 
 }
 
@@ -621,12 +644,13 @@ form .link {
     justify-content: flex-end;
     padding: 0 0.5rem;
     padding-bottom: 0.5rem;
+    background: #f3f0f0;
 
 }
 
 .mc-padding {
     padding: 100px 5%;
-    padding-top: 50px;
+    padding-top: 20px;
     background: #f2f2f2;
 
 }
@@ -691,7 +715,7 @@ footer p {
 
     .h1-style {
         margin: 1rem 0;
-        font-size: 1.2rem;
+        font-size: 1rem;
         padding: 0 0.5rem;
 
     }
@@ -728,17 +752,23 @@ footer p {
 
 
     .info-video-container {
+
         transition: height 0.5s ease;
-        height: 160px;
+        height: 100px;
         padding: 0 0.5rem;
         width: 100%;
         overflow: hidden;
-        margin-top: 1rem;
+        background: #f3f0f0;
         border-radius: 15px;
     }
 
+    .description-video{
+        overflow: hidden
+    }
+
     .info-video-container p {
-        font-size: 14px
+        font-size: 14px;
+        margin: 0
 
     }
 
@@ -797,6 +827,11 @@ footer p {
 
 @media screen and (max-width: 450px) {
 
+
+/* ---VIDEO--- */
+.breadcrumb{
+    font-size: 1rem;
+}
 
     /* ---SELECTED--- */
     
