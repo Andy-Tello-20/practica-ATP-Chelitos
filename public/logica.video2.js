@@ -4,7 +4,7 @@ const btnContainer = document.getElementsByClassName('btn-container')[0]
 const verMas = document.getElementsByClassName('ver-mas')[0]
 const ModalInfo= document.getElementsByClassName('modalTopRight2')[0]
 
-
+const vPlayer= document.getElementsByClassName('video-player')[0]
 
 
 
@@ -26,6 +26,7 @@ toggleBtn.addEventListener('click', () => {
 
   contenedor.classList.toggle('oculto')
   cambiarTexto()
+  vPlayer.classList.add('vPlayer-margin')
 
 })
 
@@ -39,8 +40,10 @@ window.addEventListener('scroll', () => {
   if (!contenedor.classList.contains('oculto')){
 
     contenedor.classList.add('oculto')
+    vPlayer.classList.add('vPlayer-margin')
   
   } else if(window.pageYOffset === 0){
+    vPlayer.classList.remove('vPlayer-margin')
     verMas.innerText = 'Ocultar'
     contenedor.classList.remove('oculto')
     btnContainer.classList.remove('oculto2')
