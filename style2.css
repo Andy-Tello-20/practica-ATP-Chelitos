@@ -34,6 +34,13 @@
 }
 
 
+.bi-class-info-empty {
+    margin-left: 0.5rem;
+    color: black;
+    display: none;
+    font-size: 0.9rem;
+}
+
 .contentWidht2 {
     width: auto;
 }
@@ -410,9 +417,13 @@ footer p {
 
     .span-ver-mas{
         display: block;
-        margin-left: 1rem;
+        margin-left: 0.5rem;
        font-size: 0.9rem;
        font-weight: 600;
+    }
+
+    .bi-class-info-empty {
+        display: block;
     }
 
     .oculto {
