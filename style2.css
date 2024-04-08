@@ -30,9 +30,14 @@
 
 .bi-class-info {
     color: #4e4c4c;
-    margin-bottom: 2rem;
+    margin-right: 1rem;
 }
 
+.ModalBodyStyle2 h4{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
 
 .bi-class-info-empty {
     margin-left: 0.5rem;
