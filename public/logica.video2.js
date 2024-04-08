@@ -26,7 +26,7 @@ toggleBtn.addEventListener('click', () => {
 
   contenedor.classList.toggle('oculto')
   cambiarTexto()
-  vPlayer.classList.add('vPlayer-margin')
+  
 
 })
 
