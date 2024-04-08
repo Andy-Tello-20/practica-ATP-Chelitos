@@ -59,29 +59,37 @@ margin-bottom: 2rem;
 }
 
 
-.breadcrumb{
+
+.breadcrumb {
     margin-bottom: 2rem;
     margin-left: 1rem;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 500;
-    
+    color: #727272
 }
 
-.breadcrumb a{
-    color: #67328e;
-    text-decoration: none;
+.breadcrumb li{
+    text-decoration: underline;
 }
 
-.arrow{
-    margin: 0 0.5rem;
+.breadcrumb a {
+    display: flex;
+    color: #727272;
+    align-items: baseline;
+}
+
+.arrow {
+    margin: 0 0.3rem;
 }
 
 
+.bi-class-colecction-empty {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #727272;
+    margin-right: 0.2rem;
 
-.h1-style {
-    
-    
-    
 }
 
 
