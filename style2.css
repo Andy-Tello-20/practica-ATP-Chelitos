@@ -22,7 +22,41 @@
 }
 
 
+
+
+
 /* ---Video--- */
+
+
+.bi-class-info{
+color: #4e4c4c;
+margin-bottom: 2rem;
+}
+
+
+.contentWidht2 {
+    width: auto;
+}
+
+.modalTopRight2 {
+    top: 65px;
+}
+
+.classModelDialog2 {
+    display: flex;
+    justify-content: center;
+    max-width: none;
+    margin: 0;
+  
+   
+}
+
+.ModalBodyStyle2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
 
 
 .breadcrumb{
@@ -255,6 +289,7 @@ footer p {
 @media screen and (max-width: 800px) {
 
 
+    
     
 
     /* ---header--- */
