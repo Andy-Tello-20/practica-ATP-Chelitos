@@ -27,6 +27,11 @@ toggleBtn.addEventListener('click', () => {
   contenedor.classList.toggle('oculto')
   cambiarTexto()
   
+  if(contenedor.classList.contains('oculto')){
+
+    vPlayer.classList.add('vPlayer-margin')
+
+  }
 
 })
 
@@ -41,7 +46,7 @@ window.addEventListener('scroll', () => {
 
     contenedor.classList.add('oculto')
     vPlayer.classList.add('vPlayer-margin')
-  
+
   } else if(window.pageYOffset === 0){
     vPlayer.classList.remove('vPlayer-margin')
     verMas.innerText = 'Ocultar'
