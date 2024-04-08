@@ -257,13 +257,17 @@
     text-decoration: none;
     display: none;
     width: 100%;
+    
 }
 
-.btn-container {
+.ver-mas-container {
     display: flex;
     justify-content: flex-end;
     padding: 0 0.5rem;
     padding-bottom: 0.5rem;
+    height: 33px;
+    overflow: hidden;
+    transition: height 0.5s ease;
 
 }
 
@@ -437,7 +441,9 @@ footer p {
     }
 
     .oculto2 {
-        display: none;
+        height: 0;
+        padding-bottom: 0;
+        /* display: none; */
     }
 
 
