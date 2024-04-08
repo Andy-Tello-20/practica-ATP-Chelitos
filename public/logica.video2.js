@@ -1,4 +1,4 @@
-const contenedor = document.getElementsByClassName('description-video')[0]
+const contenedor = document.getElementsByClassName('info-video-container')[0]
 const toggleBtn = document.getElementsByClassName('info-controler')[0]
 const btnContainer = document.getElementsByClassName('btn-container')[0]
 const verMas = document.getElementsByClassName('ver-mas')[0]
