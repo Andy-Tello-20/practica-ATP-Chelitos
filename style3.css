@@ -131,7 +131,7 @@
     align-items: flex-start;
     justify-content: center;
     text-align: left;
-    transition: max-height 1s ease;
+    transition: max-height 0.5s ease;
     transition: transform 1s ease;
 }
 
@@ -469,8 +469,8 @@ footer p {
 
     .oculto {
         height: 0;
-        background: #a5a4a4;
-        transform: scale(0.98);
+        background: #d6d3d3;
+        transform: scale(0.99);
     }
 
     .oculto2 {
