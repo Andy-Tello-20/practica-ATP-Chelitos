@@ -131,7 +131,8 @@
     align-items: flex-start;
     justify-content: center;
     text-align: left;
-    transition: max-height 0.5s ease
+    transition: max-height 1s ease;
+    transition: transform 1s ease;
 }
 
 
@@ -385,11 +386,12 @@ footer p {
         padding: 0px;
         margin-bottom: 1rem;
         z-index: 1;
+        transition: background-color 0.8s ease
 
 
     }
     .vPlayer-cont{
-        background:#000000;
+        background-color:#000000;
     }
 
     .vPlayer-margin{
@@ -466,8 +468,9 @@ footer p {
     }
 
     .oculto {
-
-        height: 0
+        height: 0;
+        background: #a5a4a4;
+        transform: scale(0.98);
     }
 
     .oculto2 {
