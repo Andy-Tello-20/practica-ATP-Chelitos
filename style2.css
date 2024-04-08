@@ -381,7 +381,7 @@ footer p {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        width: 100%;
+        width: 80%;
     }
 
     .info-video-container p {
