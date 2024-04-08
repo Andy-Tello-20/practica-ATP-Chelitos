@@ -388,9 +388,13 @@ footer p {
 
 
     }
+    .vPlayer-cont{
+        background:#000000;
+    }
 
     .vPlayer-margin{
         margin-bottom: 1rem;
+
     }
 
     .video-player {
@@ -411,7 +415,7 @@ footer p {
 
     .info-video-container {
         transition: height 0.5s ease;
-        height: 50px;
+        height: 60px;
         padding: 0 0.5rem;
         width: 100%;
         overflow: hidden;
