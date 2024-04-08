@@ -31,6 +31,8 @@ toggleBtn.addEventListener('click', () => {
 
     vPlayer.classList.add('vPlayer-margin')
 
+  }else{
+    vPlayer.classList.remove('vPlayer-margin')
   }
 
 })
