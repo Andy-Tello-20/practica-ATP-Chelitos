@@ -58,7 +58,7 @@ function asignarQuitarIdModal() {
 
 
   // Verificar si el ancho es 450px o menos y asignar/quitar el ID según corresponda
-  if (windowWidth <= 450) {
+  if (windowWidth <= 800) {
       ModalInfo.id = 'exampleModal2';
   } else {
       ModalInfo.removeAttribute('id');
