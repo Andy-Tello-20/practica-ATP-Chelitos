@@ -37,6 +37,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 1rem;
+    font-size: 1.2rem;
 }
 
 .bi-class-info-empty {
