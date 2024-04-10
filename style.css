@@ -490,6 +490,7 @@ form .link {
 
 .contentWidht2 {
     width: auto;
+
 }
 
 
@@ -505,11 +506,11 @@ form .link {
 
 .ModalBodyStyle2 {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     overflow-y: scroll;
-    max-height: 53%;
+    
 }
 
 
@@ -837,6 +838,11 @@ footer p {
         top: 327px
     }
 
+    .contentWidht2 {
+        width: auto;
+        height: calc(100vh - 327px);
+    }
+
     .info-video-container {
         height: 75px;
         transition: height 0.5s ease;
@@ -934,6 +940,11 @@ footer p {
     /* ---VIDEO--- */
     .modalTopRight2 {
         top: 323px
+    }
+
+    .contentWidht2 {
+        width: auto;
+        height: calc(100vh - 323px);
     }
 
     .breadcrumb {
