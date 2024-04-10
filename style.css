@@ -229,7 +229,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
+    height: calc(100vh - 70.8px);
     background-image: url('img/caratula-fondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
