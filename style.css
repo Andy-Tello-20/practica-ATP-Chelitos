@@ -258,6 +258,7 @@ form {
     box-shadow: 0 5px 10px rgba(71, 3, 6, 0.7);
     width: 400px;
     height: 90%;
+    max-height: 600px;
     border-radius: 10px;
 }
 
