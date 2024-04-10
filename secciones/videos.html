@@ -72,45 +72,78 @@
 
         </div>
 
+
+
+
         <div class="main-container mc-padding">
 
             <ul class="breadcrumb">
-                <li><a href="../index.html">Bibliotecas</a></li>
+
+                <a href="/"><i class="bi bi-collection bi-class-colecction-empty"></i>Bibliotecas</a>
+
                 <li class="arrow">></li>
                 <li> Clase Practica Nro 1</li>
             </ul>
 
-            
+
 
             <div class="player-container">
 
                 <div class="video-player">
 
-                    <iframe src="https://www.youtube.com/embed/EOQDjiwSTwc?si=f7p1peMx9tck6tFD" width="100%" height="100%"
-                        allowfullscreen frameborder="0"></iframe>
+                    <iframe src="https://www.youtube.com/embed/EOQDjiwSTwc?si=f7p1peMx9tck6tFD" width="100%"
+                        height="100%" allowfullscreen frameborder="0"></iframe>
                 </div>
-                <div class="info-video-container">
+                <div class="info-video-container" data-bs-toggle="modal" data-bs-target="#exampleModal2">
 
-                    <h2>Clase práctica - Formación TPA® Buenos Aires 2024 - Lic. Silvina Lambertini</h2>
-          
+                    <h2>"El color amarillo" (Temporada 21, Episodio 13) de Los Simpson</h2>
+
                     <hr class="hr-line hrl-style">
-                    <p class="description-video">
-                        
-                        <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam
-                        laboriosam tempore tenetur
-                        blanditiis unde molestias?</span></p>
+                    
+                    <div class="description-container">
+                        <p class="description-video">
+                            
+                            <span>En el capítulo de Los Simpson donde Homero funda "Compumundohipermegared", la empresa se convierte en un desastre cómico. Homero, sin entender la tecnología, crea caos y confusión, resultando en situaciones hilarantes mientras intenta vender productos inútiles. La parodia de la industria tecnológica y las incompetencias de Homero son el centro de las risas.</span>
+                        </p>
+                        <span class="span-ver-mas">mas</span>
+                    </div>
+                    
 
                 </div>
 
-                <a href="#" class="info-controler ">
-                    <div class="btn-container">
-                        <button class="ver-mas">Ocultar</button>
+                <!-- <div href="#" class="info-controler">
+                    <div class="ver-mas-container">
+                        <button class="ver-mas btn-container">Ocultar</button>
                     </div>
-                </a>
+                </div> -->
+
 
             </div>
 
 
+            <!-- ---Modal para info video--- -->
+
+            <div class="modal fade modalTopRight2 "  tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog classModelDialog2">
+                    <div class="modal-content contentWidht2">
+                        <div class="modal-header modalHeaderStyle">
+                            <p class="txt-perfil">Info</p>
+                            <i class="bi bi-x-lg bi-class" type="button" data-bs-dismiss="modal" aria-label="Close"></i>
+
+                        </div>
+                        <div class="modal-body ModalBodyStyle2">
+
+                            <i class="bi bi-info-circle-fill bi-class-info"><h4>"El color amarillo" (Temporada 21, Episodio 13) de Los Simpson</h4></i>
+
+                            <p>En el capítulo de Los Simpson donde Homero funda "Compumundohipermegared", la empresa se convierte en un desastre cómico. Homero, sin entender la tecnología, crea caos y confusión, resultando en situaciones hilarantes mientras intenta vender productos inútiles. La parodia de la industria tecnológica y las incompetencias de Homero son el centro de las risas.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
 
 
 

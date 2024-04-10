@@ -229,7 +229,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 90vh;
     background-image: url('img/caratula-fondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -242,9 +242,10 @@ nav ul li a:hover {
 
 
 .logo-login img {
+    margin-top: 1rem;
     width: 7rem;
     object-fit: cover;
-    margin-bottom: 1rem;
+
 }
 
 form {
@@ -263,7 +264,7 @@ form {
 form .title {
     color: #504d4d;
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: 5px;
 
 }
@@ -374,6 +375,7 @@ form .link {
 }
 
 .main-container .box-container {
+    margin-top: -40px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 3rem;
@@ -405,6 +407,7 @@ form .link {
 }
 
 .bi-class-colecction {
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     color: #67328e;
@@ -414,7 +417,7 @@ form .link {
 
 
 .description {
-    padding: 1rem;
+    padding: 1rem 0.8rem;
     text-align: left;
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -424,7 +427,7 @@ form .link {
 
 .main-container .box-container .box h3 {
     color: #444;
-    font-size: 22px;
+    font-size: 18px;
     padding-top: 10px;
     margin-left: 1rem;
 }
@@ -464,6 +467,54 @@ form .link {
 /* ---Video--- */
 
 
+.bi-class-info {
+    color: #4e4c4c;
+    margin-bottom: 1rem;
+
+}
+
+.ModalBodyStyle2 h4 {
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+    font-size: 1.2rem;
+
+}
+
+.bi-class-info-empty {
+    margin-left: 0.5rem;
+    color: black;
+    display: none;
+    font-size: 0.9rem;
+}
+
+.contentWidht2 {
+    width: auto;
+}
+
+
+
+.classModelDialog2 {
+    display: flex;
+    justify-content: center;
+    max-width: none;
+    margin: 0;
+
+
+}
+
+.ModalBodyStyle2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: scroll;
+    max-height: 53%;
+}
+
+
+
+
 .breadcrumb {
     margin-bottom: 2rem;
     margin-left: 1rem;
@@ -472,9 +523,6 @@ form .link {
     color: #727272
 }
 
-.breadcrumb li{
-    text-decoration: underline;
-}
 
 .breadcrumb a {
     display: flex;
@@ -493,6 +541,7 @@ form .link {
     font-size: 1rem;
     color: #727272;
     margin-right: 0.2rem;
+    font-size: 0.9rem;
 
 }
 
@@ -630,6 +679,15 @@ form .link {
     background: none;
 }
 
+.description-container {  
+    width: 100%;  
+    overflow: hidden;
+}
+
+.span-ver-mas{
+    display: none;
+}
+
 .description-video {
     transition: opacity 0.5s ease
 }
@@ -647,12 +705,14 @@ form .link {
     width: 100%;
 }
 
-.btn-container {
+.ver-mas-container {
     display: flex;
     justify-content: flex-end;
     padding: 0 0.5rem;
     padding-bottom: 0.5rem;
-
+    height: 33px;
+    overflow: hidden;
+    transition: height 0.5s ease;
 
 }
 
@@ -727,8 +787,8 @@ footer p {
         margin: 1rem 0 1rem 0.3rem;
     }
 
-    .bi-class-colecction-empty{
-        font-size: 0.9rem;
+    .video.title {
+        margin-bottom: 0;
     }
 
     .h1-style {
@@ -748,11 +808,14 @@ footer p {
         position: sticky;
         top: 59.65px;
         padding: 0px;
-        margin-bottom: 1rem;
+        margin-bottom: 4rem;
         z-index: 1;
-        border-radius: 0;
 
 
+    }
+
+    .vPlayer-margin {
+        margin-bottom: 1rem;
     }
 
     .video-player {
@@ -770,21 +833,32 @@ footer p {
         margin-bottom: 2rem;
     }
 
-
+    .modalTopRight2 {
+        top: 327px
+    }
 
     .info-video-container {
-
+        height: 75px;
         transition: height 0.5s ease;
-        height: 100px;
         padding: 0 0.5rem;
         width: 100%;
         overflow: hidden;
-        background: #f3f0f0;
         border-radius: 15px;
+        margin-top: 0px;
+        background: #f3f0f0;
+    }
+
+    .description-container {
+        display: flex;
+        align-items: center;
     }
 
     .description-video {
-        overflow: hidden
+        margin-right: 1rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        width: 60%;
     }
 
     .info-video-container p {
@@ -796,14 +870,26 @@ footer p {
         color: #67328e
     }
 
+    .span-ver-mas {
+        display: block;
+        margin-left: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .bi-class-info-empty {
+        display: block;
+    }
+
     .oculto {
 
         height: 0
     }
 
     .oculto2 {
-        display: none;
-
+        height: 0;
+        padding-bottom: 0;
+        /* display: none; */
     }
 
 
@@ -833,9 +919,6 @@ footer p {
 
 
 
-    .bi-class {
-        margin-bottom: 2rem;
-    }
 
     .main-container .box-container .box:hover {
         box-shadow: none;
@@ -848,8 +931,14 @@ footer p {
 
 @media screen and (max-width: 450px) {
 
+    /* ---VIDEO--- */
+    .modalTopRight2 {
+        top: 323px
+    }
 
-
+    .breadcrumb {
+        font-size: 1rem;
+    }
 
     /* ---SELECTED--- */
 
@@ -879,6 +968,7 @@ footer p {
     }
 
     .main-container .box-container {
+        margin-top: -55px;
         grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
     }
 

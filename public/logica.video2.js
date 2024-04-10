@@ -1,47 +1,16 @@
 const contenedor = document.getElementsByClassName('info-video-container')[0]
-const toggleBtn = document.getElementsByClassName('info-controler')[0]
-const verMas = document.getElementsByClassName('ver-mas')[0]
+
 const ModalInfo= document.getElementsByClassName('modalTopRight2')[0]
-const verMasCont= document.getElementsByClassName('ver-mas-container')[0]
 
 const vPlayer= document.getElementsByClassName('video-player')[0]
 
 
 
-let cambiarTexto = () =>{
-if (!contenedor.classList.contains('oculto')){
-
-  verMas.innerText = 'Ocultar'
-  
-  
-  
-}else {
-  verMas.innerText = 'Mostrar Info';
-  
-}
-}
-
-
-verMas.addEventListener('click', () => {
-
-  contenedor.classList.toggle('oculto')
-  cambiarTexto()
-  
-  if(contenedor.classList.contains('oculto')){
-
-    vPlayer.classList.add('vPlayer-margin')
-
-  }else{
-    vPlayer.classList.remove('vPlayer-margin')
-  }
-
-})
 
 window.addEventListener('scroll', () => {
 
   //! Ocultar el contenedor al hacer scroll
 
-  verMasCont.classList.add('oculto2')
 
   
   if (!contenedor.classList.contains('oculto')){
@@ -51,9 +20,8 @@ window.addEventListener('scroll', () => {
 
   } else if(window.pageYOffset === 0){
     vPlayer.classList.remove('vPlayer-margin')
-    verMas.innerText = 'Ocultar'
     contenedor.classList.remove('oculto')
-    verMasCont.classList.remove('oculto2')
+
 }
 
 })
