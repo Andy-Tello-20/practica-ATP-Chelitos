@@ -225,11 +225,24 @@ nav ul li a:hover {
 
 /* ---Login--- */
 
+.he-ma-fo{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.class-main-login{
+    
+        height: 90%;
+    
+}
+
 .form-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 70.8px);
+    height: 100%;
     background-image: url('img/caratula-fondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -738,7 +751,7 @@ form .link {
 /* ---Footer--- */
 
 footer {
-    height: 70.8px;
+    height: 10%;
     background: #2f2f2f;
     display: flex;
     align-items: center;
