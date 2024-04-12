@@ -547,11 +547,32 @@ form .link {
 
 
 .breadcrumb {
+    display: flex;
+    align-items: center;
     margin-bottom: 2rem;
     margin-left: 1rem;
     font-size: 1rem;
     font-weight: 500;
     color: #727272
+}
+
+.bi-class-info2{
+    color: #67328e;
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+
+.popover1{
+    background: #f2f2f2;
+    border: none;
+    width: 20px;
+}
+
+.popover1:hover{
+    background: #ffff;
+    color: none; 
+    background-color: none; 
+    border-color: none;
 }
 
 
@@ -819,6 +840,14 @@ footer p {
         font-size: 0.9rem;
         margin: 1rem 0 1rem 0.3rem;
     }
+
+
+    .popover1{
+        background: #ffff;
+        
+    }
+
+    
 
     .video.title {
         margin-bottom: 0;

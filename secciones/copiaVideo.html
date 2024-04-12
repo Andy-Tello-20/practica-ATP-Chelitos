@@ -43,6 +43,9 @@
 
     <main>
 
+
+        <!-- --Modal para info del usuario--  -->
+
         <div class="modal fade modalTopRight" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
             aria-hidden="true">
             <div class="modal-dialog classModelDialog">
@@ -84,6 +87,35 @@
 
                 <li class="arrow">></li>
                 <li> Clase Practica Nro 1</li>
+
+                
+
+                <button type="button" class="btn btn-secondary popover1" data-bs-container="body" data-bs-toggle="popover"
+                    data-bs-placement="top" data-bs-content="Videos vistos: 2/3">
+                    <i class="bi bi-info-circle-fill bi-class-info2"></i>
+                </button>
+
+
+                <!-- --Modal para info de videos vistos-- -->
+
+                <!-- <div class="modal fade modalTopRight3" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel3">
+            <div class="modal-dialog classModelDialog3">
+                <div class="modal-content contentWidht3">
+                    <div class="modal-header modalHeaderStyle3">
+                        
+                       
+
+                    </div>
+                    <div class="modal-body ModalBodyStyle3">
+
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div> -->
+
+
             </ul>
 
 
@@ -312,6 +344,8 @@
         crossorigin="anonymous"></script>
     <script src="../public/logica.js"></script>
     <script src="../public/logica.video.js"></script>
+    <script>const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))</script>
 
 </body>
 
