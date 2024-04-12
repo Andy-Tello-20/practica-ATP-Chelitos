@@ -335,7 +335,7 @@ form .link {
     margin-top: 10px;
 }
 
-.modalTopRight {
+.classModelDialog {
     top: 72px;
     left: -4%;
 }
@@ -364,6 +364,7 @@ form .link {
 
 .main-container {
     padding: 100px 15%;
+    min-height: 82.2vh;
 
 }
 
@@ -835,7 +836,7 @@ footer p {
         margin-bottom: 2rem;
     }
 
-    .modalTopRight2 {
+    .classModelDialog2 {
         top: 327px
     }
 
@@ -939,7 +940,7 @@ footer p {
 @media screen and (max-width: 450px) {
 
     /* ---VIDEO--- */
-    .modalTopRight2 {
+    .classModelDialog2 {
         top: 323px
     }
 
@@ -968,7 +969,7 @@ footer p {
 
     }
 
-    .modalTopRight {
+    .classModelDialog{
         top: 65px;
     }
 
