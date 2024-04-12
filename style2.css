@@ -559,13 +559,15 @@ form .link {
 .bi-class-info2{
     color: #67328e;
     font-size: 1rem;
-    margin-left: 1rem;
+  
 }
 
 .popover1{
     background: #f2f2f2;
     border: none;
-    width: 20px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 .popover1:hover{
