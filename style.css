@@ -248,7 +248,7 @@ nav ul li a:hover {
 
 }
 
-form {
+.form-login {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -262,7 +262,7 @@ form {
     border-radius: 10px;
 }
 
-form .title {
+.form-login .title {
     color: #504d4d;
     font-size: 20px;
     font-weight: 700;
@@ -697,11 +697,6 @@ form .link {
 
 
 
-
-
-
-
-
 .info-controler {
     text-decoration: none;
     display: none;
@@ -735,6 +730,112 @@ form .link {
 .hrl-style {
     width: 240px;
 }
+
+
+
+/* --Formulario2--- */
+
+
+/* ---Formulario de Interesado--- */
+
+.form-container-interest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 1500px; */
+    background-image: url('img/caratula-fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+.logo-interest {
+    margin-bottom: 1rem;
+}
+
+
+.logo-interest img {
+    margin-top: 1rem;
+    width: 7rem;
+    object-fit: cover;
+
+}
+
+.form-interest {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: #fff;
+    text-align: center;
+    padding: 20px 35px;
+    box-shadow: 0 5px 10px rgba(71, 3, 6, 0.7);
+    width: 50%;
+    height: 90%;
+    /* max-height: 600px; */
+    border-radius: 10px;
+    row-gap: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.form-interest .title-interest {
+    color: #504d4d;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 5px;
+
+}
+
+.dni {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nro,
+.selected1 {
+
+    width: 50%;
+
+}
+
+.address-1, .address-2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.address-1>div:nth-child(1),
+.address-2>div:nth-child(1) {
+    width: 20%;
+}
+
+.address-1>div:nth-child(2),
+.address-2>div:nth-child(2) {
+    width: 30%;
+}
+
+.address-1>div:nth-child(3),
+.address-2>div:nth-child(3) {
+    width: 50%;
+}
+
+
+.button-send {
+    color: #fff;
+    border: none;
+    background: #9BC25F;
+    padding: 6px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 0 auto;
+    border-radius: 20px;
+    width: 150px;
+}
+
+
+
 
 
 /* ---Footer--- */
