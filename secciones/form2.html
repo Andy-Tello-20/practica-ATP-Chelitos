@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    
+
 </head>
 
 <body>
@@ -25,7 +24,8 @@
                 <p class="intro">Completa el siguiente Formulario con tus datos personales para que podamos contactarte
                     a la brevedad y enviarte la Información sobre a la FORMACIÓN PROFESIONAL TPA® 2024.</p>
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control" id="floatingInput" placeholder="Nombre" autofocus>
+                    <input type="text" class="form-control is-invalid" id="floatingInput" placeholder="Nombre"
+                        autofocus>
                     <label for="floatingInput">Nombre</label>
                 </div>
                 <div class="form-floating">
@@ -47,13 +47,19 @@
                     </div>
                 </div>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Email">
-                    <label for="floatingPassword">Email</label>
+                    <!-- <input type="password" class="form-control" id="floatingPassword" placeholder="Email">
+                    <label for="floatingPassword">Email</label> -->
+
+                    <label class="visually-hidden" for="autoSizingInputGroup">Email</label>
+                    <div class="input-group">
+                        <div class="input-group-text">@</div>
+                        <input type="text" class="form-control" id="autoSizingInputGroup" placeholder=" Ingrese un Email">
+                    </div>
                 </div>
 
 
                 <div class="address-1">
-                    
+
                     <div class="form-floating pais">
                         <select class="form-select">
                             <option value="" disabled selected>Pais*</option>
@@ -67,7 +73,8 @@
                         <label for="floatingPassword">Código de área</label>
                     </div>
                     <div class="form-floating alternative phone number">
-                        <input type="number" class="form-control" id="floatingPassword" placeholder="Teléfono Alternativo">
+                        <input type="number" class="form-control" id="floatingPassword"
+                            placeholder="Teléfono Alternativo">
                         <label for="floatingPassword">Teléfono</label>
                     </div>
                 </div>
@@ -87,7 +94,8 @@
                         <label for="floatingPassword">Código de área</label>
                     </div>
                     <div class="form-floating alternative phone number">
-                        <input type="number" class="form-control" id="floatingPassword" placeholder="Teléfono Alternativo">
+                        <input type="number" class="form-control" id="floatingPassword"
+                            placeholder="Teléfono Alternativo">
                         <label for="floatingPassword">Teléfono Alternativo</label>
                     </div>
                 </div>
@@ -114,7 +122,7 @@
                             <option value="6">2019</option>
                             <option value="7">2018</option>
                             <option value="8">2017</option>
-                         
+
                         </select>
                     </div>
                 </div>
@@ -144,7 +152,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             // Inicializa Select2 en el select de los años
             $('#yearSelect').select2({
                 placeholder: "Selecciona el año",
@@ -157,13 +165,13 @@
                 allowClear: true
             });
 
-            
-            $('#yearSelect').on('select2:open', function() {
+
+            $('#yearSelect').on('select2:open', function () {
                 $('.select2-results__options').css('max-height', '150px').css('overflow-y', 'auto');
             });
 
-           
-            $('#documentType').on('select2:open', function() {
+
+            $('#documentType').on('select2:open', function () {
                 $('.select2-results__options').css('max-height', '150px').css('overflow-y', 'auto');
             });
 
@@ -172,8 +180,8 @@
                 allowClear: true
             });
 
-            
-            $('#yearSelect').on('select2:open', function() {
+
+            $('#yearSelect').on('select2:open', function () {
                 $('.select2-results__options').css('max-height', '150px').css('overflow-y', 'auto');
             });
         });
