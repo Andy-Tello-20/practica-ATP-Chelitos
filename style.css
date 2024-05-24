@@ -800,6 +800,31 @@ form .link {
 
 }
 
+span.select2.select2-container.select2-container--default {
+    width: 100% !important;
+}
+
+
+li.select2-selection__choice {
+    background-color: #bfe487 !important;
+    border: 1px solid #ffffff !important
+}
+
+ul#select2-documentType-container {
+    color: #161616 !important;
+    font-weight: 500 !important;
+}
+
+
+button.select2-selection__choice__remove {
+    color: black !important;
+}
+
+
+span#select2-yearSelect-container {
+    text-align: left !important;
+}
+
 .address-1, .address-2 {
     display: flex;
     justify-content: space-between;
@@ -821,6 +846,38 @@ form .link {
     width: 50%;
 }
 
+
+.submit-button{
+    margin-bottom: 40px;
+}
+
+.container-mt-5 {
+    padding: 0;
+    margin: 0 !important;
+
+}
+
+.mt5-class{
+    padding: 0;
+    margin: 0 !important;
+}
+
+.mb3-class{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+
+span.select2-selection__placeholder {
+    color: #5c5757 !important;
+}
+
+
+
+.select2-results__options {
+    max-height: 100px; 
+    overflow-y: auto;
+}
 
 .button-send {
     color: #fff;
