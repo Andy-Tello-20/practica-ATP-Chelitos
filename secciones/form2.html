@@ -50,7 +50,10 @@
                     <input type="password" class="form-control" id="floatingPassword" placeholder="Email">
                     <label for="floatingPassword">Email</label>
                 </div>
+
+
                 <div class="address-1">
+                    
                     <div class="form-floating pais">
                         <select class="form-select">
                             <option value="" disabled selected>Pais*</option>
@@ -68,6 +71,8 @@
                         <label for="floatingPassword">Teléfono</label>
                     </div>
                 </div>
+
+
                 <div class="address-2">
                     <div class="form-floating pais">
                         <select class="form-select">
@@ -152,12 +157,12 @@
                 allowClear: true
             });
 
-            // Agregar scroll al dropdown de Select2
+            
             $('#yearSelect').on('select2:open', function() {
                 $('.select2-results__options').css('max-height', '150px').css('overflow-y', 'auto');
             });
 
-            // Agregar scroll al dropdown de Select2 para documentos
+           
             $('#documentType').on('select2:open', function() {
                 $('.select2-results__options').css('max-height', '150px').css('overflow-y', 'auto');
             });
@@ -167,7 +172,7 @@
                 allowClear: true
             });
 
-            // Si es necesario agregar estilos adicionales en línea
+            
             $('#yearSelect').on('select2:open', function() {
                 $('.select2-results__options').css('max-height', '150px').css('overflow-y', 'auto');
             });
