@@ -512,7 +512,7 @@ form .link {
     align-items: center;
     flex-direction: column;
     overflow-y: scroll;
-    
+
 }
 
 
@@ -682,12 +682,12 @@ form .link {
     background: none;
 }
 
-.description-container {  
-    width: 100%;  
+.description-container {
+    width: 100%;
     overflow: hidden;
 }
 
-.span-ver-mas{
+.span-ver-mas {
     display: none;
 }
 
@@ -747,7 +747,7 @@ form .link {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    
+
 }
 
 .logo-interest {
@@ -774,9 +774,14 @@ form .link {
     height: 90%;
     /* max-height: 600px; */
     border-radius: 10px;
-    row-gap: 40px;
+    /* row-gap: 40px; */
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.form-interest > * {
+
+    margin-bottom: 40px !important;
 }
 
 .form-interest .title-interest {
@@ -825,7 +830,8 @@ span#select2-yearSelect-container {
     text-align: left !important;
 }
 
-.address-1, .address-2 {
+.address-1,
+.address-2 {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
@@ -847,35 +853,43 @@ span#select2-yearSelect-container {
 }
 
 
-.submit-button{
+.submit-button {
     margin-bottom: 40px;
 }
 
 .container-mt-5 {
     padding: 0;
-    margin: 0 !important;
+    margin: 0 0 40px 0 !important;
+
 
 }
 
-.mt5-class{
+.mt5-class {
     padding: 0;
     margin: 0 !important;
 }
 
-.mb3-class{
+.mb3-class-year,
+.mb3-class-where,
+.mb3-class {
     display: flex;
     flex-direction: column;
     align-items: flex-start
 }
 
+
+
 span.select2-selection__placeholder {
     color: #5c5757 !important;
 }
 
+span#select2-documentType1-container {
+    text-align: left !important;
+}
 
 
 .select2-results__options {
-    max-height: 100px; 
+    max-height: 100px;
     overflow-y: auto;
 }
 
@@ -1127,7 +1141,7 @@ footer p {
 
     }
 
-    .classModelDialog{
+    .classModelDialog {
         top: 65px;
     }
 

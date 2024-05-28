@@ -9,6 +9,13 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 
+
+    <style>
+        .hidden {
+            display: none !important;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -53,7 +60,8 @@
                     <label class="visually-hidden" for="autoSizingInputGroup">Email</label>
                     <div class="input-group">
                         <div class="input-group-text">@</div>
-                        <input type="text" class="form-control" id="autoSizingInputGroup" placeholder=" Ingrese un Email">
+                        <input type="text" class="form-control" id="autoSizingInputGroup"
+                            placeholder=" Ingrese un Email">
                     </div>
                 </div>
 
@@ -98,22 +106,43 @@
                             placeholder="Teléfono Alternativo">
                         <label for="floatingPassword">Teléfono Alternativo</label>
                     </div>
+
+                
                 </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Profesión">
-                    <label for="floatingPassword">Profesión*</label>
+                
+
+                <div class="container mt-5 container-mt-5">
+                    <div class="mb-3 mb3-class">
+                        <label for="Profesión" class="form-label">Profesión</label>
+                        <select  id="Profesión" class="form-select">
+                            <option value="">Ingeniero civil</option>
+                            <option value="">Diseñador gráfico</option>
+                            <option value="">Economista financiero</option>
+                            <option value="">Traductor/Intérprete de conferencias</option>
+                            <option value="">Abogado de derechos humanos</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="q1">
-                    <label for="floatingPassword">¿Realizó anteriormente La Formación TPA®?</label>
+
+
+
+                <div class="container mt-5 container-mt-5">
+                    <div class="mb-3 mb3-class">
+                        <label for="realizoFormacion" class="form-label">¿Realizó anteriormente La Formación
+                            TPA®?</label>
+                        <select id="realizoFormacion" class="form-select">
+                            <option value="no">No</option>
+                            <option value="si">Sí</option>
+                        </select>
+                    </div>
                 </div>
 
 
                 <div class="container mt-5 mt5-class">
-                    <div class="mb-3 mb3-class">
+                    <div class="mb-3 mb3-class-year">
                         <label for="yearSelect" class="form-label">Año en que realizaste la Formación TPA</label>
                         <select id="yearSelect" class="form-select">
-                            <option value="" disabled selected>Año en que realizaste la Formación TPA</option>
+
                             <option value="1">2024</option>
                             <option value="2">2023</option>
                             <option value="3">2022</option>
@@ -130,7 +159,7 @@
 
 
                 <div class="container mt-5 container-mt-5">
-                    <div class="mb-3 mb3-class">
+                    <div class="mb-3 mb3-class-where">
                         <label for="documentType" class="form-label">Donde te gustaría realizar la Fase presencial de la
                             Formación TPA®?*</label>
                         <select id="documentType" class="form-select " multiple="multiple">
@@ -175,15 +204,31 @@
                 $('.select2-results__options').css('max-height', '150px').css('overflow-y', 'auto');
             });
 
-            $('#yearSelect').select2({
-                placeholder: "Selecciona un año",
-                allowClear: true
-            });
 
 
-            $('#yearSelect').on('select2:open', function () {
-                $('.select2-results__options').css('max-height', '150px').css('overflow-y', 'auto');
+            
+
+            let realizoFormacion = document.getElementById('realizoFormacion');
+
+            realizoFormacion.addEventListener('change', function () {
+                let seleccion = realizoFormacion.value;
+
+                if (seleccion === 'si') {
+                    document.querySelector('.mb3-class-year').classList.remove('hidden');
+                    document.querySelector('.mb3-class-where').classList.add('hidden');
+                } else {
+                    document.querySelector('.mb3-class-year').classList.add('hidden');
+                    document.querySelector('.mb3-class-where').classList.remove('hidden');
+                }
             });
+
+            if (realizoFormacion.value == 'si') {
+                document.querySelector('.mb3-class-year').classList.remove('hidden');
+                document.querySelector('.mb3-class-where').classList.add('hidden');
+            } else {
+                document.querySelector('.mb3-class-year').classList.add('hidden');
+                document.querySelector('.mb3-class-where').classList.remove('hidden');
+            }
         });
     </script>
 </body>
