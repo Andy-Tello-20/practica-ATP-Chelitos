@@ -871,6 +871,7 @@ span#select2-yearSelect-container {
 
 .mb3-class-year,
 .mb3-class-where,
+.mb3-class-profession,
 .mb3-class {
     display: flex;
     flex-direction: column;
@@ -884,6 +885,10 @@ span.select2-selection__placeholder {
 }
 
 span#select2-documentType1-container {
+    text-align: left !important;
+}
+
+span#select2-Profesión-container {
     text-align: left !important;
 }
 

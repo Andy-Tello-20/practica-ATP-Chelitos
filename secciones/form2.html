@@ -112,14 +112,14 @@
                 
 
                 <div class="container mt-5 container-mt-5">
-                    <div class="mb-3 mb3-class">
+                    <div class="mb-3 mb3-class-profession">
                         <label for="Profesión" class="form-label">Profesión</label>
                         <select  id="Profesión" class="form-select">
-                            <option value="">Ingeniero civil</option>
-                            <option value="">Diseñador gráfico</option>
-                            <option value="">Economista financiero</option>
-                            <option value="">Traductor/Intérprete de conferencias</option>
-                            <option value="">Abogado de derechos humanos</option>
+                            <option value="1">Ingeniero civil</option>
+                            <option value="2">Diseñador gráfico</option>
+                            <option value="3">Economista financiero</option>
+                            <option value="4">Traductor/Intérprete de conferencias</option>
+                            <option value="5">Abogado de derechos humanos</option>
                         </select>
                     </div>
                 </div>
@@ -128,8 +128,7 @@
 
                 <div class="container mt-5 container-mt-5">
                     <div class="mb-3 mb3-class">
-                        <label for="realizoFormacion" class="form-label">¿Realizó anteriormente La Formación
-                            TPA®?</label>
+                        <label for="realizoFormacion" class="form-label">¿Realizó anteriormente La Formación TPA®?</label>
                         <select id="realizoFormacion" class="form-select">
                             <option value="no">No</option>
                             <option value="si">Sí</option>
@@ -190,20 +189,28 @@
 
             // Inicializa Select2 en el select de los documentos
             $('#documentType').select2({
-                placeholder: "Selecciona uno o más tipos de documentos",
+                placeholder: "Selecciona una o más ubicaciones",
+                allowClear: true
+            });
+
+            $('#Profesión').select2({
+                placeholder: "Seleccione una profesión",
                 allowClear: true
             });
 
 
             $('#yearSelect').on('select2:open', function () {
-                $('.select2-results__options').css('max-height', '150px').css('overflow-y', 'auto');
+                $('.select2-results__options').css('max-height', '100px').css('overflow-y', 'auto');
             });
 
 
             $('#documentType').on('select2:open', function () {
-                $('.select2-results__options').css('max-height', '150px').css('overflow-y', 'auto');
+                $('.select2-results__options').css('max-height', '100px').css('overflow-y', 'auto');
             });
 
+            $('#Profesión').on('select2:open', function () {
+                $('.select2-results__options').css('max-height', '100px').css('overflow-y', 'auto');
+            });
 
 
             
