@@ -946,6 +946,14 @@ span#select2-Profesión-container {
     margin-bottom: 2rem;
 }
 
+.Institution-info{
+    text-align: left;
+    border: solid 2px;
+    border-radius: 5px;
+    padding: 1rem;
+    background: #b2e3ff;
+}
+
 /* ---Footer--- */
 
 footer {

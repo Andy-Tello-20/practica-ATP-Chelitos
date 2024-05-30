@@ -78,7 +78,7 @@
                         <div class="form-check form-check-text">
                           <input class="form-check-input" type="radio" name="options" id="option1" value="option1" checked>
                           <label class="form-check-label" for="option1">
-                            MISMA DIRECCIÓN mencionada arriba
+                            MISMA DIRECCIÓN mencionada anteriormente
                           </label>
                         </div>
                         <div class="form-check form-check-text">
@@ -98,7 +98,7 @@
                       <!-- Informacion de ubicacion y horario en caso de Retiro por la Institucion -->
 
                       <div class="Institution-info">
-                        Cosquín 1222, X5000 Córdoba 
+                        📍 Cosquín 1222, X5000 Córdoba 
 🕒 Horario: Lunes a Viernes 8 a.m. - 12 p.m., 5 p.m. - 9 p.m.
                       </div>
 
@@ -152,10 +152,17 @@
                         </div>
                     </div>
 
-                    <div class="form-floating mb-3">
-                        <input type="text" class="form-control " id="floatingInput" placeholder="Nombre"
-                            autofocus>
-                        <label for="floatingInput">Profesión*</label>
+                    <div class="container mt-5 container-mt-5">
+                        <div class="mb-3 mb3-class-profession">
+                            <label for="Profesión" class="form-label">Profesión</label>
+                            <select  id="Profesión" class="form-select">
+                                <option value="1">Ingeniero civil</option>
+                                <option value="2">Diseñador gráfico</option>
+                                <option value="3">Economista financiero</option>
+                                <option value="4">Traductor/Intérprete de conferencias</option>
+                                <option value="5">Abogado de derechos humanos</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="form-floating mb-3">
@@ -184,35 +191,49 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-          const radioButtons = document.querySelectorAll('input[name="options"]');
-          const institutionInfo = document.querySelector('.Institution-info');
-          const otherAddress = document.querySelector('.other-address');
+          const radioButtons = document.querySelectorAll('input[name="options"]')
+          const institutionInfo = document.querySelector('.Institution-info')
+          const otherAddress = document.querySelector('.other-address')
 
-          institutionInfo.style.display = 'none';
-            otherAddress.style.display = 'none';
+          institutionInfo.style.display = 'none'
+            otherAddress.style.display = 'none'
     
           radioButtons.forEach(radio => {
             radio.addEventListener('change', (event) => {
               if (event.target.checked) {
-                handleRadioChange(event.target.value);
+                handleRadioChange(event.target.value)
               }
             });
           });
     
           function handleRadioChange(selectedValue) {
-            institutionInfo.style.display = 'none';
-            otherAddress.style.display = 'none';
+            institutionInfo.style.display = 'none'
+            otherAddress.style.display = 'none'
     
             if (selectedValue === 'option2') {
-              institutionInfo.style.display = 'block';
+              institutionInfo.style.display = 'block'
             } else if (selectedValue === 'option3') {
-              otherAddress.style.display = 'block';
+              otherAddress.style.display = 'block'
             }
 
           }
         });
       </script>
 
+      <script>
+        $(document).ready(function () {
+
+            $('#Profesión').select2({
+                placeholder: "Seleccione una profesión",
+                allowClear: true
+            })
+
+            $('#Profesión').on('select2:open', function () {
+                $('.select2-results__options').css('max-height', '100px').css('overflow-y', 'auto')
+            })
+
+        })
+      </script>
 
 </body>
 
