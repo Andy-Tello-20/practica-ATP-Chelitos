@@ -738,7 +738,7 @@ form .link {
 
 /* ---Formulario de Interesado--- */
 
-.form-container-interest {
+.form-container-interest, .form-container-inscripcion {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -750,19 +750,19 @@ form .link {
 
 }
 
-.logo-interest {
+.logo-interest , .logo-inscripcion {
     margin-bottom: 1rem;
 }
 
 
-.logo-interest img {
+.logo-interest , .logo-inscripcion img {
     margin-top: 1rem;
     width: 7rem;
     object-fit: cover;
 
 }
 
-.form-interest {
+.form-interest, .form-inscripcion {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -779,7 +779,7 @@ form .link {
     margin-bottom: 50px;
 }
 
-.form-interest > * {
+.form-interest, .form-inscripcion > * {
 
     margin-bottom: 40px !important;
 }
@@ -804,6 +804,11 @@ form .link {
     width: 50%;
 
 }
+
+.input-group-area,
+.input-group-phone{
+    height: 100%;
+} 
 
 span.select2.select2-container.select2-container--default {
     width: 100% !important;
@@ -830,24 +835,35 @@ span#select2-yearSelect-container {
     text-align: left !important;
 }
 
-.address-1,
+.address-1{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.address-1-container,
 .address-2 {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
 }
 
-.address-1>div:nth-child(1),
+.address-title{
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.address-1-container>div:nth-child(1),
 .address-2>div:nth-child(1) {
     width: 20%;
 }
 
-.address-1>div:nth-child(2),
+.address-1-container>div:nth-child(2),
 .address-2>div:nth-child(2) {
     width: 30%;
 }
 
-.address-1>div:nth-child(3),
+.address-1-container>div:nth-child(3),
 .address-2>div:nth-child(3) {
     width: 50%;
 }
@@ -911,8 +927,24 @@ span#select2-Profesión-container {
 }
 
 
+/* ---Formulario de Inscripcion--- */
+
+.location-cp {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.location-cp > *{
+    width: 50%;
+    
+}
 
 
+.form-check-text{
+    text-align: left;
+    margin-bottom: 2rem;
+}
 
 /* ---Footer--- */
 
