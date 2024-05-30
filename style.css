@@ -738,7 +738,8 @@ form .link {
 
 /* ---Formulario de Interesado--- */
 
-.form-container-interest, .form-container-inscripcion {
+.form-container-interest,
+.form-container-inscripcion {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -750,19 +751,22 @@ form .link {
 
 }
 
-.logo-interest , .logo-inscripcion {
+.logo-interest,
+.logo-inscripcion {
     margin-bottom: 1rem;
 }
 
 
-.logo-interest , .logo-inscripcion img {
+.logo-interest img,
+.logo-inscripcion img {
     margin-top: 1rem;
     width: 7rem;
     object-fit: cover;
 
 }
 
-.form-interest, .form-inscripcion {
+.form-interest,
+.form-inscripcion {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -770,7 +774,7 @@ form .link {
     text-align: center;
     padding: 20px 35px;
     box-shadow: 0 5px 10px rgba(71, 3, 6, 0.7);
-    width: 50%;
+    width: 500px;
     height: 90%;
     /* max-height: 600px; */
     border-radius: 10px;
@@ -779,12 +783,13 @@ form .link {
     margin-bottom: 50px;
 }
 
-.form-interest, .form-inscripcion > * {
+.form-interest>*,
+.form-inscripcion>* {
 
     margin-bottom: 40px !important;
 }
 
-.form-interest .title-interest {
+.title-inscription .title-interest {
     color: #504d4d;
     font-size: 20px;
     font-weight: 700;
@@ -806,9 +811,9 @@ form .link {
 }
 
 .input-group-area,
-.input-group-phone{
+.input-group-phone {
     height: 100%;
-} 
+}
 
 span.select2.select2-container.select2-container--default {
     width: 100% !important;
@@ -835,7 +840,7 @@ span#select2-yearSelect-container {
     text-align: left !important;
 }
 
-.address-1{
+.address-1 {
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -846,9 +851,10 @@ span#select2-yearSelect-container {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+    height: 40px;
 }
 
-.address-title{
+.address-title {
     text-align: left;
     margin-bottom: 20px;
 }
@@ -873,17 +879,16 @@ span#select2-yearSelect-container {
     margin-bottom: 40px;
 }
 
+.container.mt-5.container-mt-5 {
+    margin: 0 0 40px 0 !important;
+}
+
 .container-mt-5 {
     padding: 0;
-    margin: 0 0 40px 0 !important;
-
 
 }
 
-.mt5-class {
-    padding: 0;
-    margin: 0 !important;
-}
+
 
 .mb3-class-year,
 .mb3-class-where,
@@ -891,10 +896,33 @@ span#select2-yearSelect-container {
 .mb3-class {
     display: flex;
     flex-direction: column;
-    align-items: flex-start
+    align-items: flex-start;
+    text-align: left;
 }
 
 
+.mt-5-country {
+    margin-top: 0px !important;
+    padding: 0px;
+}
+
+span.select2-selection.select2-selection--single {
+
+    height: 40px;
+}
+
+.mb3-class-country {
+    margin-bottom: 0px !important;
+}
+
+.container.mt-5 {
+
+    margin-bottom: 0px !important;
+}
+
+img.img-flag {
+    margin-right: 0px !important;
+}
 
 span.select2-selection__placeholder {
     color: #5c5757 !important;
@@ -929,30 +957,71 @@ span#select2-Profesión-container {
 
 /* ---Formulario de Inscripcion--- */
 
+.kit-tpa,
+.kit-tpa-send,
+.address-title-inscription {
+    text-align: left;
+}
+
+.kit-tpa-send {
+    font-weight: 500;
+}
+
+.form-label-profession {
+    margin-bottom: 30px;
+}
+
+.form-label-profession,
+.span-alter-address,
+.kit-tpa,
+.address-title-inscription {
+    font-size: 1.5rem;
+}
+
+
 .location-cp {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
 }
 
-.location-cp > *{
+.location-cp>* {
     width: 50%;
-    
+
 }
 
 
-.form-check-text{
+.form-check-text {
     text-align: left;
     margin-bottom: 2rem;
 }
 
-.Institution-info{
+.Institution-info {
     text-align: left;
-    border: solid 2px;
     border-radius: 5px;
-    padding: 1rem;
+    padding: 0.5rem;
     background: #b2e3ff;
+    margin-bottom: 30px;
 }
+
+.mt-4-another {
+    margin-bottom: 20px !important;
+}
+
+.other-address {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.span-alter-address {
+    margin-bottom: 20px;
+}
+
+.mb-3-inscription {
+    margin-bottom: 40px !important;
+}
+
 
 /* ---Footer--- */
 
@@ -978,6 +1047,19 @@ footer p {
 
 
 @media screen and (max-width: 800px) {
+
+
+    /* ---Formulario Interes--- */
+    .dni {
+        flex-direction: column;
+    }
+
+    .nro,
+    .selected1 {
+        width: 100%;
+    }
+
+    
 
 
 
@@ -1142,6 +1224,36 @@ footer p {
 @media screen and (max-width: 550px) {
 
 
+    /* ---Formulario Interes--- */
+    .form-interest,
+    .form-inscripcion {
+        width: 90%;
+    }
+
+    .address-1-container,
+    .address-2 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .address-1-container>div:nth-child(1),
+    .address-2>div:nth-child(1) {
+        width: 100%;
+    }
+
+    .address-1-container>div:nth-child(2),
+    .address-2>div:nth-child(2) {
+        width: 100%;
+    }
+
+    .address-1-container>div:nth-child(3),
+    .address-2>div:nth-child(3) {
+        width: 100%;
+    }
+
+
+
+    /* ---------------------------- */
 
 
 

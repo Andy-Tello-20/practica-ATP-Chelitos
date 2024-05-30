@@ -14,29 +14,86 @@
         .hidden {
             display: none !important;
         }
+
+        /* para los paises */
+
+        .flag-select img {
+            width: 20px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .select2-container .select2-selection--single .select2-selection__rendered {
+            display: flex;
+            align-items: center;
+        }
+
+        .select2-container .select2-selection--single .select2-selection__rendered img {
+            margin-right: 10px;
+        }
     </style>
 
 </head>
 
 <body>
-    
+
     <main>
         <div class="form-container-interest">
             <form class="form-interest" action="">
+
                 <div class="logo-interest">
                     <img src="../img/logo-colores-originales-sin-bajada.png" alt="logo">
                 </div>
+
+
                 <h1 class="title-interest">Formulario de interés</h1>
-                <p class="intro">Completa el siguiente Formulario con tus datos personales para que podamos contactarte
-                    a la brevedad y enviarte la Información sobre a la FORMACIÓN PROFESIONAL TPA® 2024.</p>
+
+                <p class="intro">Para que podamos contactarte a la brevedad y enviarte la información sobre la Formación
+                    Profesional TPA® o cómo adquirir la Membresía Profesional TPA®, por favor completa el formulario con
+                    tus datos personales.</p>
+
+                <div class="container mt-5 container-mt-5">
+                    <div class="mb-3 mb3-class">
+                        <label for="realizoFormacion" class="form-label">¿Realizó anteriormente La Formación
+                            TPA®?</label>
+                        <select id="realizoFormacion" class="form-select">
+                            <option value="no">No</option>
+                            <option value="si">Sí</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="container mt-5 container-mt-5 cont-year">
+                    <div class="mb-3 mb3-class-year">
+                        <label for="yearSelect" class="form-label">Año en que realizaste la Formación TPA</label>
+                        <select id="yearSelect" class="form-select">
+
+                            <option value="1">2024</option>
+                            <option value="2">2023</option>
+                            <option value="3">2022</option>
+                            <option value="4">2021</option>
+                            <option value="5">2020</option>
+                            <option value="6">2019</option>
+                            <option value="7">2018</option>
+                            <option value="8">2017</option>
+
+                        </select>
+                    </div>
+                </div>
+
+
+
+                <!-- "class="form-control is-invalid"" establece error de input -->
+
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control is-invalid" id="floatingInput" placeholder="Nombre"
+                    <input type="text" class="form-control " id="floatingInput" placeholder="Nombre"
                         autofocus>
-                    <label for="floatingInput">Nombre</label>
+                    <label for="floatingInput">Nombres</label>
                 </div>
                 <div class="form-floating">
                     <input type="password" class="form-control" id="floatingPassword" placeholder="Apellido">
-                    <label for="floatingPassword">Apellido</label>
+                    <label for="floatingPassword">Apellidos</label>
                 </div>
                 <div class="dni">
                     <div class="form-floating selected1">
@@ -63,57 +120,73 @@
                 </div>
 
 
-             
+
 
                 <div class="address-1">
                     <span class="address-title">Telefonos de Contacto</span>
 
                     <div class="address-1-container">
-                        <div class="form-floating pais">
-                            <select class="form-select">
-                                <option value="" disabled selected>Pais*</option>
-                                <option value="1">Argentina</option>
-                                <option value="2">Colombia</option>
-                                <option value="3">Chile</option>
+
+
+                        <div class="container mt-5-country mt-5">
+
+                        <div class="mb-3 mb3-class-country ">
+                            <select id="country2" class="form-select">
+                                <option value="" disabled selected></option>
+                                <option value="+54" data-flag="ar">Arg (+54)</option>
+                                <option value="+1" data-flag="us">EEUU (+1)</option>
+                                <option value="+44" data-flag="gb">UK (+44)</option>
                             </select>
                         </div>
-    
-    
+
+                    </div>
+
+                        
+
+
                         <div class="form-floating codigo-area">
                             <div class="input-group input-group-area">
                                 <div class="input-group-text">0</div>
                                 <input type="number" class="form-control" id="autoSizingInputGroup"
                                     placeholder=" Ingrese un codigo de area">
                             </div>
-    
+
                         </div>
-    
-    
+
+
                         <div class="form-floating alternative phone number">
                             <div class="input-group input-group-phone">
                                 <div class="input-group-text">15</div>
                                 <input type="number" class="form-control" id="autoSizingInputGroup"
                                     placeholder=" Ingrese un celular">
                             </div>
-    
+
                         </div>
-    
+
                     </div>
 
-                    
+
 
 
                 </div>
 
 
+
                 <div class="address-2">
-                    <div class="form-floating pais">
-                        <select class="form-select">
-                            <option value="" disabled selected>Pais*</option>
-                            <option value="1">Argentina</option>
-                            <option value="2">Colombia</option>
-                            <option value="3">Chile</option>
-                        </select>
+
+                
+
+                    <div class="container mt-5-country mt-5">
+
+                        <div class="mb-3 mb3-class-country ">
+                            <select id="country" class="form-select">
+                                <option value="" disabled selected></option>
+                                <option value="+54" data-flag="ar">Arg (+54)</option>
+                                <option value="+1" data-flag="us">EEUU (+1)</option>
+                                <option value="+44" data-flag="gb">UK (+44)</option>
+                            </select>
+                        </div>
+
                     </div>
 
 
@@ -137,14 +210,14 @@
                     </div>
 
 
-                
+
                 </div>
-                
+
 
                 <div class="container mt-5 container-mt-5">
                     <div class="mb-3 mb3-class-profession">
                         <label for="Profesión" class="form-label">Profesión</label>
-                        <select  id="Profesión" class="form-select">
+                        <select id="Profesión" class="form-select">
                             <option value="1">Ingeniero civil</option>
                             <option value="2">Diseñador gráfico</option>
                             <option value="3">Economista financiero</option>
@@ -154,36 +227,6 @@
                     </div>
                 </div>
 
-
-
-                <div class="container mt-5 container-mt-5">
-                    <div class="mb-3 mb3-class">
-                        <label for="realizoFormacion" class="form-label">¿Realizó anteriormente La Formación TPA®?</label>
-                        <select id="realizoFormacion" class="form-select">
-                            <option value="no">No</option>
-                            <option value="si">Sí</option>
-                        </select>
-                    </div>
-                </div>
-
-
-                <div class="container mt-5 mt5-class">
-                    <div class="mb-3 mb3-class-year">
-                        <label for="yearSelect" class="form-label">Año en que realizaste la Formación TPA</label>
-                        <select id="yearSelect" class="form-select">
-
-                            <option value="1">2024</option>
-                            <option value="2">2023</option>
-                            <option value="3">2022</option>
-                            <option value="4">2021</option>
-                            <option value="5">2020</option>
-                            <option value="6">2019</option>
-                            <option value="7">2018</option>
-                            <option value="8">2017</option>
-
-                        </select>
-                    </div>
-                </div>
 
 
 
@@ -243,7 +286,44 @@
             });
 
 
-            
+            // Para los paises
+
+            $('#country').select2({
+                templateResult: formatState,
+                templateSelection: formatState
+            });
+
+            function formatState(state) {
+                if (!state.id) {
+                    return state.text;
+                }
+                var baseUrl = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/";
+                var $state = $(
+                    '<span class="flag-select"><img src="' + baseUrl + state.element.dataset.flag + '.svg" class="img-flag" /> ' + state.text + '</span>'
+                );
+                return $state;
+            }
+
+
+
+            $('#country2').select2({
+                templateResult: formatState,
+                templateSelection: formatState
+            });
+
+            function formatState(state) {
+                if (!state.id) {
+                    return state.text;
+                }
+                var baseUrl = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/";
+                var $state = $(
+                    '<span class="flag-select"><img src="' + baseUrl + state.element.dataset.flag + '.svg" class="img-flag" /> ' + state.text + '</span>'
+                );
+                return $state;
+            }
+
+
+
 
             let realizoFormacion = document.getElementById('realizoFormacion');
 
@@ -251,19 +331,19 @@
                 let seleccion = realizoFormacion.value;
 
                 if (seleccion === 'si') {
-                    document.querySelector('.mb3-class-year').classList.remove('hidden');
+                    document.querySelector('.cont-year').classList.remove('hidden');
                     document.querySelector('.mb3-class-where').classList.add('hidden');
                 } else {
-                    document.querySelector('.mb3-class-year').classList.add('hidden');
+                    document.querySelector('.cont-year').classList.add('hidden');
                     document.querySelector('.mb3-class-where').classList.remove('hidden');
                 }
             });
 
             if (realizoFormacion.value == 'si') {
-                document.querySelector('.mb3-class-year').classList.remove('hidden');
+                document.querySelector('.cont-year').classList.remove('hidden');
                 document.querySelector('.mb3-class-where').classList.add('hidden');
             } else {
-                document.querySelector('.mb3-class-year').classList.add('hidden');
+                document.querySelector('.cont-year').classList.add('hidden');
                 document.querySelector('.mb3-class-where').classList.remove('hidden');
             }
         });
