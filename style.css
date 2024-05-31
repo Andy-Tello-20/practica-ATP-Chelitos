@@ -1051,12 +1051,14 @@ footer p {
 
     /* ---Formulario Interes--- */
     .dni {
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 
-    .nro,
+    .nro{
+        width: 70%;
+    }
     .selected1 {
-        width: 100%;
+        width: 30%;
     }
 
     
@@ -1251,6 +1253,18 @@ footer p {
         width: 100%;
     }
 
+    .dni {
+        flex-direction: column;
+    }
+
+    .nro,
+    .selected1 {
+        width: 100%;
+    }
+
+    .form-interest{
+        padding: 20px 20px;
+    }
 
 
     /* ---------------------------- */
