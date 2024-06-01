@@ -797,6 +797,15 @@ form .link {
 
 }
 
+.form-control-height{
+    height: 40px !important;
+}
+
+.label-height{
+    line-height: 0.5;
+}
+
+
 .dni {
     display: flex;
     justify-content: space-between;
@@ -1070,9 +1079,9 @@ footer p {
         width: 90%;
     }
 
-    .dni {
-        /* flex-direction: column; */
-    }
+    /* .dni {
+        flex-direction: column;
+    } */
 
     .nro{
         width: 70%;

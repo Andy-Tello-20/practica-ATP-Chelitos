@@ -38,6 +38,10 @@
 <body>
 
     <main>
+
+      
+
+
         <div class="form-container-interest">
             <form class="form-interest" action="">
 
@@ -54,9 +58,11 @@
 
                 <div class="container mt-5 container-mt-5">
                     <div class="mb-3 mb3-class">
-                        <label for="realizoFormacion" class="form-label">¿Realizó anteriormente La Formación
-                            TPA®?</label>
-                        <select id="realizoFormacion" class="form-select">
+                        <!-- <label for="realizoFormacion" class="form-label">¿Realizó anteriormente La Formación
+                            TPA®?</label> -->
+                        <select id="realizoFormacion" class="form-select form-control-height">
+                            <option value="" disabled selected>¿Realizó anteriormente La Formación
+                                TPA®?</option>
                             <option value="no">No</option>
                             <option value="si">Sí</option>
                         </select>
@@ -66,9 +72,9 @@
 
                 <div class="container mt-5 container-mt-5 cont-year">
                     <div class="mb-3 mb3-class-year">
-                        <label for="yearSelect" class="form-label">Año en que realizaste la Formación TPA</label>
+                        <!-- <label for="yearSelect" class="form-label">Año en que realizaste la Formación TPA</label> -->
                         <select id="yearSelect" class="form-select">
-
+                            <option value=""></option>
                             <option value="1">2024</option>
                             <option value="2">2023</option>
                             <option value="3">2022</option>
@@ -87,17 +93,17 @@
                 <!-- "class="form-control is-invalid"" establece error de input -->
 
                 <div class="form-floating mb-3">
-                    <input type="text" class="form-control " id="floatingInput" placeholder="Nombre"
+                    <input type="text" class="form-control form-control-height" id="floatingInput" placeholder="Nombre"
                         autofocus>
-                    <label for="floatingInput">Nombres</label>
+                    <label class="label-height" for="floatingInput">Nombre/s</label>
                 </div>
                 <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Apellido">
-                    <label for="floatingPassword">Apellidos</label>
+                    <input type="text" class="form-control form-control-height" id="floatingPassword" placeholder="Apellido">
+                    <label class="label-height" for="floatingPassword">Apellido/s</label>
                 </div>
                 <div class="dni">
-                    <div class="form-floating selected1">
-                        <select class="form-select">
+                    <div class="form-floating selected1 ">
+                        <select class="form-select form-control-height">
                             <option value="" disabled selected>Tipo de Documento*</option>
                             <option value="1">DNI</option>
                             <option value="2">Pasaporte</option>
@@ -105,13 +111,13 @@
                         </select>
                     </div>
                     <div class="form-floating nro">
-                        <input type="number" class="form-control" id="floatingPassword" placeholder="Nro">
-                        <label for="floatingPassword">Nro de Documento</label>
+                        <input type="number" class="form-control form-control-height" id="floatingPassword" placeholder="Nro">
+                        <label class="label-height" for="floatingPassword">Nro de Documento</label>
                     </div>
                 </div>
 
-                <div class="form-floating">
-                    <label class="visually-hidden" for="autoSizingInputGroup">Email</label>
+                <div class="form-floating form-control-height">
+                    <label class="visually-hidden label-height" for="autoSizingInputGroup">Email</label>
                     <div class="input-group">
                         <div class="input-group-text">@</div>
                         <input type="text" class="form-control" id="autoSizingInputGroup"
@@ -216,8 +222,9 @@
 
                 <div class="container mt-5 container-mt-5">
                     <div class="mb-3 mb3-class-profession">
-                        <label for="Profesión" class="form-label">Profesión</label>
+                        <!-- <label for="Profesión" class="form-label">Profesión</label> -->
                         <select id="Profesión" class="form-select">
+                            <option value=""></option>
                             <option value="1">Ingeniero civil</option>
                             <option value="2">Diseñador gráfico</option>
                             <option value="3">Economista financiero</option>
@@ -256,7 +263,7 @@
         $(document).ready(function () {
             // Inicializa Select2 en el select de los años
             $('#yearSelect').select2({
-                placeholder: "Selecciona el año",
+                placeholder: "Año en que realizaste la Formación TPA",
                 allowClear: true
             });
 
@@ -267,7 +274,7 @@
             });
 
             $('#Profesión').select2({
-                placeholder: "Seleccione una profesión",
+                placeholder: "Profesión",
                 allowClear: true
             });
 
