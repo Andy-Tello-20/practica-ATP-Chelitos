@@ -871,6 +871,7 @@ span#select2-yearSelect-container {
 
 .small-class{
     color: rgb(231, 21, 21) !important;
+    text-align: center;
 }
 
 .address-1 {
@@ -903,7 +904,7 @@ span#select2-yearSelect-container {
     width: 70%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    
 }
 
 
@@ -914,6 +915,11 @@ span#select2-yearSelect-container {
 
 .container.mt-5.container-mt-5 {
     margin: 0 0 40px 0 !important;
+    
+}
+
+.mt-5-height{
+height: 40px;
 }
 
 .container.mt-5.container-mt-5>div:nth-child(1){
