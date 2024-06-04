@@ -770,7 +770,7 @@ form .link {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background: #fff;
+    background: #f8f8f8;
     text-align: center;
     padding: 20px 35px;
     box-shadow: 0 5px 10px rgba(71, 3, 6, 0.7);
@@ -845,7 +845,15 @@ select.form-select {
 
 span#select2-country2-container,
 span#select2-country-container {
-    line-height: 35px;
+    line-height: 50px;
+}
+
+span#select2-Profesión-container {
+    line-height: 50px;
+}
+
+textarea.select2-search__field {
+    line-height: 16px;
 }
 
 span.select2.select2-container.select2-container--default {
@@ -871,6 +879,7 @@ button.select2-selection__choice__remove {
 
 span#select2-yearSelect-container {
     text-align: left !important;
+    line-height: 50px;
 }
 
 .input-group-height {
@@ -1006,6 +1015,16 @@ span#select2-Profesión-container {
 
 span.select2-selection.select2-selection--multiple {
     height: 56px;
+    display: flex;
+    align-items: center;
+}
+
+span#select2-OtraProfesión-container{
+    line-height: 50px;
+}
+
+span.select2-search.select2-search--inline {
+    width: 100%;
 }
 
 .select2-results__options {
