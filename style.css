@@ -857,6 +857,11 @@ textarea.select2-search__field {
     height: 100% !important;
 }
 
+/* span.select2-dropdown.select2-dropdown--below {
+
+    width: calc(100%) !important;
+} */
+
 
 span.select2.select2-container.select2-container--default {
     width: 100% !important;
@@ -1331,13 +1336,10 @@ footer p {
         margin-top: 0px;
         margin-bottom: 0px;
     }
-
-    .address-1-container,
-    .address-2 {
-
-        height: auto;
+    .address-1-container, .address-2-container {
+    
+        gap: 0px;
     }
-
 
     .dni {
         flex-direction: column;
