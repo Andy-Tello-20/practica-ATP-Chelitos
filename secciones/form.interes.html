@@ -56,71 +56,79 @@
                     Profesional TPA® o cómo adquirir la Membresía Profesional TPA®, por favor completa el formulario con
                     tus datos personales.</p>
 
-                <div class="container mt-5 container-mt-5 mt-5-height">
-                    <div class="mb-3 mb3-class">
-                        <!-- <label for="realizoFormacion" class="form-label">¿Realizó anteriormente La Formación
-                            TPA®?</label> -->
-                        <select id="realizoFormacion" class="form-select form-control-height">
-                            <option value="" disabled selected>¿Realizó anteriormente La Formación
-                                TPA®?</option>
-                            <option value="no">No</option>
-                            <option value="si">Sí</option>
-                        </select>
+                <div class="first-question">
+                    <div class="container mt-5 container-mt-5 mt-5-height">
+                        <div class="mb-3 mb3-class">
+                            <select id="realizoFormacion" class="form-select form-control-height">
+                                <option value="" disabled selected>¿Realizó anteriormente La Formación
+                                    TPA®?</option>
+                                <option value="no">No</option>
+                                <option value="si">Sí</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-
-
-                <div class="container mt-5 container-mt-5 cont-year mt-5-height">
-                    <div class="mb-3 mb3-class-year">
-                        <!-- <label for="yearSelect" class="form-label">Año en que realizaste la Formación TPA</label> -->
-                        <select id="yearSelect" class="form-select">
-                            <option value=""></option>
-                            <option value="1">2024</option>
-                            <option value="2">2023</option>
-                            <option value="3">2022</option>
-                            <option value="4">2021</option>
-                            <option value="5">2020</option>
-                            <option value="6">2019</option>
-                            <option value="7">2018</option>
-                            <option value="8">2017</option>
-
-                        </select>
+    
+    
+                    <div class="container mt-5 container-mt-5 cont-year mt-5-height">
+                        <div class="mb-3 mb3-class-year">
+                
+                            <select id="yearSelect" class="form-select">
+                                <option value=""></option>
+                                <option value="1">2024</option>
+                                <option value="2">2023</option>
+                                <option value="3">2022</option>
+                                <option value="4">2021</option>
+                                <option value="5">2020</option>
+                                <option value="6">2019</option>
+                                <option value="7">2018</option>
+                                <option value="8">2017</option>
+    
+                            </select>
+                        </div>
                     </div>
-                </div>
+                </div>    
+
+                
 
 
 
                 <!-- "class="form-control is-invalid"" establece error de input -->
 
 
+                <div class="datos-container">
 
-                <span class="address-title">Datos Personales</span>
+                    <span class="address-title-datos">Datos Personales</span>
 
-                <div class="form-floating mb-3">
+                    <div class="form-floating ">
 
-                    <input type="text" class="form-control form-control-height" id="floatingInput" placeholder="Nombre"
-                        autofocus>
-                    <label class="label-height" for="floatingInput">Nombre/s</label>
-                </div>
-                <div class="form-floating">
-                    <input type="text" class="form-control form-control-height" id="floatingPassword"
-                        placeholder="Apellido">
-                    <label class="label-height" for="floatingPassword">Apellido/s</label>
-                </div>
-                <div class="dni">
-                    <div class="form-floating selected1 ">
-                        <select class="form-select form-control-height">
-                            <option value="" disabled selected>Tipo de Documento*</option>
-                            <option value="1">DNI</option>
-                            <option value="2">Pasaporte</option>
-                            <option value="3">UE</option>
-                        </select>
+                        <input type="text" class="form-control form-control-height" id="floatingInput"
+                            placeholder="Nombre" autofocus>
+                        <label class="label-height" for="floatingInput">Nombre/s</label>
+
                     </div>
-                    <div class="form-floating nro">
-                        <input type="number" class="form-control form-control-height" id="floatingPassword"
-                            placeholder="Nro">
-                        <label class="label-height" for="floatingPassword">Nro de Documento</label>
+
+                    <div class="form-floating">
+                        <input type="text" class="form-control form-control-height" id="floatingPassword"
+                            placeholder="Apellido">
+                        <label class="label-height" for="floatingPassword">Apellido/s</label>
                     </div>
+
+                    <div class="dni">
+                        <div class="form-floating selected1 ">
+                            <select class="form-select form-control-height">
+                                <option value="" disabled selected>Tipo de Documento*</option>
+                                <option value="1">DNI</option>
+                                <option value="2">Pasaporte</option>
+                                <option value="3">UE</option>
+                            </select>
+                        </div>
+                        <div class="form-floating nro">
+                            <input type="number" class="form-control form-control-height" id="floatingPassword"
+                                placeholder="Nro">
+                            <label class="label-height" for="floatingPassword">Nro de Documento</label>
+                        </div>
+                    </div>
+
                 </div>
 
 
@@ -128,10 +136,9 @@
                 <div class="address-1">
                     <span class="address-title">Contacto</span>
 
-
-                    <div class="form-floating form-control-height form-control-margin">
+                    <div class="form-floating form-control-height ">
                         <label class="visually-hidden label-height" for="autoSizingInputGroup">Email</label>
-                        <div class="input-group">
+                        <div class="input-group input-group-height">
                             <div class="input-group-text">@</div>
                             <input type="text" class="form-control" id="autoSizingInputGroup"
                                 placeholder=" Ingrese un Email">
@@ -155,64 +162,58 @@
 
 
                         <div class="form-floating alternative phone number">
-                            <div class="input-group input-group-phone">
+                            <div class="input-group input-group-phone input-group-height">
 
                                 <input type="number" class="form-control" id="autoSizingInputGroup"
                                     placeholder=" Ingrese un celular">
                             </div>
 
+                            <small class="form-text text-muted small-class">Ingrese 10 dígitos sin el 0 y sin el
+                                15</small>
+                        </div>
+
+                    </div>
+
+
+                    <div class="address-2-container">
+
+                        <div class="container mt-5-country mt-5">
+
+                            <div class="mb-3 mb3-class-country ">
+                                <select id="country" class="form-select">
+                                    <option value="" disabled selected>País</option>
+                                    <option value="+54" data-flag="ar">(+54)</option>
+                                    <option value="+1" data-flag="us">(+1)</option>
+                                    <option value="+44" data-flag="gb">(+44)</option>
+                                </select>
+                            </div>
+    
+                        </div>
+    
+    
+    
+                        <div class="form-floating alternative phone number">
+                            <div class="input-group input-group-phone input-group-height">
+    
+                                <input type="number" class="form-control" id="autoSizingInputGroup"
+                                    placeholder=" Ingrese un celular alternativo">
+                            </div>
+    
                             <small class="form-text text-muted small-class">Ingrese 10 dígitos sin el 0 y sin el 15</small>
                         </div>
-
                     </div>
 
 
-
+                   
 
                 </div>
-
-
-
-                <div class="address-2">
-
-
-
-                    <div class="container mt-5-country mt-5">
-
-                        <div class="mb-3 mb3-class-country ">
-                            <select id="country" class="form-select">
-                                <option value="" disabled selected>País</option>
-                                <option value="+54" data-flag="ar">(+54)</option>
-                                <option value="+1" data-flag="us">(+1)</option>
-                                <option value="+44" data-flag="gb">(+44)</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="form-floating alternative phone number">
-                        <div class="input-group input-group-phone">
-
-                            <input type="number" class="form-control" id="autoSizingInputGroup"
-                                placeholder=" Ingrese un celular alternativo">
-                        </div>
-
-                        <small class="form-text text-muted small-class">Ingrese 10 dígitos sin el 0 y sin el 15</small>
-                    </div>
-
-
-
-                </div>
-
 
 
 
                 <div class="container mt-5 container-mt-5">
+                    <span class="address-title">Profesiones</span>
                     <div class="mb-3 mb3-class-profession">
-                        <!-- <label for="Profesión" class="form-label">Profesiones</label> -->
-                        <span class="address-title">Profesiones</span>
+                       
                         <select id="Profesión" class="form-select">
                             <option value=""></option>
                             <option value="1">Ingeniero civil</option>
@@ -221,12 +222,13 @@
                             <option value="4">Traductor/Intérprete de conferencias</option>
                             <option value="5">Abogado de derechos humanos</option>
                         </select>
-                        <small class="form-text text-muted ">Debes ser profesional de la salud y/o del movimiento, como pilates, yoga, educación física, para realizar la formación TPA®</small>
+                        <small class="form-text text-muted ">Debes ser profesional de la salud y/o del movimiento, como
+                            pilates, yoga, educación física, para realizar la formación TPA®</small>
                     </div>
 
 
                     <div class="mb-3 mb3-class-profession">
-           
+
                         <select id="OtraProfesión" class="form-select">
                             <option value=""></option>
                             <option value="1">Ingeniero civil</option>
@@ -239,11 +241,6 @@
 
 
                 </div>
-
-
-
-
-
 
                 <div class="container mt-5 container-mt-5">
                     <div class="mb-3 mb3-class-where">
@@ -258,9 +255,13 @@
                         <a class="link-info" href="">Información sobre la Fase Presencial</a>
                     </div>
                 </div>
+
+
                 <div class="submit-button">
                     <input type="submit" role="button" class="button-send" value="Enviar">
                 </div>
+
+
             </form>
         </div>
     </main>

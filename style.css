@@ -786,7 +786,7 @@ form .link {
 .form-interest>*,
 .form-inscripcion>* {
 
-    margin-bottom: 40px !important;
+    margin-bottom: 35px !important;
 }
 
 .title-inscription .title-interest {
@@ -797,15 +797,15 @@ form .link {
 
 }
 
-.form-control-height{
-    height: 40px !important;
+.form-control-height {
+    height: 56px !important;
 }
 
-.form-control-margin{
+.form-control-margin {
     margin-bottom: 40px;
 }
 
-.label-height{
+.label-height {
     line-height: 0.5;
 }
 
@@ -816,10 +816,13 @@ form .link {
     gap: 2rem;
 }
 
-.nro,
+.nro {
+    width: 65%;
+}
+
 .selected1 {
 
-    width: 50%;
+    width: 35%;
 
 }
 
@@ -830,7 +833,8 @@ form .link {
 
 
 
-span#select2-country2-container, span#select2-country-container  {
+span#select2-country2-container,
+span#select2-country-container {
     justify-content: center;
 }
 
@@ -839,7 +843,8 @@ select.form-select {
     padding-bottom: 0px !important;
 }
 
-span#select2-country2-container, span#select2-country-container {
+span#select2-country2-container,
+span#select2-country-container {
     line-height: 35px;
 }
 
@@ -868,8 +873,11 @@ span#select2-yearSelect-container {
     text-align: left !important;
 }
 
+.input-group-height {
+    height: 56px;
+}
 
-.small-class{
+.small-class {
     color: rgb(231, 21, 21) !important;
     text-align: center;
 }
@@ -878,33 +886,42 @@ span#select2-yearSelect-container {
     text-align: left;
     display: flex;
     flex-direction: column;
+    gap: 30px;
 }
 
 .address-1-container,
-.address-2 {
+.address-2-container {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    height: 40px;
+
 }
 
+.datos-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.address-title-datos,
 .address-title {
+    margin-bottom: 5px;
     text-align: left;
-    margin-bottom: 30px !important;
     font-size: 1.5rem;
 }
 
+
 .address-1-container>div:nth-child(1),
-.address-2>div:nth-child(1) {
+.address-2-container>div:nth-child(1) {
     width: 30%;
 }
 
 .address-1-container>div:nth-child(2),
-.address-2>div:nth-child(2) {
+.address-2-container>div:nth-child(2) {
     width: 70%;
-    display: flex;
-    flex-direction: column;
-    
+
+
 }
 
 
@@ -913,30 +930,34 @@ span#select2-yearSelect-container {
     margin-bottom: 40px;
 }
 
-.container.mt-5.container-mt-5 {
-    margin: 0 0 40px 0 !important;
-    
+.container-mt-5 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 0 0 35px 0 !important;
+    padding: 0;
 }
 
-.mt-5-height{
-height: 40px;
+
+
+.first-question{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-.container.mt-5.container-mt-5>div:nth-child(1){
-    margin-bottom: 3rem !important;
+.mt-5-height {
+    gap: 0px;
+    margin-bottom: 0px !important;
 }
 
-.link-info{
+
+
+.link-info {
     color: #0d6efd;
-    margin-top: 10px;
+    margin-top: 0.25rem;
     text-decoration: none;
 }
-
-.container-mt-5 {
-    padding: 0;
-
-}
-
 
 
 .mb3-class-year,
@@ -947,6 +968,7 @@ height: 40px;
     flex-direction: column;
     align-items: flex-start;
     text-align: left;
+    margin-bottom: 0px !important;
 }
 
 
@@ -957,17 +979,14 @@ height: 40px;
 
 span.select2-selection.select2-selection--single {
 
-    height: 40px;
+    height: 56px;
 }
 
 .mb3-class-country {
     margin-bottom: 0px !important;
 }
 
-.container.mt-5 {
 
-    margin-bottom: 0px !important;
-}
 
 img.img-flag {
     margin-right: 0px !important;
@@ -1100,7 +1119,7 @@ footer p {
 
     /* ---Formulario Interes--- */
 
-    .form-interest{
+    .form-interest {
         width: 90%;
     }
 
@@ -1108,14 +1127,15 @@ footer p {
         flex-direction: column;
     } */
 
-    .nro{
+    .nro {
         width: 70%;
     }
+
     .selected1 {
         width: 30%;
     }
 
-    
+
 
 
 
@@ -1288,7 +1308,7 @@ footer p {
 
     .address-1-container,
     .address-2 {
-      
+
         height: auto;
     }
 
@@ -1313,7 +1333,7 @@ footer p {
         width: 100%;
     }
 
-    .form-interest{
+    .form-interest {
         padding: 20px 20px;
     }
 
