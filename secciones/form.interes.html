@@ -59,7 +59,7 @@
                 <div class="first-question">
                     <div class="container mt-5 container-mt-5 mt-5-height">
                         <div class="mb-3 mb3-class">
-                            <select id="realizoFormacion" class="form-select form-control-height">
+                            <select id="realizoFormacion" class="form-select form-control-height" required>
                                 <option value="" disabled selected>¿Realizó anteriormente La Formación
                                     TPA®?</option>
                                 <option value="no">No</option>
@@ -72,7 +72,7 @@
                     <div class="container mt-5 container-mt-5 cont-year mt-5-height">
                         <div class="mb-3 mb3-class-year">
                 
-                            <select id="yearSelect" class="form-select">
+                            <select id="yearSelect" class="form-select" >
                                 <option value=""></option>
                                 <option value="1">2024</option>
                                 <option value="2">2023</option>
@@ -101,21 +101,21 @@
 
                     <div class="form-floating ">
 
-                        <input type="text" class="form-control form-control-height" id="floatingInput"
-                            placeholder="Nombre" autofocus>
-                        <label class="label-height" for="floatingInput">Nombre/s</label>
+                        <input type="text" class="form-control form-control-height" id="floatingInputNombre"
+                            placeholder="Nombre" autofocus required>
+                        <label class="label-height" for="floatingInputNombre">Nombre/s</label>
 
                     </div>
 
                     <div class="form-floating">
-                        <input type="text" class="form-control form-control-height" id="floatingPassword"
-                            placeholder="Apellido">
-                        <label class="label-height" for="floatingPassword">Apellido/s</label>
+                        <input type="text" class="form-control form-control-height" id="floatingLastName"
+                            placeholder="Apellido" required>
+                        <label class="label-height" for="floatingLastName">Apellido/s</label>
                     </div>
 
                     <div class="dni">
                         <div class="form-floating selected1 ">
-                            <select class="form-select form-control-height">
+                            <select class="form-select form-control-height" required>
                                 <option value="" disabled selected>Tipo de Documento*</option>
                                 <option value="1">DNI</option>
                                 <option value="2">Pasaporte</option>
@@ -123,9 +123,9 @@
                             </select>
                         </div>
                         <div class="form-floating nro">
-                            <input type="number" class="form-control form-control-height" id="floatingPassword"
-                                placeholder="Nro">
-                            <label class="label-height" for="floatingPassword">Nro de Documento</label>
+                            <input type="number" class="form-control form-control-height" id="floatingNro"
+                                placeholder="Nro" required>
+                            <label class="label-height" for="floatingNro">Nro de Documento</label>
                         </div>
                     </div>
 
@@ -137,11 +137,11 @@
                     <span class="address-title">Contacto</span>
 
                     <div class="form-floating form-control-height ">
-                        <label class="visually-hidden label-height" for="autoSizingInputGroup">Email</label>
+                        <label class="visually-hidden label-height" for="autoSizingMailSymbol">Email</label>
                         <div class="input-group input-group-height">
                             <div class="input-group-text">@</div>
-                            <input type="text" class="form-control" id="autoSizingInputGroup"
-                                placeholder=" Ingrese un Email">
+                            <input type="text" class="form-control" id="autoSizingMailSymbol"
+                                placeholder=" Ingrese un Email" required>
                         </div>
                     </div>
 
@@ -150,7 +150,7 @@
                         <div class="container mt-5-country mt-5">
 
                             <div class="mb-3 mb3-class-country ">
-                                <select id="country2" class="form-select">
+                                <select id="country2" class="form-select" required>
                                     <option value="" disabled selected>País</option>
                                     <option value="+54" data-flag="ar">(+54)</option>
                                     <option value="+1" data-flag="us">(+1)</option>
@@ -164,8 +164,8 @@
                         <div class="form-floating alternative phone number">
                             <div class="input-group input-group-phone input-group-height">
 
-                                <input type="number" class="form-control" id="autoSizingInputGroup"
-                                    placeholder=" Ingrese un celular">
+                                <input type="number" class="form-control" id="autoSizingInputGroup1"
+                                    placeholder=" Ingrese un celular" required>
                             </div>
 
                             <small class="form-text text-muted small-class">Ingrese 10 dígitos sin el 0 y sin el
@@ -180,7 +180,7 @@
                         <div class="container mt-5-country mt-5">
 
                             <div class="mb-3 mb3-class-country ">
-                                <select id="country" class="form-select">
+                                <select id="country" class="form-select" required>
                                     <option value="" disabled selected>País</option>
                                     <option value="+54" data-flag="ar">(+54)</option>
                                     <option value="+1" data-flag="us">(+1)</option>
@@ -195,8 +195,8 @@
                         <div class="form-floating alternative phone number">
                             <div class="input-group input-group-phone input-group-height">
     
-                                <input type="number" class="form-control" id="autoSizingInputGroup"
-                                    placeholder=" Ingrese un celular alternativo">
+                                <input type="number" class="form-control" id="autoSizingInputGroup2"
+                                    placeholder=" Ingrese un celular alternativo" required>
                             </div>
     
                             <small class="form-text text-muted small-class">Ingrese 10 dígitos sin el 0 y sin el 15</small>
@@ -214,7 +214,7 @@
                     <span class="address-title">Profesiones</span>
                     <div class="mb-3 mb3-class-profession">
                        
-                        <select id="Profesión" class="form-select">
+                        <select id="Profesión" class="form-select" required>
                             <option value=""></option>
                             <option value="1">Ingeniero civil</option>
                             <option value="2">Diseñador gráfico</option>
@@ -229,7 +229,7 @@
 
                     <div class="mb-3 mb3-class-profession">
 
-                        <select id="OtraProfesión" class="form-select">
+                        <select id="OtraProfesión" class="form-select" required>
                             <option value=""></option>
                             <option value="1">Ingeniero civil</option>
                             <option value="2">Diseñador gráfico</option>
@@ -244,9 +244,8 @@
 
                 <div class="container mt-5 container-mt-5">
                     <div class="mb-3 mb3-class-where">
-                        <!-- <label for="documentType" class="form-label">Donde te gustaría realizar la Fase presencial de la
-                            Formación TPA®?*</label> -->
-                        <select id="documentType" class="form-select " multiple="multiple">
+                       
+                        <select id="documentType" class="form-select " multiple="multiple" required>
                             <option value="1">P. Sherman, 42 Wallaby Way, Sydney</option>
                             <option value="2">Pizza Planet, 231 County Road, Richmond, VA</option>
                             <option value="3">Stark Tower, 200 Park Avenue, New York, NY</option>
