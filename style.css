@@ -1004,6 +1004,9 @@ span#select2-Profesión-container {
     text-align: left !important;
 }
 
+span.select2-selection.select2-selection--multiple {
+    height: 56px;
+}
 
 .select2-results__options {
     max-height: 100px;
@@ -1018,8 +1021,9 @@ span#select2-Profesión-container {
     cursor: pointer;
     font-size: 20px;
     margin: 0 auto;
-    border-radius: 20px;
+    border-radius: 8px;
     width: 150px;
+    height: 50px;
 }
 
 
@@ -1303,7 +1307,9 @@ footer p {
     /* ---Formulario Interes--- */
     .form-interest,
     .form-inscripcion {
-        width: 90%;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     .address-1-container,
@@ -1311,17 +1317,6 @@ footer p {
 
         height: auto;
     }
-
-    /* .address-1-container>div:nth-child(1),
-    .address-2>div:nth-child(1) {
-        width: 100%;
-    }
-
-    .address-1-container>div:nth-child(2),
-    .address-2>div:nth-child(2) {
-        width: 100%;
-    } */
-
 
 
     .dni {
@@ -1336,6 +1331,11 @@ footer p {
     .form-interest {
         padding: 20px 20px;
     }
+
+    .button-send{
+        width: 100%;
+        height: 56px;
+    } 
 
 
     /* ---------------------------- */
