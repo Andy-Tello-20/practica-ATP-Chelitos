@@ -873,8 +873,10 @@ span#select2-Profesión-container {
 }
 
 textarea.select2-search__field {
-    line-height: 21px;
-    height: 100% !important;
+    line-height: 20px;
+    font-size: 1.2rem !important;
+    background: #cbdccb !important;
+    height: 1.4rem !important;
 }
 
 /* span.select2-dropdown.select2-dropdown--below {
@@ -960,11 +962,6 @@ span#select2-yearSelect-container {
 
 }
 
-
-
-.submit-button {
-    
-}
 
 .small-cancelar{
     color: #0d6efd !important;
@@ -1062,6 +1059,21 @@ span#select2-OtraProfesión-container{
 span.select2-search.select2-search--inline {
     width: 100%;
 }
+
+.span-place{
+    /* display: none; */
+    font-size: 1rem;
+    color: #7d7d7d;
+    background: #fff;
+    height: 0px;
+    transition: all 0.4s;
+}
+
+.show-span{
+    /* display: block; */
+    height: 26px;
+}
+
 
 .select2-results__options {
     max-height: 100px;
