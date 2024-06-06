@@ -215,7 +215,7 @@ $(document).ready(function () {
     $('form').on('submit', function (e) {
         var select = $('#documentType')
         if ( realizoFormacion.value =='no' && select.val().length === 0) {
-            alert('Por favor, selecciona al menos una ubicación ❗.')
+            alert('POR FAVOR, SELECCIONA AL MENOS UNA UBICACÍON ⚠.')
             e.preventDefault()
             select.focus()
         }
