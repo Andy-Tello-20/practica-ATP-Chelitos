@@ -11,29 +11,6 @@
     <link rel="stylesheet" href="../style.css">
 
 
-    <style>
-        .hidden {
-            display: none !important;
-        }
-
-        /* para los paises */
-
-        .flag-select img {
-            width: 20px;
-            height: auto;
-            margin-right: 10px;
-        }
-
-        .select2-container .select2-selection--single .select2-selection__rendered {
-            display: flex;
-            align-items: center;
-        }
-
-        .select2-container .select2-selection--single .select2-selection__rendered img {
-            margin-right: 10px;
-        }
-    </style>
-
 </head>
 
 <body>
@@ -63,13 +40,18 @@
 
                 <div class="first-question">
                     <div class="container mt-5 container-mt-5 mt-5-height">
-                        <div class="mb-3 mb3-class">
+                        <div class="mb-3 mb3-class form-floating">
+
+                            <span class="span-fq">¿Realizó anteriormente La Formación
+                                TPA®?</span>
                             <select id="realizoFormacion" class="form-select form-control-height" required>
                                 <option value="" disabled selected>¿Realizó anteriormente La Formación
                                     TPA®?</option>
                                 <option value="no">No</option>
                                 <option value="si">Sí</option>
                             </select>
+                            
+
                         </div>
                     </div>
 
@@ -77,6 +59,7 @@
                     <div class="container mt-5 container-mt-5 cont-year mt-5-height">
                         <div class="mb-3 mb3-class-year">
 
+                            <span class="span-year">Año en que realizaste la Formación TPA</span>
                             <select id="yearSelect" class="form-select">
                                 <option value=""></option>
                                 <option value="1">2024</option>
@@ -219,7 +202,7 @@
                 <div class="container mt-5 container-mt-5">
                     <span class="address-title">Profesiones</span>
                     <div class="mb-3 mb3-class-profession">
-
+                        <span class="span-profesion">Profesión</span>
                         <select id="Profesión" class="form-select" required>
                             <option value=""></option>
                             <option value="1">Ingeniero civil</option>
@@ -234,7 +217,8 @@
 
 
                     <div class="mb-3 mb3-class-profession">
-                        <span class="span-place">Otra Profesión</span>
+
+                        <span class="span-OProfesion">Otra Profesión</span>
                         <select id="OtraProfesión" class="form-select" required>
                             <option value=""></option>
                             <option value="1">Ingeniero civil</option>
@@ -243,6 +227,7 @@
                             <option value="4">Traductor/Intérprete de conferencias</option>
                             <option value="5">Abogado de derechos humanos</option>
                         </select>
+
                     </div>
 
 
@@ -253,8 +238,8 @@
                 <div class="container mt-5 container-mt-5 mt-5-place">
                     <div class="mb-3 mb3-class-where">
 
-                        <!-- <span class="span-place">Donde te gustaría realizar la Fase presencial de la Formación
-                            TPA®?*</span> -->
+                        <span class="span-place">Donde te gustaría realizar la Fase presencial de la Formación
+                            TPA®?*</span>
                         <select id="documentType" class="form-select " multiple="multiple" required>
                             <option value="1">P. Sherman, 42 Wallaby Way, Sydney</option>
                             <option value="2">Pizza Planet, 231 County Road, Richmond, VA</option>
@@ -280,132 +265,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Inicializa Select2 en el select de los años
-            $('#yearSelect').select2({
-                placeholder: "Año en que realizaste la Formación TPA",
-                allowClear: true
-            });
-
-            // Inicializa Select2 en el select de los documentos
-            $('#documentType').select2({
-                placeholder: "",
-                allowClear: true
-            });
-
-            $('#Profesión').select2({
-                placeholder: "Profesión",
-                allowClear: true
-            });
-
-            $('#OtraProfesión').select2({
-                placeholder: "Otra Profesión",
-                allowClear: true
-            });
-
-
-            //! ---Capturar click select2:open ---
-
-            var spanElement = $('.span-place');
-            var selectElement = $('#OtraProfesión');
-
- 
-            // Verificar al cargar la página
-            if (selectElement.val()) {
-                spanElement.addClass('show-span');
-            }
-
-            // Capturar el cambio de selección y añadir/quitar la clase 'show-span'
-            selectElement.on('change', function (e) {
-                if ($(this).val()) {
-                    spanElement.addClass('show-span');
-                } else {
-                    spanElement.removeClass('show-span');
-                }
-            });
-
-
-            $('#yearSelect').on('select2:open', function () {
-                $('.select2-results__options').css('max-height', '100px').css('overflow-y', 'auto');
-            });
-
-
-            $('#documentType').on('select2:open', function () {
-                $('.select2-results__options').css('max-height', '100px').css('overflow-y', 'auto');
-            });
-
-            $('#Profesión').on('select2:open', function () {
-                $('.select2-results__options').css('max-height', '100px').css('overflow-y', 'auto');
-            });
-
-            $('#OtraProfesión').on('select2:open', function () {
-                $('.select2-results__options').css('max-height', '100px').css('overflow-y', 'auto');
-            });
-
-
-            // Para los paises
-
-            $('#country').select2({
-                templateResult: formatState,
-                templateSelection: formatState
-            });
-
-            function formatState(state) {
-                if (!state.id) {
-                    return state.text;
-                }
-                var baseUrl = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/";
-                var $state = $(
-                    '<span class="flag-select"><img src="' + baseUrl + state.element.dataset.flag + '.svg" class="img-flag" /> ' + state.text + '</span>'
-                );
-                return $state;
-            }
-
-
-
-            $('#country2').select2({
-                templateResult: formatState,
-                templateSelection: formatState
-            });
-
-            function formatState(state) {
-                if (!state.id) {
-                    return state.text;
-                }
-                var baseUrl = "https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/flags/4x3/";
-                var $state = $(
-                    '<span class="flag-select"><img src="' + baseUrl + state.element.dataset.flag + '.svg" class="img-flag" /> ' + state.text + '</span>'
-                );
-                return $state;
-            }
-
-
-
-
-            let realizoFormacion = document.getElementById('realizoFormacion');
-
-            realizoFormacion.addEventListener('change', function () {
-                let seleccion = realizoFormacion.value;
-
-                if (seleccion === 'si') {
-                    document.querySelector('.cont-year').classList.remove('hidden');
-                    document.querySelector('.mb3-class-where').classList.add('hidden');
-                } else {
-                    document.querySelector('.cont-year').classList.add('hidden');
-                    document.querySelector('.mb3-class-where').classList.remove('hidden');
-                }
-            });
-
-            if (realizoFormacion.value == 'si') {
-                document.querySelector('.cont-year').classList.remove('hidden');
-                document.querySelector('.mb3-class-where').classList.add('hidden');
-            } else {
-                document.querySelector('.cont-year').classList.add('hidden');
-                document.querySelector('.mb3-class-where').classList.remove('hidden');
-            }
-        });
-    </script>
+    <script src="/public/logica.form.interes.js"></script>
 </body>
 
 </html>

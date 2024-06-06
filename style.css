@@ -739,12 +739,33 @@ form .link {
 
 /* ---Formulario de Interesado--- */
 
+
+.hidden-formacion {
+    display: none !important;
+}
+
+/* para los paises */
+
+.flag-select img {
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    display: flex;
+    align-items: center;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered img {
+    margin-right: 10px;
+}
+
 .form-container-interest,
 .form-container-inscripcion {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* height: 1500px; */
     background-image: url('img/caratula-fondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -872,10 +893,12 @@ span#select2-Profesión-container {
     line-height: 50px;
 }
 
+
+
 textarea.select2-search__field {
     line-height: 20px;
-    font-size: 1.2rem !important;
-    background: #cbdccb !important;
+    font-size: 1rem !important;
+    background: transparent !important;
     height: 1.4rem !important;
 }
 
@@ -1060,7 +1083,7 @@ span.select2-search.select2-search--inline {
     width: 100%;
 }
 
-.span-place{
+.span-OProfesion, .span-profesion ,.span-year, .span-place, .span-fq{
     display: none;
     font-size: 1rem;
     color: #7d7d7d;
