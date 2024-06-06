@@ -210,5 +210,18 @@ $(document).ready(function () {
     }
 
 
+    //! Previene el envío del formulario
+
+    $('form').on('submit', function (e) {
+        var select = $('#documentType')
+        if ( realizoFormacion.value =='no' && select.val().length === 0) {
+            alert('Por favor, selecciona al menos una opción.')
+            e.preventDefault()
+            select.focus()
+        }
+    });
+
+
+
 
 });
