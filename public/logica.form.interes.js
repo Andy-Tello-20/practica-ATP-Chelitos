@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     // Inicializa Select2 en el select de los años
     $('#yearSelect').select2({
@@ -210,18 +209,5 @@ $(document).ready(function () {
     }
 
 
-    //! Previene el envío del formulario
-
-    $('form').on('submit', function (e) {
-        var select = $('#documentType')
-        if ( realizoFormacion.value =='no' && select.val().length === 0) {
-            alert('POR FAVOR, SELECCIONA AL MENOS UNA UBICACÍON ⚠.')
-            e.preventDefault()
-            select.focus()
-        }
-    });
-
-
-
-
 });
+

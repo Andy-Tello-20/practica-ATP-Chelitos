@@ -322,6 +322,7 @@ form .link {
 
 .inError {
     border: 1px solid #F06292;
+    background: #fdefef;
 
 
 }
@@ -739,6 +740,15 @@ form .link {
 
 /* ---Formulario de Interesado--- */
 
+.label-floating {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: left;
+}
+
+
 
 .hidden-formacion {
     display: none !important;
@@ -811,7 +821,7 @@ form .link {
     margin-bottom: 35px !important;
 }
 
-.back{
+.back {
     display: none;
     text-decoration: none;
     font-size: 1rem;
@@ -821,13 +831,13 @@ form .link {
 
 }
 
-.bi-class-back{
+.bi-class-back {
     display: flex;
     align-items: center;
     color: #000000;
     margin-right: 0.5rem;
     font-size: 1.3rem;
-  
+
 }
 
 .title-inscription .title-interest {
@@ -893,6 +903,9 @@ span#select2-Profesión-container {
     line-height: 50px;
 }
 
+span#select2-Profesión-i-container {
+    line-height: 56px;
+}
 
 
 textarea.select2-search__field {
@@ -966,7 +979,8 @@ span#select2-yearSelect-container {
 
 
 .address-title-datos,
-.address-title {
+.address-title,
+.address-title-inscription {
     margin-bottom: 5px;
     text-align: left;
     font-size: 1.5rem;
@@ -986,7 +1000,7 @@ span#select2-yearSelect-container {
 }
 
 
-.small-cancelar{
+.small-cancelar {
     color: #0d6efd !important;
     font-size: 1rem;
 }
@@ -1001,10 +1015,14 @@ span#select2-yearSelect-container {
 
 
 
-.first-question{
+.first-question {
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+.container-mw {
+    max-width: 100%;
 }
 
 .mt-5-height {
@@ -1032,13 +1050,17 @@ span#select2-yearSelect-container {
     margin-bottom: 0px !important;
 }
 
+.bi-class-Envelope {
+    color: #434343;
+    font-size: 1.3rem;
+}
 
 .mt-5-country {
     margin-top: 0px !important;
     padding: 0px;
 }
 
-.mt-5-place{
+.mt-5-place {
     margin-top: 20px !important;
 }
 
@@ -1071,11 +1093,21 @@ span#select2-Profesión-container {
 
 span.select2-selection.select2-selection--multiple {
     min-height: 56px;
-    
-   
+
+
 }
 
-span#select2-OtraProfesión-container{
+button.select2-selection__clear {
+    display: none;
+}
+
+span.select2-selection__arrow {
+    top: 15px !important;
+    right: 10px !important;
+}
+
+
+span#select2-OtraProfesión-container {
     line-height: 50px;
 }
 
@@ -1083,24 +1115,37 @@ span.select2-search.select2-search--inline {
     width: 100%;
 }
 
-.span-OProfesion, .span-profesion ,.span-year, .span-place, .span-fq{
+.span-OProfesion,
+.span-profesion,
+.span-profesion-i,
+.span-year,
+.span-place,
+.span-fq,
+.span-how {
     display: none;
     font-size: 1rem;
     color: #7d7d7d;
     background: #f8f8f8;
-   margin-bottom: 5px;
+    margin-bottom: 5px;
     transition: all 0.4s;
 }
 
-.show-span{
+.show-span {
     display: block;
-    
+
 }
 
 
 .select2-results__options {
     max-height: 100px;
     overflow-y: auto;
+}
+
+.submit-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
 }
 
 .button-send {
@@ -1118,6 +1163,13 @@ span.select2-search.select2-search--inline {
 
 
 /* ---Formulario de Inscripcion--- */
+
+
+.form-control-textTarea {
+    padding-top: 0.5rem !important;
+    min-height: 56px;
+    max-height: 80px;
+}
 
 .kit-tpa,
 .kit-tpa-send,
@@ -1166,9 +1218,30 @@ span.select2-search.select2-search--inline {
     margin-bottom: 30px;
 }
 
-.mt-4-another {
-    margin-bottom: 20px !important;
+
+.mb3-input {
+    margin-bottom: 0px !important;
 }
+
+.label-none {
+    display: none;
+}
+
+.span-how {
+    text-align: left;
+}
+
+.mt-4 {
+    margin-top: 0 !important;
+}
+
+.container-pr-pl-mr-ml {
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+    margin-right: 0;
+    margin-left: 0;
+}
+
 
 .other-address {
     text-align: left;
@@ -1403,10 +1476,11 @@ footer p {
         border-radius: 0px;
     }
 
-    
 
-    .address-1-container, .address-2-container {
-    
+
+    .address-1-container,
+    .address-2-container {
+
         gap: 0px;
     }
 
@@ -1423,16 +1497,16 @@ footer p {
         padding: 20px 20px;
     }
 
-    .button-send{
+    .button-send {
         width: 100%;
         height: 56px;
-    } 
+    }
 
-    .back{
+    .back {
         display: flex;
     }
 
-    .small-cancelar{
+    .small-cancelar {
         display: none;
     }
 

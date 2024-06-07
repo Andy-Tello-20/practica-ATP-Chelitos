@@ -21,7 +21,7 @@
 
 
         <div class="form-container-interest">
-            <form class="form-interest" action="">
+            <form id="miFormulario" class="form-interest" action="">
 
                 <a class="back" href=""><i class="bi bi-arrow-left bi-class-back
                     "></i>Volver</a>
@@ -39,7 +39,7 @@
                     tus datos personales.</p>
 
                 <div class="first-question">
-                    <div class="container mt-5 container-mt-5 mt-5-height">
+                    <div class="container mt-5 container-mt-5 mt-5-height container-mw">
                         <div class="mb-3 mb3-class form-floating">
 
                             <span class="span-fq">¿Realizó anteriormente La Formación
@@ -90,7 +90,7 @@
                     <div class="form-floating ">
 
                         <input type="text" class="form-control form-control-height" id="floatingInputNombre"
-                            placeholder="Nombre" autofocus required>
+                            placeholder="Nombre"  required>
                         <label class="label-height" for="floatingInputNombre">Nombre/s</label>
 
                     </div>
@@ -113,7 +113,7 @@
                         <div class="form-floating nro">
                             <input type="number" class="form-control form-control-height" id="floatingNro"
                                 placeholder="Nro" required>
-                            <label class="label-height" for="floatingNro">Nro de Documento</label>
+                            <label class="label-height label-floating" for="floatingNro">Nro de Documento</label>
                         </div>
                     </div>
 
@@ -127,9 +127,9 @@
                     <div class="form-floating form-control-height ">
                         <label class="visually-hidden label-height" for="autoSizingMailSymbol">Email</label>
                         <div class="input-group input-group-height">
-                            <div class="input-group-text">@</div>
+                            <div class="input-group-text"><i class="bi bi-envelope bi-class-Envelope"></i></div>
                             <input type="text" class="form-control" id="autoSizingMailSymbol"
-                                placeholder=" Ingrese un Email" required>
+                                placeholder="Email" required>
                         </div>
                     </div>
 
@@ -153,7 +153,7 @@
                             <div class="input-group input-group-phone input-group-height">
 
                                 <input type="number" class="form-control" id="autoSizingInputGroup1"
-                                    placeholder=" Ingrese un celular" required>
+                                    placeholder="Celular" required>
                             </div>
 
                             <small class="form-text text-muted small-class">Ingrese 10 dígitos sin el 0 y sin el
@@ -183,8 +183,8 @@
                         <div class="form-floating alternative phone number">
                             <div class="input-group input-group-phone input-group-height">
 
-                                <input type="number" class="form-control" id="autoSizingInputGroup2"
-                                    placeholder=" Ingrese un celular alternativo" required>
+                                <input type="number" class="form-control " id="autoSizingInputGroup2"
+                                    placeholder="Celular alternativo" required>
                             </div>
 
                             <small class="form-text text-muted small-class">Ingrese 10 dígitos sin el 0 y sin el
@@ -200,7 +200,9 @@
 
 
                 <div class="container mt-5 container-mt-5">
+
                     <span class="address-title">Profesiones</span>
+
                     <div class="mb-3 mb3-class-profession">
                         <span class="span-profesion">Profesión</span>
                         <select id="Profesión" class="form-select" required>
@@ -235,8 +237,12 @@
 
 
 
-                <div class="container mt-5 container-mt-5 mt-5-place">
-                    <div class="mb-3 mb3-class-where">
+
+
+
+
+                <div class="container mt-5 container-mt-5 mt-5-place ">
+                    <div class="mb-3 mb3-class-where ">
 
                         <span class="span-place">Donde te gustaría realizar la Fase presencial de la Formación
                             TPA®?*</span>
@@ -253,9 +259,10 @@
 
                 <div class="submit-button">
                     <input type="submit" role="button" class="button-send" value="Enviar">
+                    <small class="form-text text-muted small-cancelar"><a href="">Cancelar</a></small>
 
                 </div>
-                <small class="form-text text-muted small-cancelar"><a href="">Cancelar</a></small>
+                
 
 
             </form>
