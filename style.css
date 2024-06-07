@@ -1210,7 +1210,7 @@ span.select2-search.select2-search--inline {
     margin-bottom: 2rem;
 }
 
-.form-check-text-otro{
+.form-check-text-otro {
     text-align: left;
 }
 
@@ -1254,11 +1254,11 @@ span.select2-search.select2-search--inline {
     flex-direction: column;
 }
 
-.instituto-On{
+.instituto-On {
     display: block;
 }
 
-.otherAddress-on{
+.otherAddress-on {
     display: flex !important;
 }
 
@@ -1269,6 +1269,48 @@ span.select2-search.select2-search--inline {
 .mb-3-inscription {
     margin-bottom: 40px !important;
 }
+
+
+
+
+/* ----COMPLETED FORM ---- */
+
+
+.a-completed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('img/caratula-fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.section-info {
+    display: flex;
+    height: 550px;
+    background: #ffff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 70%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.section-info h1 {
+    color: #565656
+}
+
+.bi-class-okay {
+    color: #4caf50;
+    /* color: #da5a5a; */
+    font-size: 11rem;
+    margin-bottom: 4rem;
+}
+
 
 
 /* ---Footer--- */
@@ -1533,6 +1575,19 @@ footer p {
         transform: none;
     }
 
+
+
+    /* ---------------------------------- */
+
+    .section-info{
+        border-radius: 0px;
+        height: 100%;
+        max-width: 100%;
+    }
+
+    .bi-class-okay {
+        font-size: 8rem !important;
+    }
 }
 
 
@@ -1585,6 +1640,9 @@ footer p {
         grid-template-columns: repeat(auto-fit, minmax(80%, 1fr));
     }
 
-
+    /* ---------------------------------- */
+    .bi-class-okay {
+        font-size: 7rem !important;
+    }
 
 }
