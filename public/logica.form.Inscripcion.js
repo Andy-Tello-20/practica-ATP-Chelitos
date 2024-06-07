@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const radioButtons = document.querySelectorAll('input[name="options"]')
     const institutionInfo = document.querySelector('.Institution-info')
-    const otherAddress = document.querySelector('.other-address')
+    const otherAddress = document.querySelector('.form-check-text-otro')
 
     institutionInfo.style.display = 'none'
     otherAddress.style.display = 'none'
