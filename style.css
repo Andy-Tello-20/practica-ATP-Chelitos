@@ -1210,6 +1210,10 @@ span.select2-search.select2-search--inline {
     margin-bottom: 2rem;
 }
 
+.form-check-text-otro{
+    text-align: left;
+}
+
 .Institution-info {
     text-align: left;
     border-radius: 5px;
@@ -1245,12 +1249,12 @@ span.select2-search.select2-search--inline {
 
 .other-address {
     text-align: left;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
 }
 
 .span-alter-address {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 
 .mb-3-inscription {
