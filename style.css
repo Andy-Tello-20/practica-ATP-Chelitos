@@ -1304,12 +1304,18 @@ span.select2-search.select2-search--inline {
     color: #565656
 }
 
+.section-info >*{
+    margin-bottom: 2rem;
+}
+
 .bi-class-okay {
     color: #4caf50;
     /* color: #da5a5a; */
     font-size: 10rem;
-    margin-bottom: 4rem;
+    margin-bottom: 4rem !important;
 }
+
+
 
 
 
@@ -1588,6 +1594,10 @@ footer p {
     .bi-class-okay {
         font-size: 8rem !important;
     }
+
+    .smCompleted{
+        width: 100%;
+        }
 }
 
 
@@ -1644,5 +1654,7 @@ footer p {
     .bi-class-okay {
         font-size: 7rem !important;
     }
+
+    
 
 }
