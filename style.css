@@ -1301,7 +1301,8 @@ span.select2-search.select2-search--inline {
 }
 
 .section-info h1 {
-    color: #565656
+    color: #313131;
+    font-weight: 700;
 }
 
 .section-info >*{
