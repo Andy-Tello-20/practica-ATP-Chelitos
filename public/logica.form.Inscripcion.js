@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const radioButtons = document.querySelectorAll('input[name="options"]')
     const institutionInfo = document.querySelector('.Institution-info')
-    const otherAddress = document.querySelector('.form-check-text-otro')
+    const otherAddress = document.querySelector('.other-address')
 
     institutionInfo.style.display = 'none'
     otherAddress.style.display = 'none'
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (selectedValue === 'option2') {
             institutionInfo.style.display = 'block'
         } else if (selectedValue === 'option3') {
-            otherAddress.style.display = 'block'
+            otherAddress.style.display = 'flex'
         }
 
     }

@@ -1215,6 +1215,7 @@ span.select2-search.select2-search--inline {
 }
 
 .Institution-info {
+    display: none;
     text-align: left;
     border-radius: 5px;
     padding: 0.5rem;
@@ -1249,8 +1250,16 @@ span.select2-search.select2-search--inline {
 
 .other-address {
     text-align: left;
-    display: flex !important;
+    display: none;
     flex-direction: column;
+}
+
+.instituto-On{
+    display: block;
+}
+
+.otherAddress-on{
+    display: flex !important;
 }
 
 .span-alter-address {
