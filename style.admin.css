@@ -1,0 +1,270 @@
+.cont-principal {
+    background: #F9F9F9;
+    min-height: 100vh;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 200px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 45px 1fr 1fr 1fr;
+    grid-template-areas:
+        "menu header header header header"
+        "menu main main main main"
+        "menu main main main main"
+        "menu main main main main"
+
+
+}
+
+.menu {
+    background: #2A384D;
+    grid-area: menu;
+
+}
+
+.header {
+    grid-area: header;
+    border: solid 1px #E0E0E0;
+    display: flex;
+}
+
+.main {
+
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30% 10% 30% 30%;
+    grid-template-areas:
+        "filterB filterB filterB filterB filterB"
+        "searcher searcher searcher searcher searcher"
+        "table table table table table"
+        "table table table table table"
+}
+
+
+
+.filter-buttons {
+    width: 100%;
+    grid-area: filterB;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.todos ,.habilitados ,.inactivos ,.interesados{
+    width: 25%;
+    height: 124px;
+    background: #fff;
+    
+}
+
+
+.search {
+    
+    display: flex;
+    grid-area: searcher;
+}
+
+
+.table-container {
+    overflow-y: scroll;
+    grid-area: table;
+    border-collapse: collapse;
+
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+.material-icons{
+    font-size: 27px !important;
+    color: #7A7777 !important;
+}
+
+.btn{
+    padding: 0px;
+}
+
+ /* Estilos personalizados para el tooltip */
+ .custom-tooltip .tooltip-inner {
+    background-color: #7A7777; /* Cambiar color de fondo del tooltip */
+    color: #ffffff; /* Cambiar color del texto del tooltip */
+}
+
+/* Estilos para el tooltip flecha */
+.tooltip-arrow {
+    border-top-color: #7A7777 !important; /* Cambiar color de la flecha del tooltip */
+}
+
+
+.span-activo,
+.span-vencido,
+.span-porVencer,
+.span-interesado,
+.span-rechazado,
+.span-bloqueado{
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+    height: 38px;
+    width: 103px;
+}
+
+.span-activo {
+    background: rgba(128, 171, 94, 0.7);
+}
+
+.span-vencido {
+    background: rgba(189, 189, 189, 0.7);
+}
+
+.span-porVencer {
+    background: rgba(224, 151, 83, 0.7);
+}
+
+.span-interesado {
+    background: rgba(234, 215, 50, 0.7);
+}
+
+.span-rechazado {
+    background: rgba(201, 57, 57, 0.7);
+}
+
+.span-bloqueado {
+    background: rgba(127, 84, 218, 0.7);
+}
+
+
+.data-tr td{
+    font-size: 16px;
+    background: transparent;
+    line-height: 2.2;
+
+}
+
+.data-tr{
+    
+    transition: background-color 0.3s ease;
+}
+
+.data-tr:hover {
+    background-color: #EEEEEE;
+    cursor: pointer;
+}
+
+th{
+    font-weight: 500;
+}
+
+th,
+td {
+
+    padding: 8px;
+    text-align: left;
+}
+
+.titulo1,
+.titulo2,
+.titulo3,
+.titulo4,
+.titulo5,
+.titulo6 {
+    display: none;
+}
+
+.btn-dif {
+    display: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+i {
+    font-size: 1.4rem;
+    border-radius: 3px;
+    color: #ff1a1a;
+    padding: 3px;
+    background: #e4e4e4;
+
+}
+
+.thick-eye-slash {
+    stroke-width: 3px;
+    /* Grosor deseado */
+}
+
+
+.show{
+    opacity: 100% !important;
+}
+
+@media screen and (max-width: 700px) {
+
+    .menu {
+        display: none;
+    }
+
+    .cont-principal {
+        grid-template-columns: 15% 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 45px;
+        grid-template-areas:
+
+            "main main main main main"
+            "main main main main main"
+            "main main main main main"
+            "header header header header header"
+
+
+    }
+
+    .td-web-mail,
+    .td-web-cel,
+    .td-web-status,
+    .th-email,
+    .th-cel,
+    .th-status,
+    .acciones {
+        display: none;
+    }
+
+    .search {
+        flex-direction: column;
+    }
+
+    .dropdown-menu.p-3 {
+        width: 100%;
+    }
+
+    .drop-hidden-data>* {
+        margin-bottom: 20px;
+    }
+
+    .cont-drop-status,
+    .cont-drop-cel,
+    .cont-drop-mail {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .ver-mas {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0px ;
+    }
+
+    .btn-vMas {
+        background: #ced3dd;
+        width: 100%;
+        font-weight: 700;
+        
+    }
+
+}
