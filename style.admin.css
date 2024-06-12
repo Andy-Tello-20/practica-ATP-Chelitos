@@ -71,10 +71,10 @@
 
 }
 
-.table {
+/* .table {
     width: 100%;
     margin-bottom: 0px;
-}
+} */
 
 .material-icons{
     font-size: 27px !important;
@@ -268,3 +268,4 @@ i {
     }
 
 }
+
