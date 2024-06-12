@@ -73,7 +73,7 @@
 
 /* .table {
     width: 100%;
-    margin-bottom: 0px;
+  
 } */
 
 .material-icons{
@@ -212,7 +212,7 @@ i {
     }
 
     .cont-principal {
-        grid-template-columns: 15% 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 45px;
         grid-template-areas:
 
@@ -224,16 +224,7 @@ i {
 
     }
 
-    .td-web-mail,
-    .td-web-cel,
-    .td-web-status,
-    .th-email,
-    .th-cel,
-    .th-status,
-    .acciones {
-        display: none;
-    }
-
+   
     .search {
         flex-direction: column;
     }
