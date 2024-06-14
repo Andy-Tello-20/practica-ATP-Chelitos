@@ -1,11 +1,3 @@
-let table = new DataTable('#tpaTable', {
-    responsive: true
-})
-
-
-
-//LOGICA DEL MODAL 
-
 //!   Logica botones 
 document.addEventListener('DOMContentLoaded', function () {
     const botones = document.querySelectorAll('.btn-modal-pages');

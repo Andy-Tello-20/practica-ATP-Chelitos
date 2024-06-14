@@ -1,6 +1,6 @@
 .cont-principal {
     background: #F9F9F9;
-    min-height: 100vh;
+    height: 100vh;
     display: grid;
     gap: 15px;
     grid-template-columns: 200px 1fr 1fr 1fr 1fr;
@@ -49,22 +49,28 @@
     align-items: center;
 }
 
-.todos ,.habilitados ,.inactivos ,.interesados{
+.todos,
+.habilitados,
+.inactivos,
+.interesados {
     width: 25%;
     height: 124px;
     background: #fff;
-    
+
 }
 
 
+
+
 .search {
-    
+
     display: flex;
     grid-area: searcher;
 }
 
 
 .table-container {
+    overflow: hidden;
     overflow-y: scroll;
     grid-area: table;
     border-collapse: collapse;
@@ -76,24 +82,27 @@
   
 } */
 
-.material-icons{
+.material-icons {
     font-size: 27px !important;
     color: #7A7777 !important;
 }
 
-.btn{
+.btn {
     padding: 0px;
 }
 
- /* Estilos personalizados para el tooltip */
- .custom-tooltip .tooltip-inner {
-    background-color: #7A7777; /* Cambiar color de fondo del tooltip */
-    color: #ffffff; /* Cambiar color del texto del tooltip */
+/* Estilos personalizados para el tooltip */
+.custom-tooltip .tooltip-inner {
+    background-color: #7A7777;
+    /* Cambiar color de fondo del tooltip */
+    color: #ffffff;
+    /* Cambiar color del texto del tooltip */
 }
 
 /* Estilos para el tooltip flecha */
 .tooltip-arrow {
-    border-top-color: #7A7777 !important; /* Cambiar color de la flecha del tooltip */
+    border-top-color: #7A7777 !important;
+    /* Cambiar color de la flecha del tooltip */
 }
 
 
@@ -102,7 +111,7 @@
 .span-porVencer,
 .span-interesado,
 .span-rechazado,
-.span-bloqueado{
+.span-bloqueado {
     font-size: 16px;
     font-weight: 500;
     color: #FFFFFF;
@@ -140,15 +149,15 @@
 }
 
 
-.data-tr td{
+.data-tr td {
     font-size: 16px;
     background: transparent;
     line-height: 2.2;
 
 }
 
-.data-tr{
-    
+.data-tr {
+
     transition: background-color 0.3s ease;
 }
 
@@ -157,7 +166,7 @@
     cursor: pointer;
 }
 
-th{
+th {
     font-weight: 500;
 }
 
@@ -166,6 +175,15 @@ td {
 
     padding: 8px;
     text-align: left;
+}
+
+td.child {
+    background: #EEEEEE !important;
+}
+
+li {
+    display: flex;
+    align-items: center;
 }
 
 .titulo1,
@@ -200,10 +218,10 @@ i {
     /* Grosor deseado */
 }
 
-
-.show{
+/* 
+.show {
     opacity: 100% !important;
-}
+} */
 
 @media screen and (max-width: 700px) {
 
@@ -224,7 +242,7 @@ i {
 
     }
 
-   
+
     .search {
         flex-direction: column;
     }
@@ -248,15 +266,300 @@ i {
     .ver-mas {
         display: flex;
         justify-content: center;
-        margin-bottom: 0px ;
+        margin-bottom: 0px;
     }
 
     .btn-vMas {
         background: #ced3dd;
         width: 100%;
         font-weight: 700;
-        
+
     }
 
 }
 
+
+/* ----ESTILOS DEL MODAL----  */
+
+
+.show{
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.class-hidden-none{
+    display: none;
+}
+
+/* 
+----- evento de los 4 botones verticales----- */
+
+.btn-modal-pages{
+    cursor: pointer;
+    height: 25%;
+    background: #2A384D;
+    border: solid 1px #728DB5;
+    padding: 0px !important;
+    transition: 0.2s;
+} 
+
+
+.btn-modal-pages:hover{
+    background: #3E4958;
+}
+
+.btn-active {
+    background: #435B7D;
+    /* Color de fondo del botón activo */
+}
+
+.btn-active:hover{
+    background: #435B7D;
+}
+
+.content {
+    display: none;
+    /* Todos los divs de contenido están ocultos por defecto */
+}
+
+.content.active {
+    display: flex;
+    /* Solo el div de contenido activo se mostrará */
+}
+
+
+
+
+
+/* 
+----- evento de los 4 botones verticales----- */
+
+
+
+
+
+
+
+.btn-close-class{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.contentWidht{
+    height: 640px;
+    width: 556px;
+}
+
+.mbody-class{
+    display: flex;
+    height: 100%;
+    padding: 0px;
+    align-items: center;
+}
+
+.btn-modal{
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    width: 81px
+    
+}
+
+
+.dto-contacto{
+    flex-direction: column;
+    width: 475px;
+    height: 100%;
+    align-items: center;
+  
+
+}
+
+.user-dto{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    width: 100%;
+    padding: 12px 54px 12px 48px;
+}
+
+.dto-title-1,
+.dto-title-2,
+.dto-title-3,
+.dto-title-4{
+    margin-bottom: 0px !important;
+    font-weight: 700;
+}
+
+.btn-edit{
+    border: none;
+    background: none;
+    position: absolute;
+    right: 15px;
+    top: 100px;
+}
+
+.bt-2{
+    top: 184px;
+}
+
+.header-dto{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+ 
+    padding: 12px 54px 12px 48px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.header-title{
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  
+}
+
+hr.under-header {
+    margin: 10px 0 !important;
+}
+
+.under-header{
+    border: solid 1px gray;
+    width: 80%;
+    opacity: 100%;
+}
+
+.user-profile{
+    display: flex;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+
+}
+
+.user-contact{
+    display: flex;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 500;
+   
+}
+
+.input-width{
+    width: 40%
+}
+
+input.editable-input-1.form-control,
+input.editable-input-2.form-control {
+    min-height: 50px !important;
+    padding: 0 12px 0 12px !important;
+    height: 44px !important;
+    line-height: 1 !important;
+    overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sc-buttons-1,
+.sc-buttons-2,
+.sc-buttons-3,
+.sc-buttons-4{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 36px;
+}
+
+.btn-cancel, .btn-save{
+       border: none;
+       width: 111px;
+       height: 34px;
+       border-radius: 7px;
+}
+
+.btn-cancel{
+    background: #D9D7D7;
+}
+
+.btn-save{
+    background:rgb(13, 161, 108, 70%)
+    
+}
+
+
+.active-label-1,
+.active-label-2,
+.active-label-3,
+.active-label-4{
+    padding: 3px 0 0 12px !important;
+    font-size: 16px;
+    height: 55% !important;
+    font-weight: 400;
+}
+
+.al-2{
+    height: 30% !important;
+}
+
+
+
+.close-button-container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.udto-2{
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+.member-code{
+    border: solid 1px #B3B3B3;
+    display: flex;
+    width: 260px;
+    flex-direction: column;
+    height: 75px;
+    border-radius: 8px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.member-title{
+    font-weight: 700;
+}
+
+.dates{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.start-date,
+.expiration-date{
+    padding: 7px 16px;
+    font-weight: 700;
+    margin-bottom: 0px !important;
+}
+
+.dates-1, .dates-2{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.dates-1{
+    margin-bottom: 1rem;
+}
+
+.start-number,
+.expiration-number{
+    padding: 7px 30px;
+}
