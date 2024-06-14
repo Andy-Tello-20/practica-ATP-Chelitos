@@ -82,9 +82,20 @@
   
 } */
 
-.material-icons {
+.mI-table{
     font-size: 27px !important;
-    color: #7A7777 !important;
+    color: #7A7777 !important; 
+}
+
+.mI-modal-buttons{
+    font-size: 40px !important;
+    color: #ffff;
+    transition: transform 0.3s
+}
+
+.mI-modal-buttons:hover{
+    transform: scale(1.2);
+    
 }
 
 .btn {
@@ -289,7 +300,7 @@ i {
 }
 
 .class-hidden-none{
-    display: none;
+    display: none !important;
 }
 
 /* 
@@ -299,7 +310,7 @@ i {
     cursor: pointer;
     height: 25%;
     background: #2A384D;
-    border: solid 1px #728DB5;
+    border-bottom: solid 1px #728DB5;
     padding: 0px !important;
     transition: 0.2s;
 } 
@@ -400,6 +411,8 @@ i {
     top: 100px;
 }
 
+
+
 .bt-2{
     top: 184px;
 }
@@ -433,6 +446,13 @@ hr.under-header {
     opacity: 100%;
 }
 
+.hr-dto-date{
+    margin-top: 0px;
+    width: 80%;
+    color: #5a5a5a;
+    opacity: 100%;
+}
+
 .user-profile{
     display: flex;
     gap: 8px;
@@ -444,18 +464,37 @@ hr.under-header {
 
 .user-contact{
     display: flex;
-    gap: 8px;
+    gap: 15px;
     font-size: 18px;
     font-weight: 500;
    
 }
 
-.input-width{
+.input-width-1{
+    display: flex;
     width: 40%
+}
+
+.input-width-2{
+    display: flex;
+    align-items: center;
+}
+
+.mI-2{
+    margin-right: 8px;
+}
+
+.mI-Edit{
+    transition: filter 0.2s;
+}
+
+.mI-Edit:hover{
+    filter: drop-shadow(2px 4px 6px rgb(0, 0, 0)); 
 }
 
 input.editable-input-1.form-control,
 input.editable-input-2.form-control {
+    border: none;
     min-height: 50px !important;
     padding: 0 12px 0 12px !important;
     height: 44px !important;

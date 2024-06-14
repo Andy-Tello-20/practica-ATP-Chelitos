@@ -8,38 +8,38 @@ let table = new DataTable('#tpaTable', {
 
 //!   Logica botones 
 document.addEventListener('DOMContentLoaded', function () {
-    const botones = document.querySelectorAll('.btn-modal-pages');
-    const contenidos = document.querySelectorAll('.content');
+    const botones = document.querySelectorAll('.btn-modal-pages')
+    const contenidos = document.querySelectorAll('.content')
 
     botones.forEach(boton => {
         boton.addEventListener('click', function () {
-            const dataContent = boton.getAttribute('data-content');
-            actualizarContenido(dataContent);
-            actualizarBotonActivo(boton); // Asegúrate de llamar a la función aquí
+            const dataContent = boton.getAttribute('data-content')
+            actualizarContenido(dataContent)
+            actualizarBotonActivo(boton)
         });
     });
 
     function actualizarContenido(dataContent) {
-        // Ocultar todos los contenidos
+
         contenidos.forEach(contenido => {
-            contenido.classList.remove('active');
+            contenido.classList.remove('active')
         });
 
-        // Mostrar el contenido seleccionado
-        const contenidoSeleccionado = document.getElementById(`content-${dataContent}`);
+
+        const contenidoSeleccionado = document.getElementById(`content-${dataContent}`)
         if (contenidoSeleccionado) {
-            contenidoSeleccionado.classList.add('active');
+            contenidoSeleccionado.classList.add('active')
         }
     }
 
     function actualizarBotonActivo(botonActivo) {
-        // Remover la clase activa de todos los botones
-        botones.forEach(boton => {
-            boton.classList.remove('btn-active');
-        });
 
-        // Añadir la clase activa al botón seleccionado
-        botonActivo.classList.add('btn-active');
+        botones.forEach(boton => {
+            boton.classList.remove('btn-active')
+        })
+
+
+        botonActivo.classList.add('btn-active')
     }
 });
 
@@ -53,85 +53,99 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let originalValues = {};
 
-// Agregar event listeners a cada botón de editar
+
 document.querySelectorAll('.btn-edit').forEach(button => {
     button.addEventListener('click', function () {
-        const suffix = this.getAttribute('data-button');
+        const suffix = this.getAttribute('data-button')
 
-        // Obtener todos los elementos con la clase 'editable'
-        const editableElements = document.querySelectorAll(`.editable-${suffix}`);
-        let pTitle = document.querySelectorAll(`.dto-title-${suffix}`);
-        let labels = document.querySelectorAll(`.active-label-${suffix}`);
 
-        // Iterar sobre cada elemento para agregar la clase "class-hidden-none"
+        const editableElements = document.querySelectorAll(`.editable-${suffix}`)
+        let pTitle = document.querySelectorAll(`.dto-title-${suffix}`)
+        let labels = document.querySelectorAll(`.active-label-${suffix}`)
+        let mIcons = document.querySelectorAll(`.mIcons-${suffix}`)
+
+
+        mIcons.forEach(i => {
+            i.classList.add('class-hidden-none')
+        })
+
         pTitle.forEach(element => {
-            element.classList.add('class-hidden-none');
-        });
+            element.classList.add('class-hidden-none')
+        })
 
         labels.forEach(l => {
-            l.classList.remove('class-hidden-none');
-        });
+            l.classList.remove('class-hidden-none')
+        })
 
-        // Guardar los valores originales en un objeto
-        originalValues[suffix] = {};
+
+        originalValues[suffix] = {}
         editableElements.forEach(element => {
-            originalValues[suffix][element.id] = element.textContent;
+            originalValues[suffix][element.id] = element.textContent
 
-            const input = document.createElement('input');
-            input.type = 'text';
-            input.value = element.textContent;
-            input.className = `editable-input-${suffix} form-control`; // Agregar la clase 'form-control'
-            input.setAttribute('data-id', element.id); // Guardar el id en el input
+            const input = document.createElement('input')
+            input.type = 'text'
+            input.value = element.textContent
+            input.className = `editable-input-${suffix} form-control`
+            input.setAttribute('data-id', element.id)
 
-            // Reemplazar el span con el input
+
             element.replaceWith(input);
         });
 
-        // Mostrar los botones de guardar y cancelar
-        document.querySelector(`.sc-buttons-${suffix}`).style.display = 'flex';
 
-        // Deshabilitar el botón de editar
-        button.disabled = true;
+        document.querySelector(`.sc-buttons-${suffix}`).style.display = 'flex'
+
+
+        button.disabled = true
     });
 });
 
 
 document.querySelectorAll('.btn-save').forEach(button => {
-    button.addEventListener('click', function (){
+    button.addEventListener('click', function () {
 
 
-        const suffix = this.getAttribute('data-save');
+        const suffix = this.getAttribute('data-save')
 
         console.log('suffix es: ', suffix)
 
-        let pTitle = document.querySelectorAll(`.dto-title-${suffix}`);
-        let labels = document.querySelectorAll(`.active-label-${suffix}`);
-        
+        let pTitle = document.querySelectorAll(`.dto-title-${suffix}`)
+        let labels = document.querySelectorAll(`.active-label-${suffix}`)
+        let mIcons = document.querySelectorAll(`.mIcons-${suffix}`)
         // Restaurar los campos a elementos span
-        const inputs = document.querySelectorAll(`.editable-input-${suffix}`);
+        const inputs = document.querySelectorAll(`.editable-input-${suffix}`)
         inputs.forEach(input => {
-            const span = document.createElement('span');
-            span.className = `editable-${suffix}`;
-            span.textContent = input.value;
-            span.id = input.getAttribute('data-id'); // Recuperar el id del input
-    
-            // Reemplazar el input con el span
-            input.replaceWith(span);
+            const span = document.createElement('span')
+            span.className = `editable-${suffix}`
+            span.textContent = input.value
+            span.id = input.getAttribute('data-id')
+
+
+            input.replaceWith(span)
         });
-    
-    
+
+
+
+
+
+
+        mIcons.forEach(i => {
+            i.classList.remove('class-hidden-none')
+        })
+
+
         pTitle.forEach(element => {
-            element.classList.remove('class-hidden-none');
+            element.classList.remove('class-hidden-none')
         });
-    
+
         labels.forEach(l => {
-            l.classList.add('class-hidden-none');
+            l.classList.add('class-hidden-none')
         });
-    
-        // Ocultar los botones de guardar y cancelar
-        document.querySelector(`.sc-buttons-${suffix}`).style.display = 'none';
-    
-        // Habilitar el botón de editar
+
+
+        document.querySelector(`.sc-buttons-${suffix}`).style.display = 'none'
+
+
         document.getElementById(`editButton-${suffix}`).disabled = false;
 
     })
@@ -139,45 +153,52 @@ document.querySelectorAll('.btn-save').forEach(button => {
 
 
 document.querySelectorAll('.btn-cancel').forEach(button => {
-    button.addEventListener('click', function (){
+    button.addEventListener('click', function () {
 
-    const suffix = this.getAttribute('data-cancel');
+        const suffix = this.getAttribute('data-cancel')
 
-    let pTitle = document.querySelectorAll(`.dto-title-${suffix}`);
-    let labels = document.querySelectorAll(`.active-label-${suffix}`);
+        let pTitle = document.querySelectorAll(`.dto-title-${suffix}`)
+        let labels = document.querySelectorAll(`.active-label-${suffix}`)
+        let mIcons = document.querySelectorAll(`.mIcons-${suffix}`)
 
-    // Restaurar los campos a elementos span usando los valores originales
-    const inputs = document.querySelectorAll(`.editable-input-${suffix}`);
-    inputs.forEach(input => {
-        const span = document.createElement('span');
-        span.className = `editable-${suffix}`;
-        span.textContent = originalValues[suffix][input.getAttribute('data-id')]; // Recuperar el valor original
-        span.id = input.getAttribute('data-id'); // Recuperar el id del input
+        const inputs = document.querySelectorAll(`.editable-input-${suffix}`)
+        inputs.forEach(input => {
+            const span = document.createElement('span')
+            span.className = `editable-${suffix}`
+            span.textContent = originalValues[suffix][input.getAttribute('data-id')]
+            span.id = input.getAttribute('data-id')
 
-        // Reemplazar el input con el span
-        input.replaceWith(span);
+
+            input.replaceWith(span)
+        });
+
+
+
+
+
+
+        mIcons.forEach(i => {
+            i.classList.remove('class-hidden-none')
+        })
+
+        pTitle.forEach(element => {
+            element.classList.remove('class-hidden-none')
+        })
+
+        labels.forEach(l => {
+            l.classList.add('class-hidden-none')
+        })
+
+
+        document.querySelector(`.sc-buttons-${suffix}`).style.display = 'none'
+
+
+        document.getElementById(`editButton-${suffix}`).disabled = false
+
+
     });
 
-
-
-    pTitle.forEach(element => {
-        element.classList.remove('class-hidden-none');
-    });
-
-    labels.forEach(l => {
-        l.classList.add('class-hidden-none');
-    });
-
-    // Ocultar los botones de guardar y cancelar
-    document.querySelector(`.sc-buttons-${suffix}`).style.display = 'none';
-
-    // Habilitar el botón de editar
-    document.getElementById(`editButton-${suffix}`).disabled = false;
-
-    
-});
-
-    })
+})
 
 
 
