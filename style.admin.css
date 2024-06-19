@@ -225,6 +225,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end;
+    transition: height 0.5s ease-in-out;
 
 }
 
@@ -258,6 +259,7 @@
     padding: 0px 20px;
     border: solid 1px #dadada;
     border-radius: 8px;
+    
 }
 
 .aSearch-container input{
@@ -295,7 +297,7 @@
     overflow-y: scroll;
     margin: 0px 10px 5px 0px;
     border-collapse: collapse;
-
+    transition: height 0.5s ease-in-out;
 }
 
 
@@ -528,6 +530,8 @@ i {
 .class-hidden-none{
     display: none !important;
 }
+
+
 
 .table-subClass{
     height: 60vh;
