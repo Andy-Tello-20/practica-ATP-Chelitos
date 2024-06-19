@@ -435,6 +435,29 @@ i {
     padding: 12px 54px 12px 48px;
 }
 
+
+.user-dto::-webkit-scrollbar {
+    width: 10px; /* Ancho del scrollbar */
+    
+}
+
+/* Para cambiar el color de la barra deslizante */
+.user-dto::-webkit-scrollbar-thumb {
+    background-color: #2A384D; /* Color de la barra deslizante */
+}
+
+/* Para cambiar el color cuando se pasa el mouse por encima del scrollbar */
+.user-dto::-webkit-scrollbar-thumb:hover {
+    background-color: #3E4958; /* Color cuando se pasa el mouse por encima */
+}
+
+.user-dto::-webkit-scrollbar-thumb {
+
+    border-radius: 10px; /* Redondear los bordes */
+}
+
+
+
 .dto-title-1,
 .dto-title-2,
 .dto-title-3,
@@ -462,7 +485,6 @@ i {
     width: 100%;
     display: flex;
     justify-content: space-around;
- 
     padding: 12px 54px 12px 48px;
     width: 100%;
     flex-direction: column;
