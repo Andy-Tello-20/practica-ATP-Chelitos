@@ -258,3 +258,26 @@ document.querySelectorAll('.btn-cancel').forEach(button => {
 });
 
 
+document.getElementById('toggleSearch').addEventListener('click', function() {
+    
+    let btnS = document.getElementById('searchContainer')
+    let tableContainer = document.getElementsByClassName('table-container')[0]
+    let search = document.getElementsByClassName('search')[0]
+    let arrow = document.getElementsByClassName('mI-arrow')[0]
+
+    if (btnS.classList.contains('class-hidden-none')) {
+
+
+        btnS.classList.remove('class-hidden-none')
+        tableContainer.classList.remove('table-subClass')
+        search.classList.remove('search-subClass')
+        arrow.classList.remove('arrow-subClass')
+
+    } else {
+        
+        btnS.classList.add('class-hidden-none')
+        tableContainer.classList.add('table-subClass')
+        search.classList.add('search-subClass')
+        arrow.classList.add('arrow-subClass')
+    }
+})

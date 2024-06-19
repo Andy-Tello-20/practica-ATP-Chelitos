@@ -34,19 +34,34 @@
   <div class="cont-principal">
 
     <div class="menu">
+
+      <img class="menu-logo" src="../img/logo colores originales SIN BAJADA.png" alt="logo">
+      <hr class="hr-menu">
       <ul class="menu-list">
-        <li><a href="#">Gestion de Miembros</a></li>
-        <li><a href="#">Profesiones</a></li>
+
+        <li class="li-menu">
+          <a class="a-management" href="#"><span class="material-symbols-outlined">dashboard_customize</span>
+            <p class="p-management">Gestion de Miembros</p>
+          </a>
+        </li>
+
+        <li class="li-menu">
+          <a class="a-profession" href="#"><span class="material-symbols-outlined">business_center</span>
+            <p class="p-profession">Profesiones</p>
+          </a>
+        </li>
+
       </ul>
     </div>
 
     <div class="cont-secundario">
       <header class="header">
-        <p>TPA Sitio de Administración</p>
+        <p class="header-title">TPA Sitio de Administración</p>
         <nav class="nav" id="nav">
-          <div class="admin-user">
-            <p>Nombre</p>
-          </div>
+
+          <span class="material-symbols-outlined mI-User">account_circle</span>
+          <p>Silvina Lambertini</p>
+
         </nav>
       </header>
 
@@ -88,17 +103,37 @@
         </div>
 
         <div class="search">
-          <div class="search-container">
-            <input type="text" id="search-input" placeholder="Buscar...">
+          <div class="btn-Asearch" id="toggleSearch">
+            <span>Busqueda Avanzada</span>
+            <span class="material-symbols-outlined mI-arrow">keyboard_double_arrow_down</span>
           </div>
-          <div class="filter-container">
-            <select id="category-filter">
-              <option value="">Todas las categorías</option>
-              <option value="categoria1">Categoría 1</option>
-              <option value="categoria2">Categoría 2</option>
-              <option value="categoria3">Categoría 3</option>
-            </select>
-          </div>
+
+          <div class="container aSearch-container" id="searchContainer">
+
+            <div class="form-floating ">
+                <input id="aSName" type="text" class="form-control input-height" placeholder="Nombre">
+                <label class="label-fButtons" for="aSName">Nombre</label>
+            </div>
+        
+            <div class="form-floating ">
+                <input id="aSLname" type="text" class="form-control input-height" placeholder="Apellido">
+                <label class="label-fButtons" for="aSLname">Apellido</label>
+            </div>
+        
+            <div class="form-floating ">
+                <input id="aSDocument" type="text" class="form-control input-height" placeholder="Nro Documento">
+                <label class="label-fButtons" for="aSDocument">Nro Documento</label>
+            </div>
+        
+            <div class="form-floating ">
+                <input id="aSEmail" type="email" class="form-control input-height" placeholder="Email">
+                <label class="label-fButtons" for="aSEmail">Email</label>
+            </div>
+
+            <button class="btn-Asearch2"><span>Buscar</span></button>
+
+        </div>
+
         </div>
 
         <div class="table-container">
@@ -597,7 +632,7 @@
 
                           <span id="userLastName" class="editable-1">Diaz</span>
 
-                          <label class="active-label-1 class-hidden-none" for="userLastNam">Apellido/s:</label>
+                          <label class="active-label-1 class-hidden-none" for="userLastName">Apellido/s:</label>
                         </div>
                       </div>
 
@@ -796,66 +831,66 @@
 
 
 
-                          <div class="form-floating">
+                      <div class="form-floating">
 
-                            <p class="dto-title-2">Dirección</p>
-                            <span id="UserAddress" class="editable-2"> Av. Corrientes 1234</span>
-                            <label class="active-label-2 class-hidden-none al-2" for="UserAddress">Direccion</label>
-                            <hr class="hr-dto">
-    
-                          </div>
-    
-                          <div class="form-floating">
-    
-                            <p class="dto-title-2">Código Postal</p>
-                            <span id="UserCp" class="editable-2">B1228</span>
-                            <label class="active-label-2 class-hidden-none al-2" for="UserCp">Código Postal</label>
-                            <hr class="hr-dto">
-    
-                          </div>
-    
-    
-                          <div class="form-floating">
-    
-                            <p class="dto-title-2">Barrio</p>
-                            <span id="UserNeighborhood" class="editable-2">Palermo</span>
-                            <label class="active-label-2 class-hidden-none al-2" for="UserNeighborhood">Barrio</label>
-                            <hr class="hr-dto">
-    
-                          </div>
-    
-    
-                          <div class="form-floating">
-    
-                            <p class="dto-title-2">Localidad</p>
-                            <span id="UserLocation" class="editable-2">CABA</span>
-                            <label class="active-label-2 class-hidden-none al-2" for="UserLocation">Localidad</label>
-                            <hr class="hr-dto">
-    
-                          </div>
-    
-    
-                          <div class="form-floating">
-    
-                            <p class="dto-title-2">Provincia</p>
-                            <span id="UserState" class="editable-2">Buenos Aires</span>
-                            <label class="active-label-2 class-hidden-none al-2" for="UserState">Provincia</label>
-                            <hr class="hr-dto">
-    
-                          </div>
-    
-                          <div class="form-floating">
-    
-                            <p class="dto-title-2">País</p>
-                            <span id="UserCountry" class="editable-2">Argentina</span>
-                            <label class="active-label-2 class-hidden-none al-2" for="UserCountry">País</label>
-                            <hr class="hr-dto">
-    
-                          </div>
+                        <p class="dto-title-2">Dirección</p>
+                        <span id="UserAddress" class="editable-2"> Av. Corrientes 1234</span>
+                        <label class="active-label-2 class-hidden-none al-2" for="UserAddress">Direccion</label>
+                        <hr class="hr-dto">
+
+                      </div>
+
+                      <div class="form-floating">
+
+                        <p class="dto-title-2">Código Postal</p>
+                        <span id="UserCp" class="editable-2">B1228</span>
+                        <label class="active-label-2 class-hidden-none al-2" for="UserCp">Código Postal</label>
+                        <hr class="hr-dto">
+
+                      </div>
 
 
+                      <div class="form-floating">
 
-                
+                        <p class="dto-title-2">Barrio</p>
+                        <span id="UserNeighborhood" class="editable-2">Palermo</span>
+                        <label class="active-label-2 class-hidden-none al-2" for="UserNeighborhood">Barrio</label>
+                        <hr class="hr-dto">
+
+                      </div>
+
+
+                      <div class="form-floating">
+
+                        <p class="dto-title-2">Localidad</p>
+                        <span id="UserLocation" class="editable-2">CABA</span>
+                        <label class="active-label-2 class-hidden-none al-2" for="UserLocation">Localidad</label>
+                        <hr class="hr-dto">
+
+                      </div>
+
+
+                      <div class="form-floating">
+
+                        <p class="dto-title-2">Provincia</p>
+                        <span id="UserState" class="editable-2">Buenos Aires</span>
+                        <label class="active-label-2 class-hidden-none al-2" for="UserState">Provincia</label>
+                        <hr class="hr-dto">
+
+                      </div>
+
+                      <div class="form-floating">
+
+                        <p class="dto-title-2">País</p>
+                        <span id="UserCountry" class="editable-2">Argentina</span>
+                        <label class="active-label-2 class-hidden-none al-2" for="UserCountry">País</label>
+                        <hr class="hr-dto">
+
+                      </div>
+
+
+
+
 
                       <div class="sc-buttons-2" id="actionButtons" style="display: none;">
                         <button class="btn-cancel" id="cancelButton" data-cancel="2">Cancelar</button>

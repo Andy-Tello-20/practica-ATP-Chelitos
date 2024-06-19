@@ -1,8 +1,18 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .cont-principal {
-    background: #F9F9F9;
+    background: #f0eeee;
     height: 100vh;
     display: flex;
     gap: 15px;
+    padding-right: 15px;
     
 
 
@@ -15,6 +25,10 @@
 }
 
 .menu {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
     background: #2A384D;
     grid-area: menu;
     width: 200px;
@@ -22,12 +36,96 @@
 
 }
 
-.header {
-    border: solid 1px #E0E0E0;
-    display: flex;
-    height: 10vh;
-    
+.menu-logo{
+    width: 70px;
+    margin-top: 20px;
 }
+
+.hr-menu{
+    border: solid 1px #ffff;
+    width: 90%;
+    margin-bottom: 80px;
+}
+
+.menu-list{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.li-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 54px;
+    width: 176px;
+    margin-bottom: 20px;
+}
+
+
+.li-menu:hover{
+    background: #435B7D;
+}
+
+
+.a-management, .a-profession{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffff;
+    align-items: center;
+    gap: 20px;
+}
+
+.p-management, .p-profession{
+    width: 80px;
+    font-weight: 600;
+    margin-bottom: 0px !important;
+}
+
+
+
+
+
+.header {
+    border-bottom: solid 1px #E0E0E0;
+    display: flex;
+    height: 6vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 12px 7px 12px;
+}
+
+
+.header-title {
+    font-weight: 800;
+    margin-bottom: 0px !important;
+    color: #7A7777;
+    font-size: 17px !important;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 8px;
+}
+
+.nav:hover{
+    background: #c5c1c1;
+}
+
+.nav p {
+    margin-bottom: 0px !important;
+    color: #7A7777;
+    font-weight: 600;
+}
+
+.mI-User{
+    font-size: 36px !important;
+    margin-right: 10px;
+    color: #7A7777;
+}
+
 
 .main {
  
@@ -38,7 +136,7 @@
 
 
 .filter-buttons {
-  height: 25vh;
+  height: 20vh;
     width: 100%;
     display: flex;
     gap: 10px;
@@ -53,7 +151,24 @@
     height: 124px;
     background: #fff;
     padding: 18px 34px 36px 34px;
+    border-radius: 12px;
 
+}
+
+.todos:hover{
+    background: #c5c1c1;
+}
+
+.habilitados:hover{
+    background: #c5c1c1;
+}
+
+.inactivos:hover{
+    background: #c5c1c1;
+}
+
+.interesados:hover{
+    background: #c5c1c1;
 }
 
 
@@ -82,7 +197,7 @@
 }
 
 .f-btn-container span{
-    font-size: 29px;
+    font-size: 35px;
 }
 
 
@@ -105,17 +220,80 @@
 
 
 .search {
-    height: 25vh;
+    height: 30vh;
     display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
 
+}
+
+.btn-Asearch{
+    width: 207px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    border: solid 1px #dadada;
+    gap: 12px;
+    border-radius: 5px;
+    justify-content: center;
+    background: #ffff;
+}
+
+
+.btn-Asearch:hover{
+    background: #c5c1c1;
+}
+
+
+.aSearch-container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    width: 80%;
+    background: #ffff;
+    margin: 0px;
+    padding: 0px 20px;
+    border: solid 1px #dadada;
+    border-radius: 8px;
+}
+
+.aSearch-container input{
+    height: 50px !important;
+    padding: 0px !important
+}
+
+.label-fButtons{
+    padding: 6px 0px 0px 0px !important;
+    height: 30px !important;
+    font-size: 15px;
+}
+
+.input-height{
+    min-height: 40px !important;
+}
+
+.btn-Asearch2{
+    width: 88px;
+    height: 34px;
+    background: rgb(13, 161, 108, 70%);
+    border-radius: 8px;
+}
+
+
+
+.btn-Asearch span{
+    font-weight: 600;
 }
 
 
 .table-container {
-    height: 40vh;
+    height: 42vh;
     overflow: hidden;
     overflow-y: scroll;
-
+    margin: 0px 10px 5px 0px;
     border-collapse: collapse;
 
 }
@@ -124,6 +302,12 @@
 .mI-table{
     font-size: 27px !important;
     color: #7A7777 !important; 
+}
+
+
+.mt-2 {
+    margin-top: 0rem !important;
+    margin-bottom: 2rem !important;
 }
 
 .mI-modal-buttons{
@@ -231,9 +415,12 @@ td.child {
     background: #EEEEEE !important;
 }
 
+
+
 li {
     display: flex;
     align-items: center;
+   
 }
 
 .titulo1,
@@ -342,6 +529,22 @@ i {
     display: none !important;
 }
 
+.table-subClass{
+    height: 50vh;
+}
+
+.search-subClass{
+    height: 20vh;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.arrow-subClass{
+    transition: 0.2s;
+    transform: rotate(180deg);
+}
+
+
 /* 
 ----- evento de los 4 botones verticales----- */
 
@@ -438,12 +641,13 @@ i {
 
 .user-dto::-webkit-scrollbar {
     width: 10px; /* Ancho del scrollbar */
+
     
 }
 
 /* Para cambiar el color de la barra deslizante */
 .user-dto::-webkit-scrollbar-thumb {
-    background-color: #2A384D; /* Color de la barra deslizante */
+    background-color: #435B7D; /* Color de la barra deslizante */
 }
 
 /* Para cambiar el color cuando se pasa el mouse por encima del scrollbar */
