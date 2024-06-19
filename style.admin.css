@@ -1,49 +1,45 @@
 .cont-principal {
     background: #F9F9F9;
     height: 100vh;
-    display: grid;
+    display: flex;
     gap: 15px;
-    grid-template-columns: 200px 1fr 1fr 1fr 1fr;
-    grid-template-rows: 45px 1fr 1fr 1fr;
-    grid-template-areas:
-        "menu header header header header"
-        "menu main main main main"
-        "menu main main main main"
-        "menu main main main main"
+    
 
+
+}
+
+.cont-secundario{
+    width: calc(100% - 200px);
+    height: 100%;
 
 }
 
 .menu {
     background: #2A384D;
     grid-area: menu;
+    width: 200px;
+    height: 100%;
 
 }
 
 .header {
-    grid-area: header;
     border: solid 1px #E0E0E0;
     display: flex;
+    height: 10vh;
+    
 }
 
 .main {
-
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 30% 10% 30% 30%;
-    grid-template-areas:
-        "filterB filterB filterB filterB filterB"
-        "searcher searcher searcher searcher searcher"
-        "table table table table table"
-        "table table table table table"
+ 
+    display: flex;
+    flex-direction: column;
 }
 
 
 
 .filter-buttons {
+  height: 25vh;
     width: 100%;
-    grid-area: filterB;
     display: flex;
     gap: 10px;
     align-items: center;
@@ -56,31 +52,74 @@
     width: 25%;
     height: 124px;
     background: #fff;
+    padding: 18px 34px 36px 34px;
 
 }
 
+
+.todos,
+.habilitados,
+.inactivos,
+.interesados p{
+  text-align: left;
+  font-size: 25px;
+  color: #7A7777;
+  font-weight: 600;
+
+}
+
+.f-btn-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f-btn-container p{
+    margin-bottom: 0px !important;
+    font-size: 25px;
+    color: #7A7777;
+  
+}
+
+.f-btn-container span{
+    font-size: 29px;
+}
+
+
+.mI-todos{
+    color: #4A90E2;
+}
+
+.mI-habilitados {
+    color: #7ED321;
+}
+
+.mI-inactivos {
+    color: #9B9B9B;
+}
+
+.mI-interesados {
+    color: #F2DD22;
+}
 
 
 
 .search {
-
+    height: 25vh;
     display: flex;
-    grid-area: searcher;
+
 }
 
 
 .table-container {
+    height: 40vh;
     overflow: hidden;
     overflow-y: scroll;
-    grid-area: table;
+
     border-collapse: collapse;
 
 }
 
-/* .table {
-    width: 100%;
-  
-} */
 
 .mI-table{
     font-size: 27px !important;
@@ -390,7 +429,8 @@ i {
 .user-dto{
     display: flex;
     flex-direction: column;
-    height: 60%;
+    height: 420px;
+    overflow-y: scroll;
     width: 100%;
     padding: 12px 54px 12px 48px;
 }
@@ -415,6 +455,7 @@ i {
 
 .bt-2{
     top: 184px;
+    right: 30px;
 }
 
 .header-dto{
@@ -503,6 +544,19 @@ input.editable-input-2.form-control {
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+
+.editable-select-1{
+    border: none;
+    height: 50px !important;
+}
+
+.editable-select-prof-1{
+    border: none;
+    height: 50px !important;
+    padding: 0px 0px 0px auto !important; 
+}
+
 
 .sc-buttons-1,
 .sc-buttons-2,
