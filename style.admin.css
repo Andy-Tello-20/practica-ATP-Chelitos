@@ -530,11 +530,11 @@ i {
 }
 
 .table-subClass{
-    height: 50vh;
+    height: 60vh;
 }
 
 .search-subClass{
-    height: 20vh;
+    height: 10vh;
     justify-content: flex-end;
     margin-bottom: 20px;
 }
