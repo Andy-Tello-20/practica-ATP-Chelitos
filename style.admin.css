@@ -11,8 +11,7 @@
     background: #f0eeee;
     height: 100vh;
     display: flex;
-    gap: 15px;
-    padding-right: 15px;
+   
     
 
 
@@ -93,13 +92,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 7px 12px 7px 12px;
+    background: #9C9A9A;
 }
 
 
 .header-title {
     font-weight: 800;
     margin-bottom: 0px !important;
-    color: #7A7777;
+    color: #ffff;
     font-size: 17px !important;
 }
 
@@ -116,14 +116,14 @@
 
 .nav p {
     margin-bottom: 0px !important;
-    color: #7A7777;
+    color: #ffff;
     font-weight: 600;
 }
 
 .mI-User{
     font-size: 36px !important;
     margin-right: 10px;
-    color: #7A7777;
+    color: #ffff;
 }
 
 
@@ -141,16 +141,18 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 0px 10px;
 }
 
 .todos,
 .habilitados,
 .inactivos,
 .interesados {
-    width: 25%;
+    width: 23%;
     height: 124px;
     background: #fff;
-    padding: 18px 34px 36px 34px;
+    padding: 9px 34px 10px 34px;
     border-radius: 12px;
 
 }
@@ -177,11 +179,31 @@
 .inactivos,
 .interesados p{
   text-align: left;
-  font-size: 25px;
+  font-size: 28px;
   color: #7A7777;
   font-weight: 600;
+  margin-bottom: 0px !important;
 
 }
+
+.todos p{
+    margin-bottom: 0px !important;
+}
+
+.habilitados p {
+    margin-bottom: 0px !important;
+}
+
+.inactivos p {
+    margin-bottom: 0px !important;
+}
+
+.interesados p {
+    margin-bottom: 0px !important;
+}
+
+
+
 
 .f-btn-container{
     display: flex;
@@ -191,13 +213,13 @@
 
 .f-btn-container p{
     margin-bottom: 0px !important;
-    font-size: 25px;
+    font-size: 28px;
     color: #7A7777;
   
 }
 
 .f-btn-container span{
-    font-size: 35px;
+    font-size: 45px;
 }
 
 
@@ -220,12 +242,13 @@
 
 
 .search {
-    height: 30vh;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end;
-    transition: height 0.3s ease-in-out;
+    transition: height 0.1s ease-in-out;
+    padding-right: 10px;
 
 }
 
@@ -249,15 +272,14 @@
 
 .aSearch-container{
     display: flex;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    width: 80%;
+    justify-content: center;
+    height: 80px;
+    width: 70%;
     background: #ffff;
     margin: 0px;
     padding: 0px 20px;
-    border: solid 1px #dadada;
     border-radius: 8px;
     
 }
@@ -268,13 +290,18 @@
 }
 
 .label-fButtons{
-    padding: 6px 0px 0px 0px !important;
+    padding: 6px 0px 0px 12px !important;
     height: 30px !important;
     font-size: 15px;
 }
 
 .input-height{
     min-height: 40px !important;
+}
+
+.form-floating>.form-control, .form-floating>.form-control-plaintext {
+
+    padding-left: 8px !important;
 }
 
 .btn-Asearch2{
@@ -292,12 +319,13 @@
 
 
 .table-container {
-    height: 42vh;
+    height: 52vh;
     overflow: hidden;
     overflow-y: scroll;
     margin: 0px 10px 5px 0px;
     border-collapse: collapse;
-    transition: height 0.3s ease-in-out;
+    transition: height 0.1s ease-in-out;
+    padding: 0px 10px
 }
 
 
@@ -307,9 +335,17 @@
 }
 
 
+input#dt-search-0 {
+    height: 36px;
+}
+
+select#dt-length-0 {
+    height: 36px;
+}
+
 .mt-2 {
     margin-top: 0rem !important;
-    margin-bottom: 2rem !important;
+    margin-bottom: 1rem !important;
 }
 
 .mI-modal-buttons{
@@ -348,16 +384,16 @@
 .span-interesado,
 .span-rechazado,
 .span-bloqueado {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
-    color: #FFFFFF;
+    color: #595959;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
     border-radius: 25px;
-    height: 38px;
-    width: 103px;
+    height: 34px;
+    width: 100px;
 }
 
 .span-activo {
@@ -393,13 +429,18 @@
 }
 
 .data-tr {
-
+    background: transparent;
     transition: background-color 0.3s ease;
 }
 
 .data-tr:hover {
-    background-color: #EEEEEE;
+    background-color: #EEEEEE !important;
     cursor: pointer;
+}
+
+.acciones{
+    display: flex;
+    gap: 20px;
 }
 
 th {
@@ -539,7 +580,6 @@ i {
 
 .search-subClass{
     height: 10vh;
-    justify-content: flex-end;
     margin-bottom: 20px;
 }
 
@@ -671,7 +711,7 @@ i {
 .dto-title-3,
 .dto-title-4{
     margin-bottom: 0px !important;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .btn-edit{
@@ -685,7 +725,7 @@ i {
 
 
 .bt-2{
-    top: 184px;
+    top: 200px;
     right: 30px;
 }
 
@@ -700,11 +740,11 @@ i {
 }
 
 
-.header-title{
-    font-size: 16px;
+.header-nav-title{
+    font-size: 20px;
     font-weight: 700;
-    margin-bottom: 16px;
-  
+    margin-bottom: 30px;
+
 }
 
 hr.under-header {
@@ -715,6 +755,10 @@ hr.under-header {
     border: solid 1px gray;
     width: 80%;
     opacity: 100%;
+}
+
+hr{
+    margin: 10px 0px !important;
 }
 
 .hr-dto-date{

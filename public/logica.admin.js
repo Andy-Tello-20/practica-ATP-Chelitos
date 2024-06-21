@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const dataContent = boton.getAttribute('data-content')
             actualizarContenido(dataContent)
             actualizarBotonActivo(boton)
+            $('.btn-cancel').click()
         });
     });
 
@@ -102,7 +103,7 @@ document.querySelectorAll('.btn-edit').forEach(button => {
 
             } else if (element.classList.contains(`editable-select-prof-${suffix}`)) {
 
-                console.log('hola')
+           
                 const select = document.createElement('select');
                 select.className = `editable-select-prof-${suffix} form-control `;
                 select.setAttribute('data-id', element.id);
@@ -258,6 +259,8 @@ document.querySelectorAll('.btn-cancel').forEach(button => {
 });
 
 
+
+
 document.getElementById('toggleSearch').addEventListener('click', function() {
     
     let btnS = document.getElementById('searchContainer')
@@ -265,19 +268,28 @@ document.getElementById('toggleSearch').addEventListener('click', function() {
     let search = document.getElementsByClassName('search')[0]
     let arrow = document.getElementsByClassName('mI-arrow')[0]
 
-    if (btnS.classList.contains('class-hidden-none')) {
+    if ($('#searchContainer').is(':visible')) {
 
-
-        btnS.classList.remove('class-hidden-none')
-        tableContainer.classList.remove('table-subClass')
-        search.classList.remove('search-subClass')
+        
+        $('.dt-search').show()
+        // btnS.classList.remove('class-hidden-none')
+        $('#searchContainer').hide(500)
+        tableContainer.classList.add('table-subClass')
+        search.classList.add('search-subClass')
         arrow.classList.remove('arrow-subClass')
 
     } else {
-        
-        btnS.classList.add('class-hidden-none')
-        tableContainer.classList.add('table-subClass')
-        search.classList.add('search-subClass')
+        $('.dt-search').hide()
+        // btnS.classList.add('class-hidden-none')
+        $('#searchContainer').show(500)
+        tableContainer.classList.remove('table-subClass')
+        search.classList.remove('search-subClass')
         arrow.classList.add('arrow-subClass')
+        
     }
 })
+
+
+$('#modalDescription').on('hidden.bs.modal', function () {
+    $('.btn-cancel').click()
+  })
