@@ -81,7 +81,7 @@ document.querySelectorAll('.btn-edit').forEach(button => {
 
 
                 const select = document.createElement('select');
-                select.className = `editable-select-${suffix} bg-edit form-select`;
+                select.className = `editable-select-${suffix} form-control`;
                 select.setAttribute('data-id', element.id);
                 const option = document.createElement('option');
                 option.value = element.textContent;
@@ -105,7 +105,7 @@ document.querySelectorAll('.btn-edit').forEach(button => {
 
            
                 const select = document.createElement('select');
-                select.className = `editable-select-prof-${suffix} bg-edit form-select `;
+                select.className = `editable-select-prof-${suffix} form-control `;
                 select.setAttribute('data-id', element.id);
                 const option = document.createElement('option');
                 option.value = element.textContent;
@@ -131,7 +131,7 @@ document.querySelectorAll('.btn-edit').forEach(button => {
                 const input = document.createElement('input');
                 input.type = 'text';
                 input.value = element.textContent;
-                input.className = `editable-input-${suffix} bg-edit form-control`;
+                input.className = `editable-input-${suffix} form-control`;
                 input.setAttribute('data-id', element.id);
 
 
