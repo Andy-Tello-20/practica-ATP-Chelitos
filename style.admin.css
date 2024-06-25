@@ -8,7 +8,7 @@
 }
 
 .cont-principal {
-    
+
     max-width: 100%;
     margin: 0px !important;
     padding: 0px !important;
@@ -103,6 +103,12 @@
     background: #9C9A9A;
 }
 
+.header-main {
+    display: none
+}
+
+
+
 
 .header-title {
     font-weight: 700;
@@ -193,7 +199,7 @@
 .todos,
 .habilitados,
 .inactivos,
-.interesados  {
+.interesados {
     text-align: left;
     color: #7A7777;
     font-weight: 600;
@@ -201,7 +207,7 @@
 
 }
 
-.f-btn-title{
+.f-btn-title {
     font-size: 28px;
 }
 
@@ -707,7 +713,8 @@ i {
 }
 
 
-.header-nav-title, .header-nav-Subtitle {
+.header-nav-title,
+.header-nav-Subtitle {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 30px;
@@ -715,7 +722,7 @@ i {
 
 }
 
-.header-nav-Subtitle{
+.header-nav-Subtitle {
     font-size: 18px;
     margin-bottom: 0px;
     margin-top: 30px;
@@ -888,12 +895,13 @@ input.editable-input-2.form-control {
 
 }
 
-.code-status{
+.code-status {
     display: flex;
     gap: 15px;
 }
 
-.member-code, .user-status-title {
+.member-code,
+.user-status-title {
     background: #EEEEEE;
     display: flex;
     width: 180px;
@@ -907,15 +915,15 @@ input.editable-input-2.form-control {
 
 
 
-.member-title{
+.member-title {
     margin-bottom: 5px !important;
 }
 
-.status-title{
+.status-title {
     margin-bottom: 5px !important;
 }
 
-.code-number{
+.code-number {
     font-weight: 600;
     letter-spacing: 2px;
 }
@@ -960,7 +968,7 @@ input.editable-input-2.form-control {
 
     }
 
-    .aSearch-container{
+    .aSearch-container {
         align-items: center;
     }
 
@@ -973,36 +981,41 @@ input.editable-input-2.form-control {
     }
 
 
-    .f-btn-title , .f-btn-container p {
+    .f-btn-title,
+    .f-btn-container p {
         font-size: 22px;
     }
 
-    .todos, .habilitados, .inactivos, .interesados {
+    .todos,
+    .habilitados,
+    .inactivos,
+    .interesados {
         padding: 10px 10px 10px 10px;
     }
 
-   
 
-    .p-management, .p-profession{
+
+    .p-management,
+    .p-profession {
         font-size: 13px;
     }
 }
 
 
 @media screen and (min-width: 768px) {
-    .container-buttons{
-        max-width: 100% 
+    .container-buttons {
+        max-width: 100%
     }
 }
 
 
 @media screen and (max-width: 768px) {
 
-   .main{
-    background: #f0eeee;
-   }
+    .main {
+        background: #f0eeee;
+    }
 
-    .table-container{
+    .table-container {
         height: auto;
         padding: 0px;
         margin: 0px;
@@ -1012,15 +1025,15 @@ input.editable-input-2.form-control {
         height: auto;
     }
 
-    table.dataTable>tbody>tr.child ul.dtr-details>li{
+    table.dataTable>tbody>tr.child ul.dtr-details>li {
         border-bottom: 1px solid #e5e2e2;
-       
+
     }
 
     td.child {
         background: #e5e2e2 !important;
     }
-    
+
 
     font {
         margin-right: 5px;
@@ -1034,11 +1047,11 @@ input.editable-input-2.form-control {
         display: none
     }
 
-    .header{
+    .header {
         justify-content: center;
     }
 
-    .nav{
+    .nav {
         display: none;
     }
 
@@ -1068,7 +1081,7 @@ input.editable-input-2.form-control {
         flex-direction: column-reverse;
     }
 
-    
+
     .f-btn-container span {
         font-size: 35px;
     }
@@ -1087,9 +1100,9 @@ input.editable-input-2.form-control {
         border-radius: 8px;
     }
 
-   
 
-    .btn-Asearch{
+
+    .btn-Asearch {
         height: 44px;
         margin: 20px 0px;
         border: solid 2px #c5c1c1;
@@ -1109,23 +1122,23 @@ input.editable-input-2.form-control {
     }
 
 
-    .form-aSearch{
+    .form-aSearch {
         width: 100%;
-    padding: 0px 15px;
+        padding: 0px 15px;
     }
 
     .aSearch-container input {
         height: 58px !important;
-    
+
     }
 
-    .input-height{
+    .input-height {
         border: solid 1px #D6CECE;
         width: 100%;
-      
-    } 
 
-    .label-fButtons{
+    }
+
+    .label-fButtons {
         padding: 2px 0px 0px 20px !important;
     }
 
@@ -1156,6 +1169,30 @@ input.editable-input-2.form-control {
         width: 100%;
         font-weight: 700;
 
+    }
+
+
+    .active>.page-link, .page-link.active {
+        z-index: 1;
+    }
+
+    .header-main {
+        display: flex;
+        height: 10vh;
+        justify-content: space-between;
+        align-items: center;
+        padding: 7px 25px ;
+        background: #fff;
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        z-index: 2;
+        
+    }
+
+    .mI-U2{
+        color: #555252;
+        margin: 0px;
     }
 
 }
