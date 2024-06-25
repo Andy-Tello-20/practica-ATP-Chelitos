@@ -1178,11 +1178,11 @@ input.editable-input-2.form-control {
 
     .header-main {
         display: flex;
-        height: 10vh;
+        height: 8vh;
         justify-content: space-between;
         align-items: center;
         padding: 7px 25px ;
-        background: #fff;
+        background: #a3a3a3;
         width: 100%;
         position: sticky;
         bottom: 0;
@@ -1191,7 +1191,7 @@ input.editable-input-2.form-control {
     }
 
     .mI-U2{
-        color: #555252;
+        color: #212020;
         margin: 0px;
     }
 
