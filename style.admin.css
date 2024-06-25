@@ -642,7 +642,7 @@ i {
     height: 420px;
     overflow-y: scroll;
     width: 100%;
-    padding: 12px 54px 12px 48px;
+    padding: 12px 40px;
 }
 
 
@@ -679,6 +679,7 @@ i {
 .dto-title-4 {
     margin-bottom: 0px !important;
     font-weight: 600;
+    color: #7A7777;
 }
 
 .btn-edit {
@@ -707,11 +708,18 @@ i {
 }
 
 
-.header-nav-title {
+.header-nav-title, .header-nav-Subtitle {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 30px;
+    color: #7A7777;
 
+}
+
+.header-nav-Subtitle{
+    font-size: 18px;
+    margin-bottom: 0px;
+    margin-top: 30px;
 }
 
 hr.under-header {
@@ -730,9 +738,10 @@ hr {
 
 .hr-dto-date {
     margin-top: 0px;
-    width: 80%;
+    width: 100%;
     color: #5a5a5a;
     opacity: 100%;
+    margin: 0px !important;
 }
 
 .user-profile {
@@ -741,6 +750,7 @@ hr {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 8px;
+    color: #7A7777;
 
 }
 
@@ -749,6 +759,7 @@ hr {
     gap: 15px;
     font-size: 18px;
     font-weight: 500;
+    color: #7A7777;
 
 }
 
@@ -807,14 +818,14 @@ input.editable-input-2.form-control {
 }
 
 .form-floating>.form-control:not(:placeholder-shown)~label::after {
-    background-color: #e9e6e6;
+    background-color: transparent;
 }
 
 .form-floating>.form-control-plaintext~label::after,
 .form-floating>.form-control:focus~label::after,
 .form-floating>.form-control:not(:placeholder-shown)~label::after,
 .form-floating>.form-select~label::after {
-    background-color: #e9e6e6;
+    background-color: transparent;
 }
 
 .form-floating>.form-select {
@@ -878,20 +889,38 @@ input.editable-input-2.form-control {
 
 }
 
-.member-code {
-    border: solid 1px #B3B3B3;
+.code-status{
     display: flex;
-    width: 260px;
+    gap: 15px;
+}
+
+.member-code, .user-status-title {
+    background: #EEEEEE;
+    display: flex;
+    width: 180px;
     flex-direction: column;
-    height: 75px;
+    height: 85px;
     border-radius: 8px;
     align-items: center;
     margin-bottom: 20px;
+    padding-top: 10px;
 }
 
-.member-title {
-    font-weight: 700;
+
+
+.member-title{
+    margin-bottom: 5px !important;
 }
+
+.status-title{
+    margin-bottom: 5px !important;
+}
+
+.code-number{
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
 
 .dates {
     display: flex;
@@ -902,8 +931,9 @@ input.editable-input-2.form-control {
 .start-date,
 .expiration-date {
     padding: 7px 16px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0px !important;
+    color: #7A7777;
 }
 
 .dates-1,
@@ -925,6 +955,15 @@ input.editable-input-2.form-control {
 
 @media screen and (max-width: 1140px) {
 
+    .aSearch-container {
+        width: 100%;
+        margin: auto;
+
+    }
+
+    .aSearch-container{
+        align-items: center;
+    }
 
     .menu-logo {
         width: 40px;
@@ -951,10 +990,42 @@ input.editable-input-2.form-control {
 }
 
 
+@media screen and (min-width: 768px) {
+    .container-buttons{
+        max-width: 100% 
+    }
+}
+
+
 @media screen and (max-width: 768px) {
 
+    .cont-principal{
+        min-height: 1200px;
+    }
 
+    .table-container{
+        height: auto;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .table-subClass {
+        height: auto;
+    }
+
+    table.dataTable>tbody>tr.child ul.dtr-details>li{
+        border-bottom: 1px solid #e5e2e2;
+       
+    }
+
+    td.child {
+        background: #e5e2e2 !important;
+    }
     
+
+    font {
+        margin-right: 5px;
+    }
 
     div.dt-container div.dt-length {
         text-align: left;
@@ -1010,13 +1081,52 @@ input.editable-input-2.form-control {
     .search {
         height: auto;
         flex-direction: column;
+        align-items: center;
+        margin: 40px 0px;
         padding-right: 0px;
+        background: #ffff;
+    }
+
+   
+
+    .btn-Asearch{
+        height: 44px;
+        margin: 20px 0px;
+        border: solid 2px #c5c1c1;
+    }
+
+    .btn-Asearch2 {
+        width: 144px;
     }
 
     .aSearch-container {
         height: auto;
         width: 100%;
         flex-direction: column;
+        margin-bottom: 30px;
+        border-radius: 0px;
+        padding: 0px;
+    }
+
+
+    .form-aSearch{
+        width: 100%;
+    padding: 0px 15px;
+    }
+
+    .aSearch-container input {
+        height: 58px !important;
+    
+    }
+
+    .input-height{
+        border: solid 1px #D6CECE;
+        width: 100%;
+      
+    } 
+
+    .label-fButtons{
+        padding: 2px 0px 0px 20px !important;
     }
 
     .dropdown-menu.p-3 {
