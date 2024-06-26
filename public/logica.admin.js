@@ -1,5 +1,6 @@
 let table = new DataTable('#tpaTable', {
-    responsive: true
+    responsive: true,
+    searching: false
 })
 
 
@@ -263,28 +264,29 @@ document.querySelectorAll('.btn-cancel').forEach(button => {
 
 document.getElementById('toggleSearch').addEventListener('click', function() {
     
-    let btnS = document.getElementById('searchContainer')
+ 
     let tableContainer = document.getElementsByClassName('table-container')[0]
     let search = document.getElementsByClassName('search')[0]
     let arrow = document.getElementsByClassName('mI-arrow')[0]
+    let btnSearch = document.getElementsByClassName('btn-Asearch')[0]
 
     if ($('#searchContainer').is(':visible')) {
 
         
-        $('.dt-search').show()
-        // btnS.classList.remove('class-hidden-none')
+        // $('.dt-search').show()
         $('#searchContainer').hide(500)
         tableContainer.classList.add('table-subClass')
-        search.classList.add('search-subClass')
+        search.classList.remove('search-subClass')
         arrow.classList.remove('arrow-subClass')
+        btnSearch.classList.remove('btn-Asearch3')
 
     } else {
-        $('.dt-search').hide()
-        // btnS.classList.add('class-hidden-none')
+        // $('.dt-search').hide()
         $('#searchContainer').show(500)
         tableContainer.classList.remove('table-subClass')
-        search.classList.remove('search-subClass')
+        search.classList.add('search-subClass')
         arrow.classList.add('arrow-subClass')
+        btnSearch.classList.add('btn-Asearch3')
         
     }
 })

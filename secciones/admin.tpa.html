@@ -42,7 +42,7 @@
         <hr class="hr-menu">
         <ul class="menu-list">
 
-          <li class="li-menu">
+          <li class="li-menu li-menu-selected">
             <a class="a-management" href="#"><span
                 class="material-symbols-outlined notranslate">dashboard_customize</span>
               <p class="p-management d-none d-md-block">Gestion de Miembros</p>
@@ -80,7 +80,7 @@
 
               <div class="col-6 col-md-3 cont-Fbtn1">
 
-                <button class=" todos">
+                <button class="filter-btns filter-btns-selected">
                   <p class="f-btn-title">Todos</p>
                   <div class="f-btn-container">
                     <p>578</p>
@@ -92,7 +92,7 @@
 
               <div class="col-6 col-md-3 cont-Fbtn2">
 
-                <button class=" habilitados">
+                <button class="filter-btns">
                   <p class="f-btn-title">Habilitados</p>
                   <div class="f-btn-container">
                     <p>578</p>
@@ -104,7 +104,7 @@
 
               <div class="col-6 col-md-3 cont-Fbtn3">
 
-                <button class=" inactivos">
+                <button class="filter-btns">
                   <p class="f-btn-title">Inactivos</p>
                   <div class="f-btn-container">
                     <p>578</p>
@@ -116,7 +116,7 @@
 
               <div class="col-6 col-md-3 cont-Fbtn4">
 
-                <button class=" interesados">
+                <button class="filter-btns">
                   <p class="f-btn-title">Interesados</p>
                   <div class="f-btn-container">
                     <p>578</p>
@@ -1087,44 +1087,29 @@
                       <div class="user-dto">
 
 
-                        <div class="form-floating">
-
-
-                          <p class="dto-title-3">Calle y Nro</p>
-                          <span id="UserStreetNumber" class="editable-3">Av. Corrientes 1234</span>
-
-                          <hr class="hr-dto">
-
+                        <div class="modal-info-container">
+                          <div class="location-tpa">
+                            <div class="iLocation-container">
+                              <span class="material-symbols-outlined notranslate mI-subscription">location_on</span>
+                            </div>
+                            <div class="infoLocation-container">
+                              <p class="p-location-title">Ubicación Preferida para la Fase Presencial</p>
+                              <p class="p-ubication">Mendoza (Instituto VIANETT® sede Mendoza)</p>
+                            </div>
+                          </div>
+  
+                          <div class="knowing-tpa">
+                            <div class="iHandshake-container">
+                              <span class="material-symbols-outlined notranslate mI-subscription">handshake</span>
+                            </div>
+                            <div class="knowing-info">
+                              <p class="p-knowing-title">Cómo Conociste TPA® y Decidiste Unirte</p>
+                              <p class="p-how">Lorem ipsum dolor sit amet. Eos consequatur omnis ut veritatis aliquam quo quis voluptatibus. Ut veritatis aliquam quo quis voluptatibus.</p>
+                            </div>
+                          </div>
                         </div>
 
-                        <div class="form-floating">
-
-
-
-                          <p class="dto-title-3">Barrio, Piso, Dpto, Etc</p>
-                          <span id="Userneighborhood" class="editable-3">Depto 4, Piso 5, Palermo</span>
-
-                          <hr class="hr-dto">
-                        </div>
-
-                        <div class="form-floating">
-
-
-                          <p class="dto-title-3">Localidad y CP</p>
-                          <span id="UserLocation" class="editable-3">Las Lucias - CP 2345</span>
-
-                          <hr class="hr-dto">
-                        </div>
-
-                        <div class="form-floating">
-
-
-                          <p class="dto-title-3">Provincia</p>
-                          <span id="UserProvinces" class="editable-3">Buenos Aires, CABA, Argentina</span>
-
-                          <hr class="hr-dto">
-
-                        </div>
+                        
 
 
                       </div>
@@ -1142,7 +1127,7 @@
           </div>
 
           <header class=" header-main">
-            <span class="material-icons mI-User mI-U2 notranslate">house</span>
+            <span class="material-symbols-outlined mI-User mI-U2 notranslate">home</span>
 
             <span class="material-symbols-outlined mI-User mI-U2 notranslate">account_circle</span>
           </header>
