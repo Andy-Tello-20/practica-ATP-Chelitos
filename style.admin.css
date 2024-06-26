@@ -72,7 +72,7 @@
 }
 
 
-.li-menu-selected{
+.li-menu-selected {
     background: #435B7D;
 }
 
@@ -185,11 +185,11 @@
 
 
 .filter-btns:hover {
- background: #c5c1c1;
+    background: #c5c1c1;
 }
 
 
-.filter-btns{
+.filter-btns {
     text-align: left;
     color: #7A7777;
     font-weight: 600;
@@ -198,12 +198,12 @@
 }
 
 
-.filter-btns-selected{
+.filter-btns-selected {
     background: #c3cbd7;
 }
 
 
-.filter-btns-selected:hover{
+.filter-btns-selected:hover {
     background: #c3cbd7;
 }
 
@@ -669,27 +669,28 @@ i {
     /* Redondear los bordes */
 }
 
-.modal-info-container{
+.modal-info-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 80%;
 }
 
-.location-tpa{
+.location-tpa {
     display: flex;
     height: 84px;
     gap: 26px;
 
 }
 
-.knowing-tpa{
+.knowing-tpa {
     display: flex;
     height: 134px;
     gap: 26px;
 }
 
-.iLocation-container,.iHandshake-container{
+.iLocation-container,
+.iHandshake-container {
     width: 60px;
     height: 100%;
     background: #EEEEEE;
@@ -699,13 +700,14 @@ i {
     border-radius: 8px;
 }
 
-.mI-subscription{
+.mI-subscription {
     margin: 54px;
     font-size: 33px !important;
     color: #7A7777;
 }
 
-.p-location-title , .p-knowing-title{
+.p-location-title,
+.p-knowing-title {
     color: #7A7777;
     font-weight: 500;
     margin: 0px;
@@ -713,8 +715,10 @@ i {
 }
 
 
-.p-ubication, .p-how{
-    color: #7A7777;;
+.p-ubication,
+.p-how {
+    color: #7A7777;
+    ;
     margin: 0px;
 }
 
@@ -1101,7 +1105,7 @@ input.editable-input-2.form-control {
         height: auto;
     }
 
-    .filter-btns{
+    .filter-btns {
 
         height: auto;
 
@@ -1130,9 +1134,11 @@ input.editable-input-2.form-control {
 
     .filter-btns:hover {
         background: #ffff;
-       }
+    }
 
-   
+    .filter-btns-selected:hover {
+        background: #c3cbd7;
+    }
 
 
     .search {
@@ -1145,9 +1151,9 @@ input.editable-input-2.form-control {
         border-radius: 8px;
     }
 
-    .search-subClass{
+    .search-subClass {
         background: #fff;
-    }  
+    }
 
 
     .btn-Asearch:hover {
@@ -1161,9 +1167,9 @@ input.editable-input-2.form-control {
         width: 255px;
     }
 
-    .btn-Asearch3{
+    .btn-Asearch3 {
         border: solid 2px #d0d0d0;
-        
+
     }
 
     .btn-Asearch2 {
@@ -1230,7 +1236,8 @@ input.editable-input-2.form-control {
     }
 
 
-    .active>.page-link, .page-link.active {
+    .active>.page-link,
+    .page-link.active {
         z-index: 1;
     }
 
@@ -1239,17 +1246,17 @@ input.editable-input-2.form-control {
         height: 8vh;
         justify-content: space-between;
         align-items: center;
-        padding: 7px 60px ;
+        padding: 7px 60px;
         background: #ffff;
         width: 100%;
         position: sticky;
         bottom: 0;
         z-index: 2;
         box-shadow: -1px 1px 5px;
-        
+
     }
 
-    .mI-U2{
+    .mI-U2 {
         color: #212020;
         margin: 0px;
     }
