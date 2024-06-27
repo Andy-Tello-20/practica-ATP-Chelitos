@@ -298,6 +298,21 @@ $('#modalDescription').on('hidden.bs.modal', function () {
 })
 
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    
+    document.body.addEventListener('click', function(event) {
+      if (event.target.closest('.btn-renovation')) {
+      
+        const modal = new bootstrap.Modal(document.getElementById('modalRenovation'))
+       
+        modal.show()
+      }
+    });
+})
+
+
+
 document.addEventListener('DOMContentLoaded', function () {
 
   
@@ -319,4 +334,6 @@ document.addEventListener('DOMContentLoaded', function () {
         })
     })
 
-})
+}) 
+
+

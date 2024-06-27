@@ -217,7 +217,7 @@
                   <td class="td-web-cel">0221-98765432</td>
                   <td class="td-web-status"><span class="span-porVencer">Por vencer</span></td>
                   <td class="acciones">
-                    <button class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                    <button class="btn btn-renovation" data-bs-toggle="tooltip" data-bs-placement="top"
                       data-bs-custom-class="custom-tooltip" data-bs-title="Renovar"><span
                         class="material-icons notranslate mI-table">autorenew</span></button>
                     <button class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -304,8 +304,8 @@
                 </tr>
 
 
-                <tr class="data-tr" >
-                  
+                <tr class="data-tr">
+
                   <td class="td-web-fecha">01/02/2021</td>
                   <td class="td-web-nombre">Andrea Ramírez</td>
                   <td class="td-web-mail">aramirez@example.com</td>
@@ -338,7 +338,7 @@
                   <td class="td-web-cel">0387-23456789</td>
                   <td class="td-web-status"><span class="span-porVencer">Por vencer</span></td>
                   <td class="acciones">
-                    <button class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                    <button class="btn btn-renovation" data-bs-toggle="tooltip" data-bs-placement="top"
                       data-bs-custom-class="custom-tooltip" data-bs-title="Renovar"><span
                         class="material-icons notranslate mI-table">autorenew</span></button>
                     <button class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -422,7 +422,7 @@
                   <td class="td-web-cel">0387-98765432</td>
                   <td class="td-web-status"><span class="span-porVencer">Por vencer</span></td>
                   <td class="acciones">
-                    <button class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                    <button class="btn btn-renovation" data-bs-toggle="tooltip" data-bs-placement="top"
                       data-bs-custom-class="custom-tooltip" data-bs-title="Renovar"><span
                         class="material-icons notranslate mI-table">autorenew</span></button>
                     <button class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -506,7 +506,7 @@
                   <td class="td-web-cel">0221-98765432</td>
                   <td class="td-web-status"><span class="span-porVencer">Por vencer</span></td>
                   <td class="acciones">
-                    <button class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                    <button class="btn btn-renovation" data-bs-toggle="tooltip" data-bs-placement="top"
                       data-bs-custom-class="custom-tooltip" data-bs-title="Renovar"><span
                         class="material-icons notranslate mI-table">autorenew</span></button>
                     <button class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -989,7 +989,7 @@
 
                       <div class="user-dto udto-2">
 
-                        
+
 
                         <article class="code-status">
 
@@ -1003,10 +1003,10 @@
                             <p class="member-title">Codigo de Membresia</p>
                             <p class="code-number">34569UV</p>
                           </div>
-  
-                         
+
+
                         </article>
-                        
+
                         <p class="header-nav-Subtitle ">Historial de Suscripciones</p>
 
                         <div class="dates">
@@ -1098,19 +1098,20 @@
                               <p class="p-ubication">Mendoza (Instituto VIANETT® sede Mendoza)</p>
                             </div>
                           </div>
-  
+
                           <div class="knowing-tpa">
                             <div class="iHandshake-container">
                               <span class="material-symbols-outlined notranslate mI-subscription">handshake</span>
                             </div>
                             <div class="knowing-info">
                               <p class="p-knowing-title">Cómo Conociste TPA® y Decidiste Unirte</p>
-                              <p class="p-how">Lorem ipsum dolor sit amet. Eos consequatur omnis ut veritatis aliquam quo quis voluptatibus. Ut veritatis aliquam quo quis voluptatibus.</p>
+                              <p class="p-how">Lorem ipsum dolor sit amet. Eos consequatur omnis ut veritatis aliquam
+                                quo quis voluptatibus. Ut veritatis aliquam quo quis voluptatibus.</p>
                             </div>
                           </div>
                         </div>
 
-                        
+
 
 
                       </div>
@@ -1124,6 +1125,40 @@
                 </div>
               </div>
             </div>
+
+
+            <div class="modal fade " id="modalRenovation" data-bs-keyboard="false" tabindex="-1"
+              aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+              <div class="modal-dialog modalDialogR">
+                <div class="modal-content contentWidhtRenovation">
+                  <div class="modal-body mbodyR-class">
+
+                    <div class="spanw-container">
+                      <span class="material-symbols-outlined mI-warning">warning</span>
+                    </div>
+                    
+
+
+                    <p class="renovation-title">
+                      ¿Quieres renovar la Suscripción?
+                    </p>
+
+                    <p class="renovation-text">
+                      Lorem ipsum dolor sit amet. Eos consequatur omnis ut veritatis aliquam quo quis voluptatibus. 
+                    </p>
+
+                    <div class="btns-cancel-renovation">
+                      <button class="btn-cancel btn-sr" data-bs-dismiss="modal" aria-label="Close" id="cancelButton" >Cancelar</button>
+                      <button class="btn-save btn-sr" id="saveButton" >Si, Renovar</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
 
           </div>
 
