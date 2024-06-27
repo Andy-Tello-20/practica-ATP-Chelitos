@@ -1309,7 +1309,8 @@ input.editable-input-2.form-control {
     }
 
     .mbodyR-class{
-        padding: 80px 17px;
+        justify-content: center;
+        gap: 10%;
     }
 
     .btns-cancel-renovation{
