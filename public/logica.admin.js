@@ -104,7 +104,7 @@ document.querySelectorAll('.btn-edit').forEach(button => {
 
             } else if (element.classList.contains(`editable-select-prof-${suffix}`)) {
 
-           
+
                 const select = document.createElement('select');
                 select.className = `editable-select-prof-${suffix} bg-edit form-select `;
                 select.setAttribute('data-id', element.id);
@@ -262,9 +262,9 @@ document.querySelectorAll('.btn-cancel').forEach(button => {
 
 
 
-document.getElementById('toggleSearch').addEventListener('click', function() {
-    
- 
+document.getElementById('toggleSearch').addEventListener('click', function () {
+
+
     let tableContainer = document.getElementsByClassName('table-container')[0]
     let search = document.getElementsByClassName('search')[0]
     let arrow = document.getElementsByClassName('mI-arrow')[0]
@@ -272,13 +272,14 @@ document.getElementById('toggleSearch').addEventListener('click', function() {
 
     if ($('#searchContainer').is(':visible')) {
 
-        
+
         // $('.dt-search').show()
         $('#searchContainer').hide(500)
         tableContainer.classList.add('table-subClass')
         search.classList.remove('search-subClass')
         arrow.classList.remove('arrow-subClass')
         btnSearch.classList.remove('btn-Asearch3')
+
 
     } else {
         // $('.dt-search').hide()
@@ -287,11 +288,35 @@ document.getElementById('toggleSearch').addEventListener('click', function() {
         search.classList.add('search-subClass')
         arrow.classList.add('arrow-subClass')
         btnSearch.classList.add('btn-Asearch3')
-        
+
     }
 })
 
 
 $('#modalDescription').on('hidden.bs.modal', function () {
     $('.btn-cancel').click()
-  })
+})
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  
+    const rows = document.querySelectorAll('.data-tr')
+    rows.forEach(row => {
+        row.addEventListener('click', (event) => {
+            
+            if (event.target.closest('.acciones .btn')) {
+                return
+            }
+
+            //!! Verificar si la fila contiene un td con clase 'dtr-hidden'
+            if (row.querySelector('td.dtr-hidden')) {
+                return
+            }
+
+            const modal = new bootstrap.Modal(document.querySelector('#modalDescription'))
+            modal.show()
+        })
+    })
+
+})
