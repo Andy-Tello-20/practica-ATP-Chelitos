@@ -1443,10 +1443,12 @@ input.editable-input-2.form-control {
         font-size: 20px;
         margin-bottom: 0px;
         font-weight: 600;
+        color: #7A7777;
     }
 
     .session-email {
         margin-bottom: 0px;
+        color: #7A7777;
     }
 
 
