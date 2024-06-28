@@ -1016,7 +1016,7 @@ input.editable-input-2.form-control {
     padding: 7px 30px;
 }
 
-.mf-center{
+.mf-center {
     align-items: center !important
 }
 
@@ -1073,6 +1073,39 @@ input.editable-input-2.form-control {
 
 
 
+/* ---MODAL SESION--- */
+
+.contentWidhtSesion {
+    width: 256px;
+    height: 120px;
+}
+
+.classModelDialogS {
+    margin-right: 0px !important;
+    top: 12px;
+}
+
+.a-session {
+    display: flex;
+    text-decoration: none;
+    color: #7A7777;
+    gap: 10px;
+    font-weight: 600;
+
+}
+
+.ModalBodyStyleSesion {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon-session {
+    display: none;
+}
+
+/* ---MODAL SESION !--- */
+
+
 @media screen and (max-width: 1140px) {
 
     .aSearch-container {
@@ -1106,7 +1139,7 @@ input.editable-input-2.form-control {
 
     .a-management,
     .a-profession {
-       
+
         gap: 10px;
     }
 
@@ -1322,7 +1355,7 @@ input.editable-input-2.form-control {
         margin: auto;
     }
 
-    
+
 
     .mbodyR-class {
         justify-content: center;
@@ -1337,8 +1370,88 @@ input.editable-input-2.form-control {
         width: 186px;
     }
 
+    /* ---MODAL WARNING!--- */
+    /* ---MODAL SESION--- */
 
-    /* ---MODAL WARNING !--- */
+    .m-show-sesion {
+        align-items: flex-end;
+        padding: 0px;
+        --bs-modal-width: auto
+    }
+
+    .classModelDialogS {
+        margin: 0px !important;
+        top: -54px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .contentWidhtSesion {
+
+        width: 100%;
+        height: 223px;
+        border-radius: 0px;
+    }
+
+
+    .ModalBodyStyleSesion {
+
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+
+    .hr-session-top{
+        width: 18%;
+        border: solid 2px #8d8d8d;
+        opacity: 100%;
+        margin: 0px auto !important;
+        margin-bottom: 20px !important
+    
+    }
+
+    .hr-session {
+        width: 100%;
+        border: solid 1px #bdb6b6;
+        opacity: 70%;
+
+    }
+
+    .user-icon-session {
+        display: flex;
+        gap: 20px;
+
+    }
+
+    .mI-session {
+        color: #7A7777;
+        font-size: 46px !important;
+        ;
+    }
+
+    .circle-icon-container {
+        display: flex;
+        align-items: center;
+        width: 46px;
+        ;
+    }
+
+    .session-name {
+        font-size: 20px;
+        margin-bottom: 0px;
+        font-weight: 600;
+    }
+
+    .session-email {
+        margin-bottom: 0px;
+    }
+
+
+
+    /* ---MODAL SESION!--- */
 
     .header-main {
         display: flex;

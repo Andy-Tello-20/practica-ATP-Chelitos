@@ -61,7 +61,7 @@
       <div class="col-12 col-md-10 cont-secundario">
         <header class="header">
           <p class="header-title">TPA Sitio de Administración</p>
-          <nav class="nav" id="nav">
+          <nav class="nav" id="nav" data-bs-toggle="modal" data-bs-target="#modalSesionClose">
 
             <span class="material-symbols-outlined mI-User notranslate">account_circle</span>
             <p>Silvina Lambertini</p>
@@ -1137,7 +1137,7 @@
                     <div class="spanw-container">
                       <span class="material-symbols-outlined mI-warning">warning</span>
                     </div>
-                    
+
 
 
                     <p class="renovation-title">
@@ -1149,8 +1149,9 @@
                     </p>
 
                     <div class="btns-cancel-renovation">
-                      <button class="btn-cancel btn-sr" data-bs-dismiss="modal" aria-label="Close" id="cancelButton" >Cancelar</button>
-                      <button class="btn-save btn-sr" id="saveButton" >Si, Renovar</button>
+                      <button class="btn-cancel btn-sr" data-bs-dismiss="modal" aria-label="Close"
+                        id="cancelButton">Cancelar</button>
+                      <button class="btn-save btn-sr" id="saveButton">Si, Renovar</button>
                     </div>
 
                   </div>
@@ -1165,12 +1166,52 @@
           <header class=" header-main">
             <span class="material-symbols-outlined mI-User mI-U2 notranslate">home</span>
 
-            <span class="material-symbols-outlined mI-User mI-U2 notranslate">account_circle</span>
+            <span class="material-symbols-outlined mI-User mI-U2 notranslate" data-bs-toggle="modal" data-bs-target="#modalSesionClose">account_circle</span>
           </header>
 
         </main>
 
       </div>
+
+
+
+      <div class="modal fade m-show-sesion" id="modalSesionClose" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog classModelDialogS">
+          <div class="modal-content contentWidhtSesion">
+
+            <div class="modal-body ModalBodyStyleSesion">
+
+              <hr class="hr-session-top" data-bs-dismiss="modal" aria-label="Close">
+
+              <div class="user-icon-session">
+                <div class="circle-icon-container">
+                  <span class="material-symbols-outlined mI-session notranslate">account_circle</span>
+                </div>
+
+                <div class="user-data-session">
+                  <p class="session-name">Silvina Lambertini</p>
+                  <p class="session-email">silvinalambertini@gmail.com</p>
+                </div>
+
+              </div>
+
+              <hr class="hr-session">
+
+              <a class="a-session " href=""><span class="material-symbols-outlined">exit_to_app</span>
+                <p>Cerrar Sesión</p>
+              </a>
+
+
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+
+
 
 
     </div>
