@@ -68,12 +68,14 @@
 
 
 .li-menu:hover {
-    background: #3E4958
+    background: #3E4958;
+    border-radius: 10px;
 }
 
 
 .li-menu-selected {
     background: #435B7D;
+    border-radius: 10px;
 }
 
 .li-menu-selected:hover {
@@ -87,12 +89,12 @@
     text-decoration: none;
     color: #ffff;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .p-management,
 .p-profession {
-    width: 80px;
+    width: 107px;
     font-weight: 600;
     margin-bottom: 0px !important;
 }
@@ -186,7 +188,7 @@
 
 
 .filter-btns:hover {
-    background: #c5c1c1;
+    background: #dddcdc;
 }
 
 
@@ -200,12 +202,12 @@
 
 
 .filter-btns-selected {
-    background: #c3cbd7;
+    background: #c5c1c1;
 }
 
 
 .filter-btns-selected:hover {
-    background: #c3cbd7;
+    background: #c5c1c1;
 }
 
 
@@ -258,13 +260,14 @@
 
 
 .search {
-    height: 20vh;
+    height: 10vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-end;
     transition: height 0.1s ease-in-out;
-    padding-right: 10px;
+    padding: 0px 10px;
+    margin: 20px 0px;
 
 }
 
@@ -278,6 +281,7 @@
     justify-content: center;
     background: #ffff;
     cursor: pointer;
+    margin-bottom: 20px;
 }
 
 
@@ -306,7 +310,7 @@
 }
 
 .label-fButtons {
-    padding: 6px 0px 0px 12px !important;
+    padding: 6px 0px 0px 8px !important;
     height: 30px !important;
     font-size: 15px;
 }
@@ -336,7 +340,7 @@
 
 
 .table-container {
-    height: 52vh;
+    height: 47vh;
     overflow: hidden;
     overflow-y: scroll;
     margin: 0px 10px 5px 0px;
@@ -542,9 +546,12 @@ i {
 
 
 .table-subClass {
-    height: 60vh;
+    height: 57vh;
 }
 
+.search-subClass {
+    height: 20vh;
+}
 
 
 .arrow-subClass {
@@ -1009,23 +1016,26 @@ input.editable-input-2.form-control {
     padding: 7px 30px;
 }
 
+.mf-center{
+    align-items: center !important
+}
 
-.contentWidhtRenovation{
+.contentWidhtRenovation {
     width: 415px;
     height: 364px;
 }
 
 
-.mbodyR-class{
+.mbodyR-class {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
 
-.spanw-container{
+.spanw-container {
     width: 83px;
-    height:83px;
+    height: 83px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1033,30 +1043,30 @@ input.editable-input-2.form-control {
     background: #f9d9d9;
 }
 
-.mI-warning{
+.mI-warning {
     color: #E17040;
     font-size: 50px !important;
 }
 
-.renovation-title{
-    font-size: 23px ;
+.renovation-title {
+    font-size: 23px;
     font-weight: 600;
     margin: 0px;
     text-align: center;
 }
 
-.renovation-text{
+.renovation-text {
     margin: 0px;
     text-align: center;
     font-size: 15px;
 }
 
-.btns-cancel-renovation{
+.btns-cancel-renovation {
     gap: 20px;
     display: flex;
 }
 
-.btns-cancel-renovation button{
+.btns-cancel-renovation button {
     font-weight: 500;
     color: #585858;
 }
@@ -1094,10 +1104,17 @@ input.editable-input-2.form-control {
     }
 
 
+    .a-management,
+    .a-profession {
+       
+        gap: 10px;
+    }
+
 
     .p-management,
     .p-profession {
         font-size: 13px;
+        width: 87px;
     }
 }
 
@@ -1299,30 +1316,29 @@ input.editable-input-2.form-control {
     /* ---MODAL WARNING--- */
 
 
-    .contentWidhtRenovation{
-        width: 100%;
-        height: 100vh;
+    .contentWidhtRenovation {
+        width: 94%;
+        height: 80vh;
+        margin: auto;
     }
 
-    .modalDialogR{
-        margin: 0px !important;
-    }
+    
 
-    .mbodyR-class{
+    .mbodyR-class {
         justify-content: center;
         gap: 10%;
     }
 
-    .btns-cancel-renovation{
+    .btns-cancel-renovation {
         flex-direction: column-reverse;
     }
 
-    .btn-sr{
+    .btn-sr {
         width: 186px;
     }
 
 
-   /* ---MODAL WARNING !--- */
+    /* ---MODAL WARNING !--- */
 
     .header-main {
         display: flex;
