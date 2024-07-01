@@ -57,7 +57,7 @@ document.querySelectorAll('.btn-edit').forEach(button => {
     button.addEventListener('click', function () {
         const suffix = this.getAttribute('data-button');
 
-        const editableElements = document.querySelectorAll(`.editable-${suffix}, .editable-select-${suffix} ,.editable-select-prof-${suffix}`);
+        const editableElements = document.querySelectorAll(`.editable-${suffix}, .editable-a-${suffix} , .editable-select-${suffix} ,.editable-select-prof-${suffix}`);
         let pTitle = document.querySelectorAll(`.dto-title-${suffix}`);
         let labels = document.querySelectorAll(`.active-label-${suffix}`);
         let mIcons = document.querySelectorAll(`.mIcons-${suffix}`);
@@ -128,7 +128,23 @@ document.querySelectorAll('.btn-edit').forEach(button => {
 
 
 
-            } else {
+            }
+
+            else if (element.classList.contains(`editable-a-${suffix}`)) {
+
+
+
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.value = element.textContent;
+                input.className = `editable-a-input-${suffix} bg-edit form-control`;
+                input.setAttribute('data-id', element.id);
+
+                element.replaceWith(input);
+
+            }
+
+            else {
                 const input = document.createElement('input');
                 input.type = 'text';
                 input.value = element.textContent;
@@ -153,6 +169,19 @@ document.querySelectorAll('.btn-save').forEach(button => {
         let pTitle = document.querySelectorAll(`.dto-title-${suffix}`);
         let labels = document.querySelectorAll(`.active-label-${suffix}`);
         let mIcons = document.querySelectorAll(`.mIcons-${suffix}`);
+
+
+        const anchor = document.querySelectorAll(`.editable-a-input-${suffix}`)
+        anchor.forEach(anchor => {
+            const a = document.createElement('a')
+            a.className = `editable-a-${suffix}`;
+            a.textContent = anchor.value;
+            a.id = anchor.getAttribute('data-id');
+
+            anchor.replaceWith(a);
+        })
+
+
 
         const inputs = document.querySelectorAll(`.editable-input-${suffix}`);
         inputs.forEach(input => {
@@ -210,6 +239,17 @@ document.querySelectorAll('.btn-cancel').forEach(button => {
         let pTitle = document.querySelectorAll(`.dto-title-${suffix}`);
         let labels = document.querySelectorAll(`.active-label-${suffix}`);
         let mIcons = document.querySelectorAll(`.mIcons-${suffix}`);
+
+
+        const anchor = document.querySelectorAll(`.editable-a-input-${suffix}`)
+        anchor.forEach(anchor => {
+            const a = document.createElement('a')
+            a.className = `editable-a-${suffix}`;
+            a.textContent = anchor.value;
+            a.id = anchor.getAttribute('data-id');
+
+            anchor.replaceWith(a);
+        })
 
         const inputs = document.querySelectorAll(`.editable-input-${suffix}`);
         inputs.forEach(input => {
@@ -274,21 +314,25 @@ document.getElementById('toggleSearch').addEventListener('click', function () {
 
 
         // $('.dt-search').show()
-        $('#searchContainer').hide(500)
-        tableContainer.classList.add('table-subClass')
-        search.classList.remove('search-subClass')
-        arrow.classList.remove('arrow-subClass')
-        btnSearch.classList.remove('btn-Asearch3')
+        $('#searchContainer').hide(500, function () {
+            tableContainer.classList.add('table-subClass');
+            search.classList.remove('search-subClass');
+            arrow.classList.remove('arrow-subClass');
+            btnSearch.classList.remove('btn-Asearch3');
+        })
+
 
 
     } else {
         // $('.dt-search').hide()
-        $('#searchContainer').show(500)
-        tableContainer.classList.remove('table-subClass')
         search.classList.add('search-subClass')
-        arrow.classList.add('arrow-subClass')
-        btnSearch.classList.add('btn-Asearch3')
 
+        $('#searchContainer').show(500, function () {
+            tableContainer.classList.remove('table-subClass')
+            arrow.classList.add('arrow-subClass')
+            btnSearch.classList.add('btn-Asearch3')
+
+        })
     }
 })
 
@@ -299,41 +343,70 @@ $('#modalDescription').on('hidden.bs.modal', function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    
-    document.body.addEventListener('click', function(event) {
-      if (event.target.closest('.btn-renovation')) {
-      
-        const modal = new bootstrap.Modal(document.getElementById('modalRenovation'))
-       
-        modal.show()
-      }
+document.addEventListener('DOMContentLoaded', function () {
+
+    document.body.addEventListener('click', function (event) {
+        if (event.target.closest('.btn-renovation')) {
+
+            const modal = new bootstrap.Modal(document.getElementById('modalRenovation'))
+
+            modal.show()
+        }
     });
 })
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
+const mediaQuery = window.matchMedia('(min-width: 768px)')
 
-  
-    const rows = document.querySelectorAll('.data-tr')
-    rows.forEach(row => {
-        row.addEventListener('click', (event) => {
-            
-            if (event.target.closest('.acciones .btn')) {
-                return
-            }
 
-            //!! Verificar si la fila contiene un td con clase 'dtr-hidden'
-            if (row.querySelector('td.dtr-hidden')) {
-                return
-            }
 
-            const modal = new bootstrap.Modal(document.querySelector('#modalDescription'))
-            modal.show()
+function handleMediaChange(event) {
+    if (event.matches) {
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+            const rows = document.querySelectorAll('.data-tr')
+            rows.forEach(row => {
+                row.addEventListener('click', (event) => {
+
+                    if (event.target.closest('.acciones .btn')) {
+                        return
+                    }
+
+
+                    if (event.target.closest('td.dtr-control')) {
+                        return
+                    }
+
+                    //!! Verificar si la fila contiene un td con clase 'dtr-hidden'
+                    // if (row.querySelecto r('td.dtr-hidden')) {
+                    //     return
+                    // }
+
+                    const modal = new bootstrap.Modal(document.querySelector('#modalDescription'))
+                    modal.show()
+                })
+            })
+
         })
-    })
 
-}) 
+
+    }
+}
+
+//? Verificar el estado inicial
+handleMediaChange(mediaQuery)
+
+
+mediaQuery.addEventListener('change', handleMediaChange)
+
+
+$('.modalSesionClose').click(function(){
+    $('#modalSesionClose').modal('show')
+})
+
 
 

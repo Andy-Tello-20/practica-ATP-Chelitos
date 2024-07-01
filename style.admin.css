@@ -125,6 +125,7 @@
     margin-bottom: 0px !important;
     color: #ffff;
     font-size: 17px !important;
+    margin-left: 20px;
 }
 
 .nav {
@@ -604,7 +605,10 @@ i {
 ----- evento de los 4 botones verticales----- */
 
 
-
+.modalDialogD{
+    width: auto !important;
+    max-width: none;
+}
 
 
 
@@ -615,8 +619,8 @@ i {
 }
 
 .contentWidht {
-    height: 640px;
-    width: 556px;
+    height: 750px;
+    width: 695px;
 }
 
 .mbody-class {
@@ -636,7 +640,7 @@ i {
 
 .dto-contacto {
     flex-direction: column;
-    width: 475px;
+    width: 660px;
     height: 100%;
     align-items: center;
 
@@ -836,6 +840,10 @@ hr {
     align-items: center;
 }
 
+.mI-wp{
+    font-size: 24px;
+}
+
 .mI-2 {
     margin-right: 8px;
 }
@@ -848,8 +856,15 @@ hr {
     filter: drop-shadow(2px 4px 6px rgb(0, 0, 0));
 }
 
+.editable-a-1{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 input.editable-input-1.form-control,
-input.editable-input-2.form-control {
+input.editable-input-2.form-control,
+input.editable-a-input-1.form-control {
     border: none;
     min-height: 50px !important;
     height: 56px !important;
@@ -915,8 +930,12 @@ input.editable-input-2.form-control {
 }
 
 .btn-cancel {
-    background: #D9D7D7;
+    color: #959595;
+    font-weight: 700;
+    letter-spacing: 1.25px;
 }
+
+
 
 .btn-save {
     background: rgb(13, 161, 108, 70%)
@@ -1159,7 +1178,7 @@ input.editable-input-2.form-control {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 
     .main {
         background: #f0eeee;
@@ -1191,6 +1210,7 @@ input.editable-input-2.form-control {
 
     div.dt-container div.dt-length {
         text-align: left;
+        margin-left: 10px;
     }
 
     div.dt-container div.dt-search {
