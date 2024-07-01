@@ -352,10 +352,18 @@ $('#modalSesionClose').on('hide.bs.modal', function (e) {
   });
 
   $('#modalSesionClose').on('show.bs.modal', function (e) {
-  
+    $(this).css('display','flex')
     // sleep(500)
     // $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
     $(this).addClass('m-show-sesion')
+
+  });
+
+  $('#modalSesionClose').on('shown.bs.modal', function (e) {
+    $(this).css('display','flex')
+    // sleep(500)
+    // $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
+    
 
   });
 
