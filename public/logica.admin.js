@@ -342,6 +342,23 @@ $('#modalDescription').on('hidden.bs.modal', function () {
 })
 
 
+$('#modalSesionClose').on('hide.bs.modal', function (e) {
+    console.log($(this).css('display'))
+    // sleep(500)
+    $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
+  });
+
+  $('#modalSesionClose').on('hidden.bs.modal', function (e) {
+    $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
+  });
+
+
+  function sleep(ms) {
+    var esperarHasta = new Date().getTime() + ms;
+    while(new Date().getTime() < esperarHasta) continue;
+
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
 

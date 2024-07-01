@@ -1495,4 +1495,43 @@ input.editable-a-input-1.form-control {
         margin: 0px;
     }
 
+    /* .modal.fade{
+        transition-duration: 0.15s;
+    } */
+
+    @keyframes slideInUp {
+      from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    /* Animación de salida */
+    @keyframes slideOutUp {
+      from {
+        transform: translateY(100);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 0;
+      }
+    }
+    
+    .modal.fade .modal-dialog {
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    }
+    
+    .modal.fade.show .modal-dialog {
+      animation: slideInUp 0.3s forwards;
+    }
+    
+    .modal.fade .modal-dialog {
+      animation: slideOutUp 0.3s forwards;
+    }
+
 }
