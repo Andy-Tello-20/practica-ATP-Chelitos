@@ -344,7 +344,7 @@ $('#modalDescription').on('hidden.bs.modal', function () {
 
 
 $('#modalSesionClose').on('hide.bs.modal', function (e) {
-    console.log($(this).css('display'))
+    $(this).css('display','flex')
     // sleep(500)
     // $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
     $(this).removeClass('m-show-sesion')
@@ -352,7 +352,7 @@ $('#modalSesionClose').on('hide.bs.modal', function (e) {
   });
 
   $('#modalSesionClose').on('show.bs.modal', function (e) {
-    console.log($(this).css('display'))
+  
     // sleep(500)
     // $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
     $(this).addClass('m-show-sesion')
