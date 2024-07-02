@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.admin.css">
+</head>
+
+
+
+<body>
+
+
+    <main class="modal-main">
+        <div class="modal-page">
+
+            <div class="turn-back">
+                <button id="mPageBtn" data-content="1"><span
+                        class="material-symbols-outlined mI-arrow-back mp-mI-back notranslate">arrow_back</span></button>
+
+            </div>
+
+
+            <div class="modal-page-data">
+
+                <div id="content-1" class="mpage-dto content active ">
+
+                    <div class="mb-btn-container">
+                        <button id="mPageBtn" class="mpage-btn" data-content="2">
+
+                            <span class="material-symbols-outlined notranslate mI-modal-buttons mI-color">person</span>
+
+                            <p class="mp-p">Datos de Contacto</p>
+
+                        </button>
+
+                        <button id="mPageBtn" class="mpage-btn" data-content="3">
+
+                            <span class="material-symbols-outlined notranslate mI-modal-buttons mI-color">
+                                deployed_code</span>
+
+                            <p class="mp-p">Envío de Kit</p>
+
+                        </button>
+
+                        <button id="mPageBtn" class="mpage-btn" data-content="4">
+
+                            <span class="material-symbols-outlined notranslate mI-modal-buttons mI-color">id_card</span>
+
+                            <p class="mp-p">Suscripciones</p>
+
+                        </button>
+
+                        <button id="mPageBtn" class="mpage-btn" data-content="5">
+
+                            <span class="material-symbols-outlined notranslate mI-modal-buttons mI-color">info</span>
+
+                            <p class="mp-p">Mas Información</p>
+
+                        </button>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+
+
+                <div id="content-2" class="mpage-dto content">
+                    <div class="header-dto">
+                        <h4 class="header-nav-title">Datos de contacto</h4>
+
+                        <button class="btn-edit beEdit-1 mI-Edit" id="editButton-1" data-button="1"><span
+                            class="material-icons notranslate ">edit</span></button>
+
+                        <div class="user-profile">
+
+                          <div class="form-floating">
+
+                            <span id="userName" class="editable-1">Pedro Roberto</span>
+
+                            <label class="active-label-1 class-hidden-none" for="userName">Nombre/s:</label>
+                          </div>
+
+                          <div class="form-floating">
+
+                            <span id="userLastName" class="editable-1">Diaz</span>
+
+                            <label class="active-label-1 class-hidden-none" for="userLastName">Apellido/s:</label>
+                          </div>
+                        </div>
+
+
+
+                        <div class="user-contact">
+
+
+
+
+                          <div class="form-floating input-width-1">
+                            <span class="fab fa-whatsapp mIcons-1 mI-2 mI-wp"></span>
+                            <a href="" id="userPhone" class="editable-a-1">3514567893</a>
+                            <label for="userPhone" class="active-label-1 class-hidden-none">Telefono:</label>
+                          </div>
+                        
+
+                          <div class="form-floating input-width-2">
+                            <span class="material-symbols-outlined notranslate mIcons-1 mI-2">mail</span>
+                            <a href="" id="userEmail" class="editable-a-1">pedrodiaz@gmail.com</a>
+                            <label for="userEmail" class="active-label-1 class-hidden-none">Email:</label>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <hr class="under-header">
+
+                      <div class="user-dto">
+
+                        <div class="form-floating">
+                          <p class="dto-title-1">Tipo de Documento</p>
+                          <span class="editable-select-1" id="documentType">Tipo de Documento*</span>
+                          <label class="active-label-1 class-hidden-none al-2" for="documentType">Tipo de
+                            Documento</label>
+                          <hr class="hr-dto">
+                        </div>
+
+
+
+                        <div class="form-floating">
+
+
+                          <p class="dto-title-1">Nro de Documento</p>
+                          <span id="UserDNI" class="editable-1">23456789</span>
+                          <label class="active-label-1 class-hidden-none al-2" for="UserDNI">Nro de Documento</label>
+                          <hr class="hr-dto">
+
+                        </div>
+
+                        <div class="form-floating">
+
+
+                          <p class="dto-title-1">Profesión</p>
+                          <span id="UserProfession" class="editable-select-prof-1">Tipo de Documento*</span>
+                          <label class="active-label-1 class-hidden-none al-2" for="UserProfession">Profesión</label>
+                          <hr class="hr-dto">
+                        </div>
+
+                        <div class="form-floating">
+
+                          <p class="dto-title-1">MP</p>
+                          <span id="UserMp" class="editable-1">34567890</span>
+                          <label class="active-label-1 class-hidden-none al-2" for="UserMp">MP</label>
+                          <hr class="hr-dto">
+                        </div>
+
+                        <div class="form-floating">
+
+                          <p class="dto-title-1">Dirección</p>
+                          <span id="UserAddress" class="editable-1"> Av. Corrientes 1234</span>
+                          <label class="active-label-1 class-hidden-none al-2" for="UserAddress">Direccion</label>
+                          <hr class="hr-dto">
+
+                        </div>
+
+                        <div class="form-floating">
+
+                          <p class="dto-title-1">Código Postal</p>
+                          <span id="UserCp" class="editable-1">B1228</span>
+                          <label class="active-label-1 class-hidden-none al-2" for="UserCp">Código Postal</label>
+                          <hr class="hr-dto">
+
+                        </div>
+
+
+                        <div class="form-floating">
+
+                          <p class="dto-title-1">Barrio</p>
+                          <span id="UserNeighborhood" class="editable-1">Palermo</span>
+                          <label class="active-label-1 class-hidden-none al-2" for="UserNeighborhood">Barrio</label>
+                          <hr class="hr-dto">
+
+                        </div>
+
+
+                        <div class="form-floating">
+
+                          <p class="dto-title-1">Localidad</p>
+                          <span id="UserLocation" class="editable-1">CABA</span>
+                          <label class="active-label-1 class-hidden-none al-2" for="UserLocation">Localidad</label>
+                          <hr class="hr-dto">
+
+                        </div>
+
+
+                        <div class="form-floating">
+
+                          <p class="dto-title-1">Provincia</p>
+                          <span id="UserState" class="editable-1">Buenos Aires</span>
+                          <label class="active-label-1 class-hidden-none al-2" for="UserState">Provincia</label>
+                          <hr class="hr-dto">
+
+                        </div>
+
+                        <div class="form-floating">
+
+                          <p class="dto-title-1">País</p>
+                          <span id="UserCountry" class="editable-1">Argentina</span>
+                          <label class="active-label-1 class-hidden-none al-2" for="UserCountry">País</label>
+                          <hr class="hr-dto">
+
+                        </div>
+
+
+
+
+                        <div class="sc-buttons-1" id="actionButtons" style="display: none;">
+                          <button class="btn-cancel" id="cancelButton" data-cancel="1">Cancelar</button>
+                          <button class="btn-save" id="saveButton" data-save="1">Guardar</button>
+                        </div>
+
+
+                      </div>
+                </div>
+
+
+
+                <div id="content-3" class="mpage-dto content">
+                    <p>hola3</p>
+                </div>
+
+
+
+                <div id="content-4" class="mpage-dto content">
+                    <p>hola4</p>
+                </div>
+
+
+
+                <div id="content-5" class="mpage-dto content">
+
+                    <h4 class="header-nav-title">Mas Información</h4>
+                    
+
+                  
+
+                      <div class="user-dto">
+
+
+                        <div class="modal-info-container">
+                          <div class="location-tpa bg-colorW">
+                            <div class="iLocation-container">
+                              <span class="material-symbols-outlined notranslate mI-subscription">location_on</span>
+                            </div>
+                            <div class="infoLocation-container">
+                              <p class="p-location-title">Ubicación Preferida para la Fase Presencial</p>
+                              <p class="p-ubication">Mendoza (Instituto VIANETT® sede Mendoza)</p>
+                            </div>
+                          </div>
+
+                          <div class="knowing-tpa">
+                            <div class="iHandshake-container">
+                              <span class="material-symbols-outlined notranslate mI-subscription">handshake</span>
+                            </div>
+                            <div class="knowing-info bg-colorW">
+                              <p class="p-knowing-title">Cómo Conociste TPA® y Decidiste Unirte</p>
+                              <p class="p-how">Lorem ipsum dolor sit amet. Eos consequatur omnis ut veritatis aliquam
+                                quo quis voluptatibus. Ut veritatis aliquam quo quis voluptatibus.</p>
+                            </div>
+                          </div>
+                        </div>
+
+
+
+
+                      </div>
+                </div>
+
+            </div>
+
+            <header class="mp-header-main">
+                <span class="material-symbols-outlined mI-User mp-mI-U2 notranslate">house</span>
+
+                <span
+                    class="material-symbols-outlined mI-User mp-mI-U2 notranslate modalSesionClose">account_circle</span>
+            </header>
+        </div>
+    </main>
+
+
+
+    <script src="../public/logica.modal.admin.js"></script>
+
+</body>
+
+</html>
