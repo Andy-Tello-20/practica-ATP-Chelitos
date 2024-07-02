@@ -31,19 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
             contenidoSeleccionado.classList.add('active')
         }
 
-        href (contenidoSeleccionado)
-        // const anchorButton = document.querySelector('#mPageBtn[data-content="1"]')
-
-        // anchorButton.addEventListener('click', () => {
-
-        //     if (contenidoSeleccionado.id === 'content-1') {
-                
-        //         anchorButton.setAttribute('href', './admin.tpa.html')
-        //     } else {
-        //         anchorButton.removeAttribute('href')
-        //     }
-
-        // })
+        href(contenidoSeleccionado)
+       
     }
 
     function href (data){
