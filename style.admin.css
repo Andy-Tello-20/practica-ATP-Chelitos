@@ -1165,11 +1165,16 @@ font-size: 25px;
     padding: 8px 20px;
     width: 100%;
     background: #2A384D;
+    align-items: center;
     
 }
 
 .mp-a-back{
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    text-decoration: none;
 }
 
 .mp-header-main{
@@ -1284,12 +1289,13 @@ font-size: 25px;
 
 }
 
-.mb-btn-container{
+.mp-btn-container{
     display: flex;
     flex-direction: column;
     height: 100%;
     gap: 24px;
     justify-content: center;
+    align-items: center;
 
 }
 
