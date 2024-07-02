@@ -1180,6 +1180,52 @@ font-size: 25px;
     box-shadow: 0px -1px 1px;
 }
 
+.mp-user-dto{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+    width: 100%;
+    padding: 12px 33px;
+    align-items: center;
+}
+
+.mp-location-tpa{
+    display: flex;
+    height: 120px;
+    gap: 26px;
+    border-radius: 8px;
+
+}
+
+.mp-knowing-tpa{
+    display: flex;
+    height: 190px;
+    gap: 26px;
+    border-radius: 8px;
+}
+
+.mp-code-status{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.mp-member-code,.mp-user-status-title{
+    background: #fff;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 100px;
+    border-radius: 8px;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+
+}
+
 .mp-mI-U2 {
     color: #212020;
     margin: 0px;
