@@ -1,3 +1,5 @@
+
+
 let table = new DataTable('#tpaTable', {
     responsive: true,
     searching: false
@@ -344,7 +346,7 @@ $('#modalDescription').on('hidden.bs.modal', function () {
 
 
 $('#modalSesionClose').on('hide.bs.modal', function (e) {
-    $(this).css('display','flex')
+    $(this).css('display','none')
     // sleep(500)
     // $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
     $(this).removeClass('m-show-sesion')
