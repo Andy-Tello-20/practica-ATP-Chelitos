@@ -3,12 +3,17 @@
 
 //!   Logica botones MODAL PAGE
 
+
+
 document.addEventListener('DOMContentLoaded', function () {
     const botones = document.querySelectorAll('#mPageBtn')
     const contenidos = document.querySelectorAll('.content')
+    
+    let contenidoSeleccionado = document.getElementById(`content-1`)
+    href (contenidoSeleccionado)
 
     botones.forEach(boton => {
-        boton.addEventListener('click', function () {
+        boton.addEventListener('click', function (event) {
             const dataContent = boton.getAttribute('data-content')
             actualizarContenido(dataContent)
             actualizarBotonActivo(boton)
@@ -17,33 +22,54 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function actualizarContenido(dataContent) {
-
         contenidos.forEach(contenido => {
             contenido.classList.remove('active')
         });
 
-
-        const contenidoSeleccionado = document.getElementById(`content-${dataContent}`)
+         contenidoSeleccionado = document.getElementById(`content-${dataContent}`)
         if (contenidoSeleccionado) {
             contenidoSeleccionado.classList.add('active')
         }
+
+        href (contenidoSeleccionado)
+        // const anchorButton = document.querySelector('#mPageBtn[data-content="1"]')
+
+        // anchorButton.addEventListener('click', () => {
+
+        //     if (contenidoSeleccionado.id === 'content-1') {
+                
+        //         anchorButton.setAttribute('href', './admin.tpa.html')
+        //     } else {
+        //         anchorButton.removeAttribute('href')
+        //     }
+
+        // })
     }
 
-    // function actualizarBotonActivo(botonActivo) {
+    function href (data){
+        const anchorButton = document.querySelector('#mPageBtn[data-content="1"]')
 
-    //     botones.forEach(boton => {
-    //         boton.classList.remove('btn-active')
-    //     })
+        anchorButton.addEventListener('click', () => {
 
+            if (data.id === 'content-1') {
+                
+                anchorButton.setAttribute('href', './admin.tpa.html')
+            } else {
+                anchorButton.removeAttribute('href')
+            }
 
-    //     if (!element.getAttribute('data-content') !== '1') {
-   
-    //         botonActivo.classList.add('btn-active')
-    //     }
+        })
+    }
 
-        
-    // }
+    function actualizarBotonActivo(botonActivo) {
+        botones.forEach(boton => {
+            boton.classList.remove('btn-active')
+        });
+
+        botonActivo.classList.add('btn-active')
+    }
 });
+
 
 
 
@@ -294,3 +320,5 @@ document.querySelectorAll('.btn-cancel').forEach(button => {
         document.querySelector(`.btn-edit[data-button="${suffix}"]`).disabled = false;
     });
 });
+
+

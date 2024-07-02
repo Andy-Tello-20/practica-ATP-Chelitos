@@ -1157,6 +1157,8 @@ input.editable-a-input-1.form-control {
 font-size: 25px;
 }
 
+
+
 .turn-back{
     display: flex;
     height: 6vh;
@@ -1164,6 +1166,10 @@ font-size: 25px;
     width: 100%;
     background: #2A384D;
     
+}
+
+.mp-a-back{
+    cursor: pointer;
 }
 
 .mp-header-main{
