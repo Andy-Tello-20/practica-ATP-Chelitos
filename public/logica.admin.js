@@ -443,7 +443,7 @@ handleMediaChange(mediaQuery)
 mediaQuery.addEventListener('change', handleMediaChange)
 
 
-$('.modalSesionClose2').click(function(){
+$('.modalSesionClose').click(function(){
     $('#modalSesionClose').modal('show')
 })
 

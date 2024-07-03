@@ -245,7 +245,121 @@
 
 
                 <div id="content-3" class="mpage-dto content">
-                    <p>hola3</p>
+                  <div class="header-dto">
+                    <h4 class="header-nav-title">Envio de Kit</h4>
+
+
+                    <div class="user-profile">
+
+                      <div class="form-floating">
+
+                        <span id="userName" class="">Pedro Roberto</span>
+
+
+                      </div>
+
+                      <div class="form-floating">
+
+                        <span id="userLastName" class="">Diaz</span>
+
+
+                      </div>
+                    </div>
+
+                    <div class="user-contact">
+
+                      <div class="form-floating input-width-1">
+                        <span class="fab fa-whatsapp mIcons-1 mI-2 mI-wp"></span>
+                        <a href="" id="userPhone" class="a-content-2">3514567893</a>
+
+                      </div>
+
+                      <div class="form-floating input-width-2">
+                        <span class="material-symbols-outlined notranslate mI-2">mail</span>
+                        <a href="" id="userEmail" class="a-content-2">pedrodiaz@gmail.com</a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <hr class="under-header">
+
+                  <div class="user-dto">
+                    <button class="btn-edit bt-2 mI-Edit" id="editButton-2" data-button="2"><span
+                        class="material-icons notranslate ">edit</span></button>
+
+
+
+                    <div class="form-floating">
+
+                      <p class="dto-title-2">Dirección</p>
+                      <span id="UserAddress" class="editable-2"> Av. Corrientes 1234</span>
+                      <label class="active-label-2 class-hidden-none al-2" for="UserAddress">Direccion</label>
+                      <hr class="hr-dto">
+
+                    </div>
+
+                    <div class="form-floating">
+
+                      <p class="dto-title-2">Código Postal</p>
+                      <span id="UserCp" class="editable-2">B1228</span>
+                      <label class="active-label-2 class-hidden-none al-2" for="UserCp">Código Postal</label>
+                      <hr class="hr-dto">
+
+                    </div>
+
+
+                    <div class="form-floating">
+
+                      <p class="dto-title-2">Barrio</p>
+                      <span id="UserNeighborhood" class="editable-2">Palermo</span>
+                      <label class="active-label-2 class-hidden-none al-2" for="UserNeighborhood">Barrio</label>
+                      <hr class="hr-dto">
+
+                    </div>
+
+
+                    <div class="form-floating">
+
+                      <p class="dto-title-2">Localidad</p>
+                      <span id="UserLocation" class="editable-2">CABA</span>
+                      <label class="active-label-2 class-hidden-none al-2" for="UserLocation">Localidad</label>
+                      <hr class="hr-dto">
+
+                    </div>
+
+
+                    <div class="form-floating">
+
+                      <p class="dto-title-2">Provincia</p>
+                      <span id="UserState" class="editable-2">Buenos Aires</span>
+                      <label class="active-label-2 class-hidden-none al-2" for="UserState">Provincia</label>
+                      <hr class="hr-dto">
+
+                    </div>
+
+                    <div class="form-floating">
+
+                      <p class="dto-title-2">País</p>
+                      <span id="UserCountry" class="editable-2">Argentina</span>
+                      <label class="active-label-2 class-hidden-none al-2" for="UserCountry">País</label>
+                      <hr class="hr-dto">
+
+                    </div>
+
+
+
+
+
+                    <div class="sc-buttons-2" id="actionButtons" style="display: none;">
+                      <button class="btn-cancel" id="cancelButton" data-cancel="2">Cancelar</button>
+                      <button class="btn-save" id="saveButton" data-save="2">Guardar</button>
+                    </div>
+
+
+                  </div>
                 </div>
 
 
@@ -366,10 +480,51 @@
                     class="material-symbols-outlined mI-User mp-mI-U2 notranslate modalSesionClose2">account_circle</span>
             </header>
         </div>
+
+
+        <div class="modal fade m-show-sesion" id="modalSesionClose2" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true" >
+        <div class="modal-dialog classModelDialogS">
+          <div class="modal-content contentWidhtSesion">
+
+            <div class="modal-body ModalBodyStyleSesion">
+
+              <hr class="hr-session-top" data-bs-dismiss="modal" aria-label="Close" >
+
+              <div class="user-icon-session">
+                <div class="circle-icon-container">
+                  <span class="material-symbols-outlined mI-session notranslate">account_circle</span>
+                </div>
+
+                <div class="user-data-session">
+                  <p class="session-name">Silvina Lambertini</p>
+                  <p class="session-email">silvinalambertini@gmail.com</p>
+                </div>
+
+              </div>
+
+              <hr class="hr-session">
+
+              <a class="a-session " href=""><span class="material-symbols-outlined">exit_to_app</span>
+                <p>Cerrar Sesión</p>
+              </a>
+
+
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+
     </main>
 
     
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="../public/logica.modal.admin.js"></script>
 
 </body>

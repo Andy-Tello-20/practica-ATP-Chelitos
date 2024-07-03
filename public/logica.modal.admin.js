@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
          contenidoSeleccionado = document.getElementById(`content-${dataContent}`)
         if (contenidoSeleccionado) {
             contenidoSeleccionado.classList.add('active')
+            // window.location.hash=dataContent
         }
 
         href(contenidoSeleccionado)
@@ -311,3 +312,6 @@ document.querySelectorAll('.btn-cancel').forEach(button => {
 });
 
 
+$('.modalSesionClose2').click(function(){
+    $('#modalSesionClose2').modal('show')
+})
