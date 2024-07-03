@@ -1198,7 +1198,7 @@ font-size: 25px;
     overflow-y: scroll;
     width: 100%;
     padding: 12px 33px;
-    align-items: center;
+    
 }
 
 .mp-location-tpa{
@@ -1380,6 +1380,9 @@ font-size: 25px;
     gap: 30px;
 }
 
+.mp-hr-dto{
+    margin: 0px 0px 40px 0px !important;
+}
 
 
 @media screen and (max-width: 1140px) {
