@@ -15,14 +15,22 @@ document.addEventListener('DOMContentLoaded', function () {
     botones.forEach(boton => {
         boton.addEventListener('click', function (event) {
             const dataContent = boton.getAttribute('data-content')
-            actualizarContenido(dataContent)
+
+            actualizarContenido(dataContent)      
             actualizarBotonActivo(boton)
-            $('.btn-cancel').click()
+            // $('.btn-cancel').click()
+            
+            
+            
+              
+            
         });
     });
 
     function actualizarContenido(dataContent) {
+        
         contenidos.forEach(contenido => {
+            
             contenido.classList.remove('active')
         });
 
@@ -56,7 +64,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function actualizarBotonActivo(botonActivo) {
         botones.forEach(boton => {
+                
+             //!continuar aca
+             if (boton.classList.contains('btn-active')) {
+                console.log('se le removio active a el content-: ',boton.getAttribute('data-content'))
+                const dataContent = boton.getAttribute('data-content')
+
+                console.log('data content es:', dataContent)
+
+                if (dataContent === '1' || dataContent == '2'){
+                    resetCancel(dataContent)
+                    
+                }
+                
+            }
+           
+           
             boton.classList.remove('btn-active')
+
         });
 
         botonActivo.classList.add('btn-active')
@@ -265,8 +290,13 @@ const reset = (suffix) => {
         l.classList.add('class-hidden-none');
     });
 
-    document.querySelector(`.sc-buttons-${suffix}`).style.display = 'none';
-    document.querySelector(`.btn-edit[data-button="${suffix}"]`).disabled = false;
+    const scButtons = document.querySelector(`.sc-buttons-${suffix}`)
+    if (scButtons) {
+        scButtons.style.display = 'none';
+        // button.disabled = false;
+    }
+  
+    
 }
 
 
@@ -275,6 +305,8 @@ const reset = (suffix) => {
 
 
 const resetCancel = (suffix) => {
+
+    console.log('reset cancel suffx = ', suffix)
 
     let pTitle = document.querySelectorAll(`.dto-title-${suffix}`);
     let labels = document.querySelectorAll(`.active-label-${suffix}`);
@@ -335,7 +367,7 @@ const resetCancel = (suffix) => {
     });
 
     document.querySelector(`.sc-buttons-${suffix}`).style.display = 'none';
-    document.querySelector(`.btn-edit[data-button="${suffix}"]`).disabled = false;
+    
 
 }
 
