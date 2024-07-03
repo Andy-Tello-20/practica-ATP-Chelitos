@@ -70,7 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log('se le removio active a el content-: ',boton.getAttribute('data-content'))
                 const dataContent = boton.getAttribute('data-content')
 
-                console.log('data content es:', dataContent)
 
                 if (dataContent === '1' || dataContent == '2'){
                     resetCancel(dataContent)
@@ -371,7 +370,25 @@ const resetCancel = (suffix) => {
 
 }
 
+$('#modalSesionClose').on('hide.bs.modal', function (e) {
+    $(this).css('display','none')
+    // sleep(500)
+    // $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
+    $(this).removeClass('m-show-sesion')
 
+  });
+
+  $('#modalSesionClose').on('show.bs.modal', function (e) {
+    $(this).css('display','flex')
+    // sleep(500)
+    // $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
+    $(this).addClass('m-show-sesion')
+
+  });
+
+  $('#modalSesionClose').on('shown.bs.modal', function (e) {
+    $(this).css('display','flex')
+})
 
 $('.modalSesionClose').click(function () {
     $('#modalSesionClose').modal('show')
