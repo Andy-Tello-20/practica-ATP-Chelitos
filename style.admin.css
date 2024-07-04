@@ -944,7 +944,8 @@ input.editable-a-input-2.form-control {
 }
 
 .btn-cancel,
-.btn-save {
+.btn-save,
+.btn-sr {
     border: none;
     width: 111px;
     height: 34px;
@@ -959,7 +960,7 @@ input.editable-a-input-2.form-control {
 
 
 
-.btn-save {
+.btn-save, .btn-sr {
     background: rgb(13, 161, 108, 70%)
 }
 
@@ -1682,7 +1683,9 @@ font-size: 25px;
         flex-direction: column-reverse;
     }
 
-    .btn-sr {
+   
+
+    .btn-sr, .btn-sr-cancel {
         width: 186px;
     }
 
