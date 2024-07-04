@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const dataContent = boton.getAttribute('data-content')
             actualizarContenido(dataContent)
             actualizarBotonActivo(boton)
-     
+
         })
     })
 
@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (dataContent === '1' || dataContent == '2') {
 
-                    console.log('datacontent es: ',typeof(dataContent) ,': ',dataContent)
+                    console.log('datacontent es: ', typeof (dataContent), ': ', dataContent)
                     cancelData(dataContent)
 
                 }
@@ -88,10 +88,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 const editData = (suffix) => {
 
-    console.log('editData suffix es: ', typeof(suffix) , suffix)
+    console.log('editData suffix es: ', typeof (suffix), suffix)
 
     const editableElements = document.querySelectorAll(`.editable-a-input-${suffix} , .editable-select-${suffix} ,.editable-select-prof-${suffix}`)
-   
+
 
     originalValues[suffix] = {}
     editableElements.forEach(element => {
@@ -108,7 +108,7 @@ const editData = (suffix) => {
 
 
 document.querySelectorAll('.btn-save').forEach(button => {
-    button.addEventListener('click',  function () {
+    button.addEventListener('click', function () {
         const suffix = this.getAttribute('data-save')
         saveData(suffix)
     })
@@ -123,14 +123,14 @@ const saveData = (suffix) => {
     editableElements.forEach(element => {
         if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
             const newValue = element.value
-            console.log('element.value es: ',element.value)
+            console.log('element.value es: ', element.value)
 
 
             originalValues[suffix][element.id] = newValue
         }
     })
 
-  
+
 }
 
 
@@ -140,11 +140,11 @@ const cancelData = (suffix) => {
 
     editableElements.forEach(element => {
 
-        console.log('tagname es: ',element.tagName)
+        console.log('tagname es: ', element.tagName)
 
         if (element.tagName === 'INPUT' || element.tagName === 'SELECT') {
 
-            console.log('element.value es: ',element.value)
+            console.log('element.value es: ', element.value)
 
             element.value = originalValues[suffix][element.id]
         }
@@ -152,9 +152,6 @@ const cancelData = (suffix) => {
 
 
 }
-
-
-
 
 
 
@@ -180,4 +177,32 @@ $('#modalSesionClose').on('shown.bs.modal', function (e) {
 
 $('.modalSesionClose').click(function () {
     $('#modalSesionClose').modal('show')
+})
+
+
+$(document).ready(function () {
+
+    $('.btn-save').click(function () {
+        toastr["success"]("Cambios realizados con exito")
+
+
+        toastr.options = {
+            "closeButton": false,
+            "debug": false,
+            "newestOnTop": false,
+            "progressBar": false,
+            "positionClass": "toast-top-right",
+            "preventDuplicates": false,
+            "onclick": null,
+            "showDuration": "300",
+            "hideDuration": "1000",
+            "timeOut": "3000",
+            "extendedTimeOut": "1000",
+            "showEasing": "swing",
+            "hideEasing": "linear",
+            "showMethod": "fadeIn",
+            "hideMethod": "fadeOut"
+        }
+    })
+
 })
