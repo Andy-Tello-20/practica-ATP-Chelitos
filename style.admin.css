@@ -885,7 +885,8 @@ hr {
 
 input.editable-input-1.form-control,
 input.editable-input-2.form-control,
-input.editable-a-input-1.form-control {
+input.editable-a-input-1.form-control,
+input.editable-a-input-2.form-control {
     border: none;
     min-height: 50px !important;
     height: 56px !important;

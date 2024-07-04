@@ -27,7 +27,7 @@
     <div class="modal-page">
 
       <div class="turn-back">
-        <a id="mPageBtn" class="mp-a-back btn-active" data-content="3"><span
+        <a id="mPageBtn" class="mp-a-back " data-content="3"><span
             class="material-symbols-outlined mI-arrow-back mp-mI-back notranslate">arrow_back</span></a>
 
       </div>
@@ -94,39 +94,48 @@
             <h4 class="mp-header-nav-title">Datos de contacto</h4>
 
             <div class="form-floating">
-              <p class="dto-title-1">Nombre/s</p>
-              <span id="userName" class="editable-1">Pedro Roberto</span>
+
+              <input type="text" id="userName" class="editable-a-input-1 form-control" value="Pedro Roberto">
               <label class="active-label-1 class-hidden-none" for="userName">Nombre/s:</label>
               <hr class="mp-hr-dto">
             </div>
 
+
+
             <div class="form-floating">
-              <p class="dto-title-1">Apellido</p>
-              <span id="userLastName" class="editable-1">Diaz</span>
+
+              <input type="text" id="userLastName" class="editable-a-input-1 form-control" value="Diaz">
               <label class="active-label-1 class-hidden-none" for="userLastName">Apellido/s:</label>
               <hr class="mp-hr-dto">
             </div>
 
 
             <div class="form-floating ">
-              <p class="dto-title-1">Celular</p>
-              <a href="" id="userPhone" class="editable-a-1">3514567893</a>
+
+              <input type="text" href="" id="userPhone" class="editable-a-input-1 form-control" value="3514567893">
               <label for="userPhone" class="active-label-1 class-hidden-none">Telefono:</label>
               <hr class="mp-hr-dto">
             </div>
 
 
             <div class="form-floating ">
-              <p class="dto-title-1">Email</p>
-              <a href="" id="userEmail" class="editable-a-1">pedrodiaz@gmail.com</a>
+
+              <input type="text" href="" id="userEmail" class="editable-a-input-1 form-control"
+                value="pedrodiaz@gmail.com">
               <label for="userEmail" class="active-label-1 class-hidden-none">Email:</label>
               <hr class="mp-hr-dto">
             </div>
 
 
             <div class="form-floating">
-              <p class="dto-title-1">Tipo de Documento</p>
-              <span class="editable-select-1" id="documentType">Tipo de Documento*</span>
+
+              <select class="editable-select-1 form-select" id="documentType">
+
+                <option value="DNI">DNI</option>
+                <option value="Pasaporte">Pasaporte</option>
+                <option value="UE">UE</option>
+
+              </select>
               <label class="active-label-1 class-hidden-none al-2" for="documentType">Tipo de
                 Documento</label>
               <hr class="mp-hr-dto">
@@ -137,8 +146,8 @@
             <div class="form-floating">
 
 
-              <p class="dto-title-1">Nro de Documento</p>
-              <span id="UserDNI" class="editable-1">23456789</span>
+
+              <input type="text" id="UserDNI" class="editable-a-input-1 form-control" value="23456789">
               <label class="active-label-1 class-hidden-none al-2" for="UserDNI">Nro de Documento</label>
               <hr class="mp-hr-dto">
 
@@ -147,24 +156,32 @@
             <div class="form-floating">
 
 
-              <p class="dto-title-1">Profesión</p>
-              <span id="UserProfession" class="editable-select-prof-1">Tipo de Documento*</span>
+              <select id="UserProfession" class="editable-select-prof-1 form-select">
+                
+                <option value="Ingeniero civil">Ingeniero civil</option>
+                <option value="Diseñador gráfico">Diseñador gráfico</option>
+                <option value="Economista financiero">Economista financiero</option>
+                <option value="Abogado de derechos humanos">Abogado de derechos humanos</option>
+                <option value="Traductor/Intérprete de conferencias">Traductor/Intérprete de conferencias</option>
+        
+                
+              </select>
               <label class="active-label-1 class-hidden-none al-2" for="UserProfession">Profesión</label>
               <hr class="mp-hr-dto">
             </div>
 
             <div class="form-floating">
 
-              <p class="dto-title-1">MP</p>
-              <span id="UserMp" class="editable-1">34567890</span>
+
+              <input type="text" id="UserMp" class="editable-a-input-1 form-control" value="34567890">
               <label class="active-label-1 class-hidden-none al-2" for="UserMp">MP</label>
               <hr class="mp-hr-dto">
             </div>
 
             <div class="form-floating">
 
-              <p class="dto-title-1">Dirección</p>
-              <span id="UserAddress" class="editable-1"> Av. Corrientes 1234</span>
+
+              <input type="text" id="UserAddress" class="editable-a-input-1 form-control" value="Av. Corrientes 1234">
               <label class="active-label-1 class-hidden-none al-2" for="UserAddress">Direccion</label>
               <hr class="mp-hr-dto">
 
@@ -172,8 +189,8 @@
 
             <div class="form-floating">
 
-              <p class="dto-title-1">Código Postal</p>
-              <span id="UserCp" class="editable-1">B1228</span>
+
+              <input type="text" id="UserCp" class="editable-a-input-1 form-control" value="B1228">
               <label class="active-label-1 class-hidden-none al-2" for="UserCp">Código Postal</label>
               <hr class="mp-hr-dto">
 
@@ -182,8 +199,8 @@
 
             <div class="form-floating">
 
-              <p class="dto-title-1">Barrio</p>
-              <span id="UserNeighborhood" class="editable-1">Palermo</span>
+
+              <input type="text" id="UserNeighborhood" class="editable-a-input-1 form-control" value="Palermo">
               <label class="active-label-1 class-hidden-none al-2" for="UserNeighborhood">Barrio</label>
               <hr class="mp-hr-dto">
 
@@ -192,8 +209,8 @@
 
             <div class="form-floating">
 
-              <p class="dto-title-1">Localidad</p>
-              <span id="UserLocation" class="editable-1">CABA</span>
+
+              <input type="text" id="UserLocation" class="editable-a-input-1 form-control" value="CABA">
               <label class="active-label-1 class-hidden-none al-2" for="UserLocation">Localidad</label>
               <hr class="mp-hr-dto">
 
@@ -202,8 +219,8 @@
 
             <div class="form-floating">
 
-              <p class="dto-title-1">Provincia</p>
-              <span id="UserState" class="editable-1">Buenos Aires</span>
+
+              <input type="text" id="UserState" class="editable-a-input-1 form-control" value="Buenos Aires">
               <label class="active-label-1 class-hidden-none al-2" for="UserState">Provincia</label>
               <hr class="mp-hr-dto">
 
@@ -211,8 +228,8 @@
 
             <div class="form-floating">
 
-              <p class="dto-title-1">País</p>
-              <span id="UserCountry" class="editable-1">Argentina</span>
+
+              <input type="text" id="UserCountry" class="editable-a-input-1 form-control" value="Argentina">
               <label class="active-label-1 class-hidden-none al-2" for="UserCountry">País</label>
               <hr class="mp-hr-dto">
 
@@ -222,7 +239,7 @@
 
 
             <div class="sc-buttons-1" id="actionButtons" style="display: none;">
-
+              <button class="btn-cancel" id="cancelButton" data-cancel="1">Cancelar</button>
               <button class="btn-save" id="saveButton" data-save="1">Guardar</button>
             </div>
 
@@ -239,16 +256,16 @@
 
 
           <div class="mp-user-dto bg-mp-white">
-          
+
 
             <h4 class="mp-header-nav-title">Envio de Kit</h4>
 
             <div class="form-floating">
 
-             
 
-              <p class="dto-title-2">Dirección</p>
-              <span id="UserAddress" class="editable-2"> Av. Corrientes 1234</span>
+
+             
+              <input type="text" id="UserAddress" class="editable-a-input-2 form-control" value="Av. Corrientes 1234">
               <label class="active-label-2 class-hidden-none al-2" for="UserAddress">Direccion</label>
               <hr class="mp-hr-dto">
 
@@ -256,8 +273,8 @@
 
             <div class="form-floating">
 
-              <p class="dto-title-2">Código Postal</p>
-              <span id="UserCp" class="editable-2">B1228</span>
+           
+              <input type="text" id="UserCp" class="editable-a-input-2 form-control" value="B1228">
               <label class="active-label-2 class-hidden-none al-2" for="UserCp">Código Postal</label>
               <hr class="mp-hr-dto">
 
@@ -266,8 +283,8 @@
 
             <div class="form-floating">
 
-              <p class="dto-title-2">Barrio</p>
-              <span id="UserNeighborhood" class="editable-2">Palermo</span>
+             
+              <input type="text" id="UserNeighborhood" class="editable-a-input-2 form-control" value="Palermo">
               <label class="active-label-2 class-hidden-none al-2" for="UserNeighborhood">Barrio</label>
               <hr class="mp-hr-dto">
 
@@ -276,8 +293,8 @@
 
             <div class="form-floating">
 
-              <p class="dto-title-2">Localidad</p>
-              <span id="UserLocation" class="editable-2">CABA</span>
+            
+              <input type="text" id="UserLocation" class="editable-a-input-2 form-control" value="CABA">
               <label class="active-label-2 class-hidden-none al-2" for="UserLocation">Localidad</label>
               <hr class="mp-hr-dto">
 
@@ -286,8 +303,8 @@
 
             <div class="form-floating">
 
-              <p class="dto-title-2">Provincia</p>
-              <span id="UserState" class="editable-2">Buenos Aires</span>
+          
+              <input type="text" id="UserState" class="editable-a-input-2 form-control" value="Buenos Aires">
               <label class="active-label-2 class-hidden-none al-2" for="UserState">Provincia</label>
               <hr class="mp-hr-dto">
 
@@ -295,8 +312,8 @@
 
             <div class="form-floating">
 
-              <p class="dto-title-2">País</p>
-              <span id="UserCountry" class="editable-2">Argentina</span>
+          
+              <input type="text" id="UserCountry" class="editable-a-input-2 form-control" value="Argentina">
               <label class="active-label-2 class-hidden-none al-2" for="UserCountry">País</label>
               <hr class="mp-hr-dto">
 
