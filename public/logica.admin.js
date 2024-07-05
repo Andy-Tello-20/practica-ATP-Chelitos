@@ -2,7 +2,9 @@
 
 let table = new DataTable('#tpaTable', {
     responsive: true,
-    searching: false
+    searching: false,
+    scroller: true,
+    scrollY: 270,
 })
 
 
@@ -347,28 +349,28 @@ $('#modalDescription').on('hidden.bs.modal', function () {
 
 
 $('#modalSesionClose').on('hide.bs.modal', function (e) {
-    $(this).css('display','none')
+    $(this).css('display', 'none')
     // sleep(500)
     // $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
     $(this).removeClass('m-show-sesion')
 
-  });
+});
 
-  $('#modalSesionClose').on('show.bs.modal', function (e) {
-    $(this).css('display','flex')
+$('#modalSesionClose').on('show.bs.modal', function (e) {
+    $(this).css('display', 'flex')
     // sleep(500)
     // $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
     $(this).addClass('m-show-sesion')
 
-  });
+});
 
-  $('#modalSesionClose').on('shown.bs.modal', function (e) {
-    $(this).css('display','flex')
+$('#modalSesionClose').on('shown.bs.modal', function (e) {
+    $(this).css('display', 'flex')
     // sleep(500)
     // $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
-    
 
-  });
+
+});
 
 //   $('#modalSesionClose').on('hidden.bs.modal', function (e) {
 //     $(this).find('.modal-dialog').css('animation', 'slideInUp 0.3s forwards');
@@ -443,7 +445,7 @@ handleMediaChange(mediaQuery)
 mediaQuery.addEventListener('change', handleMediaChange)
 
 
-$('.modalSesionClose').click(function(){
+$('.modalSesionClose').click(function () {
     $('#modalSesionClose').modal('show')
 })
 

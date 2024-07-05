@@ -300,7 +300,7 @@
     height: 80px;
     width: 70%;
     background: #ffff;
-    margin: 0px;
+    margin: auto;
     padding: 0px 20px;
     border-radius: 8px;
 
@@ -330,7 +330,7 @@
 .btn-Asearch2 {
     width: 88px;
     height: 34px;
-    background: rgb(13, 161, 108, 70%);
+    /* background: rgb(13, 161, 108, 70%); */
     border-radius: 8px;
 }
 
@@ -342,9 +342,8 @@
 
 
 .table-container {
-    height: 47vh;
+    height: 47.5vh;
     overflow: hidden;
-    overflow-y: scroll;
     margin: 0px 10px 5px 0px;
     border-collapse: collapse;
     transition: height 0.1s ease-in-out;
@@ -423,7 +422,8 @@ select#dt-length-0 {
 .span-porVencer,
 .span-interesado,
 .span-rechazado,
-.span-bloqueado {
+.span-bloqueado,
+.span-pendiente {
     font-size: 14px;
     font-weight: 500;
     color: #595959;
@@ -434,35 +434,42 @@ select#dt-length-0 {
     border-radius: 25px;
     height: 34px;
     width: 100px;
+    box-shadow: 0px 3px 5px gray;
+}
+
+
+.span-pendiente{
+    background: rgba(249, 133, 26, 0.8);
+    color: #fff;
 }
 
 .span-activo {
-    background: rgba(128, 171, 94, 0.7);
+    background:	rgba(107, 164, 102);
     color: #fff;
 }
 
 .span-vencido {
-    background: rgba(189, 189, 189, 0.7);
-    color: #000000;
+    background: rgba(189, 189, 189);
+    color: #7A7777;
 }
 
 .span-porVencer {
-    background: rgba(224, 151, 83, 0.7);
-    color: #000000;
+    background: rgba(46, 130, 186, 0.75);
+    color: #fff;
 }
 
 .span-interesado {
-    background: rgba(234, 215, 50, 0.7);
-    color: #000000;
+    background: rgba(242, 221, 34);
+    color: #7A7777;
 }
 
 .span-rechazado {
-    background: rgba(201, 57, 57, 0.7);
+    background: rgba(200, 65, 52, 0.8);
     color: #fff;
 }
 
 .span-bloqueado {
-    background: rgba(127, 84, 218, 0.7);
+    background: rgba(120, 83, 198, 0.8);
     color: #fff;
 }
 
@@ -565,7 +572,7 @@ i {
 
 
 .table-subClass {
-    height: 57vh;
+    height: 57.5vh;
 }
 
 .search-subClass {
@@ -671,6 +678,7 @@ i {
     height: 420px;
     overflow-y: scroll;
     width: 100%;
+    height: 100%;
     padding: 12px 33px;
 }
 
@@ -960,8 +968,9 @@ input.editable-a-input-2.form-control {
 
 
 
-.btn-save, .btn-sr {
-    background: rgb(13, 161, 108, 70%)
+.btn-save, .btn-sr, .btn-Asearch2 {
+    background: #3CA367;
+    color: #fff;
 }
 
 
