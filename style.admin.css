@@ -1171,7 +1171,7 @@ font-size: 25px;
 
 .turn-back{
     display: flex;
-    height: 8vh;
+    min-height: 60px;
     padding: 8px 20px;
     width: 100%;
     background: #2A384D;
@@ -1189,7 +1189,7 @@ font-size: 25px;
 
 .mp-header-main{
     display: flex;
-    height: 8vh;
+    min-height: 60px;
     justify-content: space-between;
     align-items: center;
     padding: 7px 60px;
