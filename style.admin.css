@@ -1420,6 +1420,45 @@ font-size: 25px;
 }
 
 
+/* --- OffCanva --- */
+.oFC-width,
+.bOC-width{
+    width: 100%;
+}
+
+.nav-canva{
+    display: flex !important;
+    align-items: flex-start;
+    padding: 0px;
+    
+}
+
+.oc-li-menu{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 54px;
+    width: 204px;
+    margin-bottom: 20px;
+}
+
+.oc-a-profession,
+.oc-a-management{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.oc-p-profession,
+.oc-p-management{
+    margin-bottom: 0px !important;
+    font-weight: 600;
+    color: rgb(13, 110, 253) !important;
+}
+
 @media screen and (max-width: 1140px) {
 
     .aSearch-container {
