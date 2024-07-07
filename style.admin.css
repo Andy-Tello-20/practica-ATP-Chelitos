@@ -1459,6 +1459,10 @@ font-size: 25px;
     color: rgb(13, 110, 253) !important;
 }
 
+.oC-max-width{
+    max-width: 250px;
+}
+
 @media screen and (max-width: 1140px) {
 
     .aSearch-container {
