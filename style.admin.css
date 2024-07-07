@@ -7,6 +7,7 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+
 .cont-principal {
 
     max-width: 100%;
@@ -715,12 +716,13 @@ i {
     height: 80%;
 }
 
-.location-tpa {
+.location-tpa, .retirement-tpa, .today-tpa {
     display: flex;
     height: 84px;
     gap: 26px;
 
 }
+
 
 .knowing-tpa {
     display: flex;
@@ -729,7 +731,9 @@ i {
 }
 
 .iLocation-container,
-.iHandshake-container {
+.iHandshake-container,
+.iToday-container,
+.iRetirement-container{
     width: 60px;
     height: 100%;
     background: #EEEEEE;
@@ -746,7 +750,9 @@ i {
 }
 
 .p-location-title,
-.p-knowing-title {
+.p-knowing-title,
+.p-year-title,
+.p-store-title {
     color: #7A7777;
     font-weight: 500;
     margin: 0px;
@@ -755,9 +761,10 @@ i {
 
 
 .p-ubication,
-.p-how {
+.p-how,
+.p-year,
+.p-store {
     color: #7A7777;
-    ;
     margin: 0px;
 }
 
@@ -970,7 +977,7 @@ input.editable-a-input-2.form-control {
 
 .btn-save, .btn-sr, .btn-Asearch2 {
     background: #3CA367;
-    color: #fff;
+    color: #fff !important
 }
 
 
@@ -1219,7 +1226,7 @@ font-size: 25px;
 
 }
 
-.mp-knowing-tpa{
+.mp-knowing-tpa,.mp-today-tpa,.mp-retirement-tpa{
     display: flex;
     height: 190px;
     gap: 26px;

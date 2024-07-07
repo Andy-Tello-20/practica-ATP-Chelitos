@@ -164,7 +164,7 @@
                 <label class="label-fButtons" for="aSEmail">Email</label>
               </div>
 
-              <button class="btn-Asearch2"><span>Buscar</span></button>
+              <button class="btn-Asearch2 btn btn-success"><span>Buscar</span></button>
 
             </div>
 
@@ -184,6 +184,34 @@
                 </tr>
               </thead>
               <tbody>
+
+                <tr class="data-tr">
+                  <td class="td-web-fecha">30/07/2023</td>
+                  <td class="td-web-nombre">Laura Gómez</td>
+                  <td class="td-web-mail">lgomez@example.com</td>
+                  <td class="td-web-cel">0223-55555555</td>
+                  <td class="td-web-status"><span class="span-interesado">Interesado</span></td>
+                  <td class="acciones">
+                    <button class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="custom-tooltip" data-bs-title="Rechazar"><span
+                        class="material-icons notranslate mI-table">cancel</span></button>
+
+                        
+
+                    <button class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="custom-tooltip" data-bs-title="Reenviar">
+                      <span class="material-icons notranslate mI-table">forward_to_inbox</span></button>
+
+
+
+                    <a href="./admin.modalPage.tpa.html" class="btn btn-user-info" data-bs-toggle="tooltip"
+                      data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                        class="material-icons notranslate mI-table">visibility</span></a>
+                  </td>
+
+                </tr>
+
+
                 <tr class="data-tr">
 
                   <td class="td-web-fecha">15/01/2021</td>
@@ -298,31 +326,7 @@
 
                 </tr>
 
-                <tr class="data-tr">
-                  <td class="td-web-fecha">30/07/2023</td>
-                  <td class="td-web-nombre">Laura Gómez</td>
-                  <td class="td-web-mail">lgomez@example.com</td>
-                  <td class="td-web-cel">0223-55555555</td>
-                  <td class="td-web-status"><span class="span-interesado">Interesado</span></td>
-                  <td class="acciones">
-                    <button class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
-                      data-bs-custom-class="custom-tooltip" data-bs-title="Rechazar"><span
-                        class="material-icons notranslate mI-table">cancel</span></button>
-
-                        
-
-                    <button class="btn" data-bs-toggle="tooltip" data-bs-placement="top"
-                      data-bs-custom-class="custom-tooltip" data-bs-title="Reenviar">
-                      <span class="material-icons notranslate mI-table">forward_to_inbox</span></button>
-
-
-
-                    <a href="./admin.modalPage.tpa.html" class="btn btn-user-info" data-bs-toggle="tooltip"
-                      data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
-                        class="material-icons notranslate mI-table">visibility</span></a>
-                  </td>
-
-                </tr>
+                
 
                 <tr class="data-tr">
 
@@ -897,7 +901,7 @@
 
                         <div class="sc-buttons-1" id="actionButtons" style="display: none;">
                           <button class="btn-cancel" id="cancelButton" data-cancel="1">Cancelar</button>
-                          <button class="btn-save" id="saveButton" data-save="1">Guardar</button>
+                          <button class="btn-save btn btn-success" id="saveButton" data-save="1">Guardar</button>
                         </div>
 
 
@@ -1029,11 +1033,33 @@
 
                         <div class="sc-buttons-2" id="actionButtons" style="display: none;">
                           <button class="btn-cancel" id="cancelButton" data-cancel="2">Cancelar</button>
-                          <button class="btn-save" id="saveButton" data-save="2">Guardar</button>
+                          <button class="btn-save btn btn-success" id="saveButton" data-save="2">Guardar</button>
                         </div>
 
 
                       </div>
+
+                      <div class="user-dto" style="display: none">
+
+                        <div class="retirement-tpa" >
+
+                          <div class="iRetirement-container">
+                            <span class="material-symbols-outlined notranslate mI-subscription">store</span>
+                          </div>
+
+
+                          <div class="store-container">
+                            <p class="p-store-title">Retiro por Instituto Vianett® en Córdoba Capital</p>
+                            <hr>
+                            <p class="p-store">Cosquín 1222, X5000 Córdoba</p>
+                          </div>
+
+                        </div>
+
+
+
+                      </div>
+
 
                     </div>
 
@@ -1200,6 +1226,7 @@
                             </div>
                             <div class="knowing-info">
                               <p class="p-knowing-title">Cómo Conociste TPA® y Decidiste Unirte</p>
+                              <hr>
                               <p class="p-how">Lorem ipsum dolor sit amet. Eos consequatur omnis ut veritatis aliquam
                                 quo quis voluptatibus. Ut veritatis aliquam quo quis voluptatibus.</p>
                             </div>
@@ -1212,11 +1239,32 @@
 
                             <div class="infoLocation-container">
                               <p class="p-location-title">Ubicaciones Preferidas para la Fase Presencial</p>
+                              <hr>
                               <p class="p-ubication">* Mendoza (Instituto VIANETT® sede Mendoza)</p>
                               <p class="p-ubication">* Córdoba (Instituto VIANETT® sede Córdoba)</p>
                               <p class="p-ubication">* Buenos Aires (Instituto VIANETT® sede Buenos Aires)</p>
                             </div>
                           </div>
+
+
+
+
+                          <div class="today-tpa" style="display: none;">
+
+                            <div class="iToday-container">
+                              <span class="material-symbols-outlined notranslate mI-subscription">today</span>
+                            </div>
+
+
+                            <div class="year-container">
+                              <p class="p-year-title">Año en el que realizó la Formación Profesional TPA®</p>
+                              <hr>
+                              <p class="p-year">2021</p>
+                            </div>
+
+                          </div>
+
+                          
 
                           
                         </div>
@@ -1261,7 +1309,7 @@
                     <div class="btns-cancel-renovation">
                       <button class="btn-cancel btn-sr-cancel" data-bs-dismiss="modal" aria-label="Close"
                         id="cancelButton">Cancelar</button>
-                      <button class="btn-sr" id="saveButton">Si, Renovar</button>
+                      <button class="btn-sr btn btn-success" id="saveButton" data-bs-dismiss="modal" aria-label="Close">Si, Renovar</button>
                     </div>
 
                   </div>
