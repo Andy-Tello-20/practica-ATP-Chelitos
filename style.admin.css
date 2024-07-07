@@ -1433,6 +1433,10 @@ font-size: 25px;
     
 }
 
+.nav-canva:hover {
+    background: #fff;
+}
+
 .oc-li-menu{
     display: flex;
     align-items: center;
