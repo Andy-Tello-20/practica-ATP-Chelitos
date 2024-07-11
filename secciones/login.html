@@ -35,7 +35,7 @@
                 <h1 class="title">Bienvenido</h1>
 
 
-                
+
 
 
 
@@ -43,11 +43,28 @@
                 <div class="form-floating mb-3">
                     <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" autofocus>
                     <label for="floatingInput">Usuario</label>
-                  </div>
-                  <div class="form-floating">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña" >
-                    <label for="floatingPassword">Contraseña</label>
-                  </div>
+                </div>
+
+
+
+
+                <div class="input-group mb-3">
+
+
+                    <div class="form-floating flex-grow-1">
+
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Contraseña">
+                        <label for="floatingPassword">Contraseña</label>
+
+                        <span class="span-eye toggle-password"><i class="bi bi-eye bi-class-eye"></i></span>
+
+                    </div>
+
+                </div>
+
+
+
+
 
                 <div id="errorMessage" class="error-message"></div>
 
@@ -67,7 +84,7 @@
 
 
 
-    <script src="../public/logica.login.js"></script>
+    <script src="/public/logica.login.js"></script>
 </body>
 
 </html>
