@@ -64,6 +64,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+
+
 const btnActivo = () =>{
 
 
@@ -76,11 +78,11 @@ const btnActivo = () =>{
         if (boton.classList.contains('btn-active')) {
 
             activeElement = boton.getAttribute('data-content')
-            console.log('activeElement es: ', activeElement, 'tipo: ', typeof(activeElement))
+            // console.log('activeElement es: ', activeElement, 'tipo: ', typeof(activeElement))         
         }
     })
 
-
+  
     const editButtons = document.querySelector(`.btn-edit[data-button="${activeElement}"]`)
     
     if (editButtons && editButtons.disabled) {
