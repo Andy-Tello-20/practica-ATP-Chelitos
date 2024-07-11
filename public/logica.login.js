@@ -26,3 +26,17 @@ btnAcceder.addEventListener('click', (e) => {
 })
 
 
+document.querySelector('.toggle-password').addEventListener('click', function () {
+    const passwordInput = document.getElementById('floatingPassword')
+    const passwordIcon = this.querySelector('i')
+
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text'
+        passwordIcon.classList.add('bi-eye')
+        passwordIcon.classList.remove('bi-eye-slash')
+    } else {
+        passwordInput.type = 'password';
+        passwordIcon.classList.add('bi-eye-slash')
+        passwordIcon.classList.remove('bi-eye')
+    }
+})

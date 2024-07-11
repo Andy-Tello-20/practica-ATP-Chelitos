@@ -1,10 +1,15 @@
+var showInfo = window.innerWidth >= 768 ? true : false
+var scrollHeight = window.innerWidth >= 768 ? "42vh" : ""
+var scrollable = window.innerWidth >= 768 ? true : false
+
 
 
 let table = new DataTable('#tpaTable', {
     responsive: true,
     searching: false,
-    scroller: true,
-    scrollY: 270,
+    scroller: scrollable,
+    scrollY: scrollHeight,
+    info: showInfo
 })
 
 
@@ -161,8 +166,12 @@ document.querySelectorAll('.btn-edit').forEach(button => {
             }
         });
 
-        document.querySelector(`.sc-buttons-${suffix}`).style.display = 'flex';
-        button.disabled = true;
+
+        const scButtons = document.querySelector(`.sc-buttons-${suffix}`)
+        if (scButtons) {
+            scButtons.style.display = 'flex'
+            button.disabled = true;
+        }
     });
 });
 
@@ -231,8 +240,17 @@ document.querySelectorAll('.btn-save').forEach(button => {
             l.classList.add('class-hidden-none');
         });
 
-        document.querySelector(`.sc-buttons-${suffix}`).style.display = 'none';
-        document.querySelector(`.btn-edit[data-button="${suffix}"]`).disabled = false;
+
+
+
+        const scButtons = document.querySelector(`.sc-buttons-${suffix}`)
+        const editButtons = document.querySelector(`.btn-edit[data-button="${suffix}"]`)
+
+        if (scButtons && editButtons ){
+            scButtons.style.display = 'none';
+            editButtons.disabled = false;
+        }
+
     });
 });
 
@@ -298,8 +316,17 @@ document.querySelectorAll('.btn-cancel').forEach(button => {
             l.classList.add('class-hidden-none');
         });
 
-        document.querySelector(`.sc-buttons-${suffix}`).style.display = 'none';
-        document.querySelector(`.btn-edit[data-button="${suffix}"]`).disabled = false;
+       
+
+        const scButtons = document.querySelector(`.sc-buttons-${suffix}`)
+        const editButtons = document.querySelector(`.btn-edit[data-button="${suffix}"]`)
+
+        if (scButtons && editButtons ){
+            scButtons.style.display = 'none';
+            editButtons.disabled = false;
+        }
+
+
     });
 });
 
@@ -507,3 +534,6 @@ $(document).ready(function () {
 
 })
 
+$('#tpaTable').on('draw.dt', function () {
+    $('.toTooltip').tooltip();
+});

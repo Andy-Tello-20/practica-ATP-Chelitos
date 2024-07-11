@@ -13,6 +13,8 @@
     max-width: 100%;
     margin: 0px !important;
     padding: 0px !important;
+    /* height: 112vh; */
+
 
 }
 
@@ -20,7 +22,7 @@
 .row-class {
     padding: 0px !important;
     margin: 0px !important;
-    height: 100vh;
+    height: 100%;
 
 }
 
@@ -107,7 +109,7 @@
 .header {
     border-bottom: solid 1px #E0E0E0;
     display: flex;
-    height: 6vh;
+    /* height: 6vh; */
     justify-content: space-between;
     align-items: center;
     padding: 7px 12px 7px 12px;
@@ -166,7 +168,7 @@
 
 
 .filter-buttons {
-    height: 20vh;
+    /* height: 20vh; */
     padding: 10px 0px 0px 0px;
 
 }
@@ -263,7 +265,7 @@
 
 
 .search {
-    height: 10vh;
+    /* height: 20vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -343,7 +345,7 @@
 
 
 .table-container {
-    height: 47.5vh;
+    /* height: 60vh; */
     overflow: hidden;
     margin: 0px 10px 5px 0px;
     border-collapse: collapse;
@@ -383,10 +385,10 @@ select#dt-length-0 {
     height: 36px;
 }
 
-.mt-2 {
+/* .mt-2 {
     margin-top: 0rem !important;
     margin-bottom: 1rem !important;
-}
+} */
 
 .mI-modal-buttons {
     font-size: 40px !important;
@@ -572,13 +574,13 @@ i {
 
 
 
-.table-subClass {
+/* .table-subClass {
     height: 57.5vh;
-}
+} */
 
-.search-subClass {
+/* .search-subClass {
     height: 20vh;
-}
+} */
 
 
 .arrow-subClass {
@@ -967,6 +969,11 @@ input.editable-a-input-2.form-control {
     border-radius: 7px;
 }
 
+.btn-sr-width{
+    min-width: 140px;
+}
+
+
 .btn-cancel {
     color: #959595;
     font-weight: 700;
@@ -1167,7 +1174,7 @@ input.editable-a-input-2.form-control {
 .modal-main {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .mI-arrow-back{
@@ -1341,6 +1348,7 @@ font-size: 25px;
 .mp-mI-U2 {
     color: #212020;
     margin: 0px;
+    cursor: pointer;
 }
 
 .mp-mI-back{
@@ -1734,7 +1742,7 @@ font-size: 25px;
 
     .contentWidhtRenovation {
         width: 94%;
-        height: 80vh;
+        /* height: 80vh; */
         margin: auto;
     }
 
@@ -1841,7 +1849,7 @@ font-size: 25px;
 
     .header-main {
         display: flex;
-        height: 8vh;
+        /* height: 8vh; */
         justify-content: space-between;
         align-items: center;
         padding: 7px 60px;

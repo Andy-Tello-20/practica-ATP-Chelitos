@@ -47,12 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 $(document).ready(function () {
 
-    $('#Profesión-i').select2({
+    $('#Profesion-i').select2({
         placeholder: "Seleccione una profesión",
         allowClear: true
     })
 
-    $('#Profesión-i').on('select2:open', function () {
+    $('#Profesion-i').on('select2:open', function () {
         $('.select2-results__options').css('max-height', '100px').css('overflow-y', 'auto')
     })
 
@@ -60,7 +60,7 @@ $(document).ready(function () {
     //! ---Capturar click select2:open ---
 
     var spanProfesion = $('.span-profesion-i')
-    var selectP = $('#Profesión-i')
+    var selectP = $('#Profesion-i')
 
 
     // Capturar el cambio de selección y añadir/quitar la clase 'show-span'

@@ -56,7 +56,7 @@ $(document).ready(function () {
 
     //?----------------------------------------------
 
-    $('#Profesión').select2({
+    $('#Profesion').select2({
         placeholder: "Profesión",
         allowClear: true
     });
@@ -64,7 +64,7 @@ $(document).ready(function () {
     //! ---Capturar click select2:open ---
 
     var spanProfesion = $('.span-profesion')
-    var selectP = $('#Profesión')
+    var selectP = $('#Profesion')
 
 
     // Verificar al cargar la página
@@ -83,7 +83,7 @@ $(document).ready(function () {
 
     //?----------------------------------------------
 
-    $('#OtraProfesión').select2({
+    $('#OtraProfesion').select2({
         placeholder: "Otra Profesión",
         allowClear: true
     });
@@ -92,7 +92,7 @@ $(document).ready(function () {
     //! ---Capturar click select2:open ---
 
     var spanOProfesion = $('.span-OProfesion')
-    var selectOP = $('#OtraProfesión')
+    var selectOP = $('#OtraProfesion')
 
 
     // Verificar al cargar la página
@@ -121,11 +121,11 @@ $(document).ready(function () {
         $('.select2-results__options').css('max-height', '100px').css('overflow-y', 'auto')
     });
 
-    $('#Profesión').on('select2:open', function () {
+    $('#Profesion').on('select2:open', function () {
         $('.select2-results__options').css('max-height', '100px').css('overflow-y', 'auto')
     });
 
-    $('#OtraProfesión').on('select2:open', function () {
+    $('#OtraProfesion').on('select2:open', function () {
         $('.select2-results__options').css('max-height', '100px').css('overflow-y', 'auto')
     });
 

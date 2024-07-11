@@ -320,17 +320,34 @@ form .link {
     margin-bottom: 15px;
 }
 
-.inError {
+.span-eye{
+    display: flex;
+    align-items: center;
+    padding: .375rem .75rem;
+    position: absolute;
+    top: 22%;
+    left: 86%;
+
+}
+
+.bi-class-eye{
+    color: #6e6e6e;
+    font-size: 20px;
+}
+
+
+
+
+
+/* .inError {
     border: 1px solid #F06292;
     background: #fdefef;
-
-
 }
 
 .inError:focus {
     box-shadow: 0 0 0 .25rem #ffc6c6;
     border-color: #F06292;
-}
+} */
 
 .error-message {
     color: red;
@@ -899,11 +916,11 @@ span#select2-country-container {
     line-height: 50px;
 }
 
-span#select2-Profesión-container {
+span#select2-Profesion-container {
     line-height: 50px;
 }
 
-span#select2-Profesión-i-container {
+span#select2-Profesion-i-container {
     line-height: 56px;
 }
 
@@ -1087,7 +1104,7 @@ span#select2-documentType1-container {
     text-align: left !important;
 }
 
-span#select2-Profesión-container {
+span#select2-Profesion-container {
     text-align: left !important;
 }
 
@@ -1107,7 +1124,7 @@ span.select2-selection__arrow {
 }
 
 
-span#select2-OtraProfesión-container {
+span#select2-OtraProfesion-container {
     line-height: 50px;
 }
 
@@ -1159,6 +1176,10 @@ span.select2-search.select2-search--inline {
     border-radius: 8px;
     width: 150px;
     height: 50px;
+}
+
+.button-send:disabled {
+    background: #c0c0c0
 }
 
 
@@ -1339,6 +1360,29 @@ footer p {
 
 
 
+.inError {
+    border: 1px solid #F06292;
+    background: #fdefef;
+}
+
+.inError:focus {
+    box-shadow: 0 0 0 .25rem #ffc6c6;
+    border-color: #F06292;
+}
+
+.select-container.inError{
+    border-radius: 5px;
+}
+
+.select-container.inError span.select2-selection.select2-selection--single {
+    background: #fdefef;
+}
+
+
+
+.select-container.inError span.select2-selection.select2-selection--multiple {
+    background: #fdefef;
+}
 
 /*---MEDIA QUERY--- */
 
