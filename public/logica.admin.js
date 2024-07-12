@@ -1,5 +1,5 @@
 var showInfo = window.innerWidth >= 768 ? true : false
-var scrollHeight = window.innerWidth >= 768 ? "42vh" : ""
+var scrollHeight = window.innerWidth >= 768 ? window.innerHeight * 0.538 + "px" : window.innerHeight * 0.295 + "px";
 var scrollable = window.innerWidth >= 768 ? true : false
 
 
