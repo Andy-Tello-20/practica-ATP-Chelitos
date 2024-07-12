@@ -17,9 +17,9 @@
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="stylesheet" href="../plugins/toastr/toastr.min.css">
-  <link rel="stylesheet" href="../style.css">
-  <link rel="stylesheet" href="../style.admin.css">
+  <link rel="stylesheet" href="../../../plugins/toastr/toastr.min.css">
+  <link rel="stylesheet" href="../../../style.css">
+  <link rel="stylesheet" href="../../../style.admin.css">
 
 
 
@@ -172,7 +172,7 @@
 
           <div class="table-container table-subClass">
 
-            <table id="tpaTable" class="table  display nowrap" cellspacing="0" style="width:100%">
+            <table id="tpaTable" class="table display nowrap table-hover dataTable" cellspacing="0" style="width:100%">
               <thead>
                 <tr>
                   <th>Fecha de Alta</th>
@@ -1336,7 +1336,8 @@
           </div>
 
           <header class="header-main">
-            <span class="material-symbols-outlined mI-User mI-U2 notranslate">home</span>
+            <span class="material-symbols-outlined mI-User mI-U2 notranslate" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">home</span>
 
             <span class="material-symbols-outlined mI-User mI-U2 notranslate modalSesionClose">account_circle</span>
           </header>
@@ -1346,6 +1347,36 @@
       </div>
 
 
+
+      <div class="offcanvas offcanvas-start oC-max-width" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+      aria-labelledby="offcanvasWithBothOptionsLabel">
+      <div class="offcanvas-header oFC-width">
+        <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menú</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body bOC-width">
+  
+        <ul class="nav flex-column nav-canva">
+         
+  
+          <li class="oc-li-menu ">
+            <a class="oc-a-management" href="./admin.tpa.html"><span
+                class="material-symbols-outlined notranslate">dashboard_customize</span>
+              <p class="oc-p-management">Gestion de Miembros</p>
+            </a>
+          </li>
+  
+          <li class="oc-li-menu">
+            <a class="oc-a-profession" href="#"><span class="material-symbols-outlined notranslate">video_library</span>
+              <p class="oc-p-profession ">Biblioteca TPA</p>
+            </a>
+          </li>
+  
+        </ul>
+        
+  
+      </div>
+    </div>
 
       <div class="modal fade m-show-sesion" id="modalSesionClose" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -1405,8 +1436,8 @@
   <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
   <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
   <script src="https://cdn.datatables.net/responsive/3.0.2/js/responsive.bootstrap5.min.js"></script>
-  <script src="../plugins/toastr/toastr.min.js"></script>
-  <script src="../public/logica.admin.js"></script>
+  <script src="../../../plugins/toastr/toastr.min.js"></script>
+  <script src="../../../public/logica.admin.js"></script>
 
   <script>
     var tooltips = document.querySelectorAll('.btn[data-bs-toggle="tooltip"]');

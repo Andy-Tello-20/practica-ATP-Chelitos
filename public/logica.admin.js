@@ -475,12 +475,14 @@ $('#modalSesionClose').on('shown.bs.modal', function (e) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    const modal = new bootstrap.Modal(document.getElementById('modalRenovation'))
+
+    modal.show()
+    
     document.body.addEventListener('click', function (event) {
         if (event.target.closest('.btn-renovation')) {
 
-            const modal = new bootstrap.Modal(document.getElementById('modalRenovation'))
-
-            modal.show()
+           
         }
     });
 })

@@ -481,23 +481,32 @@ select#dt-length-0 {
     font-size: 16px;
     background: transparent;
     line-height: 2.2;
-
+    margin-bottom: 0px !important;
 }
 
-.data-tr {
-    background: transparent;
-    transition: background-color 0.3s ease;
+.acciones  button:first-child {
+    margin-left: 10px;
+}
+.acciones  button:not(:first-child) {
+    margin-left: 10px;
 }
 
-.data-tr:hover {
-    background-color: #EEEEEE !important;
-    cursor: pointer;
+
+
+
+/* .dataTable{
+    --bs-table-bg: transparent !important;
 }
 
-.acciones {
-    display: flex;
-    gap: 20px;
+.dataTable.table-hover tbody tr:hover {
+    background-color: #a7a7a7 !important; 
 }
+
+.dt-scroll {
+    background: #fff;
+} */
+
+
 
 th {
     font-weight: 500;
@@ -647,7 +656,7 @@ i {
 }
 
 .contentWidht {
-    height: 750px;
+    height: 90vh;
     width: 695px;
 }
 
@@ -758,7 +767,7 @@ i {
     color: #7A7777;
     font-weight: 500;
     margin: 0px;
-    margin-bottom: 10px;
+    margin: 10px 0px;
 }
 
 
@@ -841,7 +850,7 @@ hr {
 .hr-dto-date {
     margin-top: 0px;
     width: 100%;
-    color: #5a5a5a;
+    color: #a19d9d;
     opacity: 100%;
     margin: 0px !important;
 }
@@ -1201,6 +1210,15 @@ font-size: 25px;
     text-decoration: none;
 }
 
+.mp-userName{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
 .mp-header-main{
     display: flex;
     min-height: 60px;
@@ -1290,13 +1308,12 @@ font-size: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
     background: #fff;
     border-radius: 8px;
     height: 300px;
     padding: 0px 10px;
-
+    gap: 15px;
 
 }
 
@@ -1336,9 +1353,13 @@ font-size: 25px;
 .mp-header-nav-title, .mp-header-nav-subtitle{
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     color: #7A7777;
     text-align: center;
+}
+
+.mp-header-nav-subtitle{
+    margin-top: 20px;
 }
 
 .bg-mp-white{
@@ -1537,13 +1558,17 @@ font-size: 25px;
     .table-container {
         height: auto;
         padding: 0px;
-        margin: 0px;
+        margin:  0px 0px 10px 0px;
     }
 
-    .table-subClass {
-        height: auto;
+    /* .dataTable {
+        background: #fff;
     }
+    
 
+    .dataTable.table-hover tbody tr:hover {
+        background-color: #fff !important; 
+    } */
 
 
 
