@@ -1,5 +1,5 @@
 var showInfo = window.innerWidth >= 768 ? true : false
-var scrollHeight = window.innerWidth >= 768 ? window.innerHeight * 0.538 + "px" : window.innerHeight * 0.295 + "px";
+var scrollHeight = window.innerWidth >= 768 ? window.innerHeight >= 688 ? window.innerHeight * 0.538 + "px" : "" : "";
 var scrollable = window.innerWidth >= 768 ? true : false
 
 
@@ -475,13 +475,13 @@ $('#modalSesionClose').on('shown.bs.modal', function (e) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const modal = new bootstrap.Modal(document.getElementById('modalRenovation'))
-
-    modal.show()
+    
     
     document.body.addEventListener('click', function (event) {
         if (event.target.closest('.btn-renovation')) {
+            const modal = new bootstrap.Modal(document.getElementById('modalRenovation'))
 
+            modal.show()
            
         }
     });
