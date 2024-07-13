@@ -484,6 +484,8 @@ select#dt-length-0 {
     margin-bottom: 0px !important;
 }
 
+
+
 .acciones  button:first-child {
     margin-left: 10px;
 }
@@ -498,13 +500,14 @@ select#dt-length-0 {
     --bs-table-bg: transparent !important;
 }
 
-.dataTable.table-hover tbody tr:hover {
+.dataTable.table-hover tbody tr:hover td {
     background-color: #a7a7a7 !important; 
 }
 
 .dt-scroll {
     background: #fff;
 } */
+
 
 
 
@@ -1107,20 +1110,57 @@ input.editable-a-input-2.form-control {
     justify-content: space-around;
 }
 
-.spanw-container {
+.spanW-container,
+.spanS-container,
+.spanI-container,
+.spanE-container {
     width: 83px;
     height: 83px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f9d9d9;
+    
 }
 
+.spanW-container{
+    background: #f9d9d9;
+}
 .mI-warning {
     color: #E17040;
-    font-size: 50px !important;
+    font-size: 55px !important;
 }
+
+
+.spanS-container{
+    background: #42a05c54
+}
+.mI-succes {
+    color: #33955A;
+    font-size: 55px !important;
+}
+
+
+.spanI-container{
+    background:#88d1e975
+}
+.mI-info{
+    color: #689FB0;
+    font-size: 55px !important;
+}
+
+
+.spanE-container{
+    background:#ECDADA
+}
+.mI-error{
+    color: #AF5027;
+    font-size: 55px !important;
+}
+
+
+
+
 
 .renovation-title {
     font-size: 23px;

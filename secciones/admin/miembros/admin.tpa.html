@@ -723,7 +723,7 @@
               </tbody>
             </table>
 
-
+            <!-- Modal Description -->
             <div class="modal " id="modalDescription" data-bs-keyboard="false" tabindex="-1"
               aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
@@ -1296,42 +1296,42 @@
 
                 </div>
               </div>
-            </div>
+</div>
 
-
+            <!-- Modal renovacion -->
             <div class="modal mf-center" id="modalRenovation" data-bs-keyboard="false" tabindex="-1"
-              aria-labelledby="staticBackdropLabel" aria-hidden="true">
-
-              <div class="modal-dialog modalDialogR">
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    
+            <div class="modal-dialog modalDialogR">
                 <div class="modal-content contentWidhtRenovation">
-                  <div class="modal-body mbodyR-class">
-
-                    <div class="spanw-container">
-                      <span class="material-symbols-outlined mI-warning">warning</span>
+                    <div class="modal-body mbodyR-class">
+    
+                        <div class="spanw-container">
+                            <span class="material-symbols-outlined mI-warning">warning</span>
+                        </div>
+    
+    
+    
+                        <p class="renovation-title">
+                            ¿Quieres renovar la Suscripción?
+                        </p>
+    
+                        <p class="renovation-text">
+                            Lorem ipsum dolor sit amet. Eos consequatur omnis ut veritatis aliquam quo quis voluptatibus. 
+                        </p>
+    
+                        <div class="btns-cancel-renovation">
+                            <button class="btn-cancel btn-sr-cancel" data-bs-dismiss="modal" aria-label="Close"
+                                id="cancelButton">Cancelar</button>
+                            <button class="btn-sr btn-sr-width btn btn-success" id="saveButton" data-bs-dismiss="modal"
+                                aria-label="Close">Si, Habilitar</button>
+                        </div>
+    
                     </div>
-
-
-
-                    <p class="renovation-title">
-                      ¿Quieres renovar la Suscripción?
-                    </p>
-
-                    <p class="renovation-text">
-                      Lorem ipsum dolor sit amet. Eos consequatur omnis ut veritatis aliquam quo quis voluptatibus. 
-                    </p>
-
-                    <div class="btns-cancel-renovation">
-                      <button class="btn-cancel btn-sr-cancel" data-bs-dismiss="modal" aria-label="Close"
-                        id="cancelButton">Cancelar</button>
-                      <button class="btn-sr btn-sr-width btn btn-success" id="saveButton" data-bs-dismiss="modal"
-                        aria-label="Close">Si, Habilitar</button>
-                    </div>
-
-                  </div>
                 </div>
-              </div>
-
             </div>
+    
+        </div>
 
 
           </div>
@@ -1383,42 +1383,43 @@
         </div>
       </div>
 
+      <!-- Modal Sesion -->
+      
       <div class="modal fade m-show-sesion" id="modalSesionClose" tabindex="-1" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog classModelDialogS">
-          <div class="modal-content contentWidhtSesion">
+      aria-hidden="true">
+      <div class="modal-dialog classModelDialogS">
+        <div class="modal-content contentWidhtSesion">
 
-            <div class="modal-body ModalBodyStyleSesion">
+          <div class="modal-body ModalBodyStyleSesion">
 
-              <hr class="hr-session-top" data-bs-dismiss="modal" aria-label="Close">
+            <hr class="hr-session-top" data-bs-dismiss="modal" aria-label="Close">
 
-              <div class="user-icon-session">
-                <div class="circle-icon-container">
-                  <span class="material-symbols-outlined mI-session notranslate">account_circle</span>
-                </div>
-
-                <div class="user-data-session">
-                  <p class="session-name">Silvina Lambertini</p>
-                  <p class="session-email">silvinalambertini@gmail.com</p>
-                </div>
-
+            <div class="user-icon-session">
+              <div class="circle-icon-container">
+                <span class="material-symbols-outlined mI-session notranslate">account_circle</span>
               </div>
 
-              <hr class="hr-session">
-
-              <a class="a-session " href=""><span class="material-symbols-outlined">exit_to_app</span>
-                <p>Cerrar Sesión</p>
-              </a>
-
+              <div class="user-data-session">
+                <p class="session-name">Silvina Lambertini</p>
+                <p class="session-email">silvinalambertini@gmail.com</p>
+              </div>
 
             </div>
 
+            <hr class="hr-session">
+
+            <a class="a-session " href=""><span class="material-symbols-outlined">exit_to_app</span>
+              <p>Cerrar Sesión</p>
+            </a>
+
+
           </div>
+
         </div>
-
-
       </div>
 
+
+    </div>
 
 
 
@@ -1440,12 +1441,19 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
   <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
   <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
   <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
   <script src="https://cdn.datatables.net/responsive/3.0.2/js/responsive.bootstrap5.min.js"></script>
+
+
   <script src="../../../plugins/toastr/toastr.min.js"></script>
   <script src="../../../public/logica.admin.js"></script>
 

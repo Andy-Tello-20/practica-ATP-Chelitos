@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
             actualizarContenido(dataContent)
             actualizarBotonActivo(boton)
             // $('.btn-cancel').click()
-            
+
         });
     });
 
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function actualizarBotonActivo(botonActivo) {
 
-        
+
         botones.forEach(boton => {
             boton.classList.remove('btn-active')
         })
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-const btnActivo = () =>{
+const btnActivo = () => {
 
 
     let activeElement
@@ -82,15 +82,15 @@ const btnActivo = () =>{
         }
     })
 
-  
+
     const editButtons = document.querySelector(`.btn-edit[data-button="${activeElement}"]`)
-    
+
     if (editButtons && editButtons.disabled) {
         // console.log('El botón está deshabilitado')
         cancelData(activeElement)
     } else {
         // console.log('El botón está habilitado')
-        
+
     }
 
 
@@ -475,17 +475,19 @@ $('#modalSesionClose').on('shown.bs.modal', function (e) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    
-    
+
+
     document.body.addEventListener('click', function (event) {
         if (event.target.closest('.btn-renovation')) {
             const modal = new bootstrap.Modal(document.getElementById('modalRenovation'))
 
             modal.show()
-           
+
         }
     });
 })
+
+
 
 
 
@@ -538,6 +540,10 @@ mediaQuery.addEventListener('change', handleMediaChange)
 
 $('.modalSesionClose').click(function () {
     $('#modalSesionClose').modal('show')
+})
+
+$('.modalMenu').click(function () {
+    $('#modalMenu').modal('show')
 })
 
 

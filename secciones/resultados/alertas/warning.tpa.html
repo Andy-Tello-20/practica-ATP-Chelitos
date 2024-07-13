@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.bootstrap5.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.2/css/responsive.bootstrap5.min.css">
+
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../../../plugins/toastr/toastr.min.css">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="stylesheet" href="../../../style.admin.css">
+
+
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <style>
+        .dropdown-menu table {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container cont-principal">
+
+        <div class="row row-class">
+
+
+            <div class="col-md-2 d-none d-md-flex menu">
+
+                <img class="menu-logo" src="../../../img/logo colores originales SIN BAJADA.png" alt="logo">
+                <hr class="hr-menu">
+                <ul class="menu-list">
+
+                    <li class="li-menu li-menu-selected">
+                        <a class="a-management" href="#"><span
+                                class="material-symbols-outlined notranslate">dashboard_customize</span>
+                            <p class="p-management d-none d-md-block">Gestion de Miembros</p>
+                        </a>
+                    </li>
+
+                    <li class="li-menu">
+                        <a class="a-profession" href="#"><span
+                                class="material-symbols-outlined notranslate">video_library</span>
+                            <p class="p-profession d-none d-md-block">Biblioteca TPA</p>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-10 cont-secundario">
+                <header class="header">
+                    <p class="header-title">TPA Sitio de Administración</p>
+                    <nav class="nav modalSesionClose" id="nav">
+
+                        <span class="material-symbols-outlined mI-User notranslate">account_circle</span>
+                        <p>Silvina Lambertini</p>
+
+                    </nav>
+                </header>
+
+                <main class="main">
+
+
+                    <div class="container container-buttons">
+
+
+
+                        <div class="row filter-buttons">
+
+                            <div class="col-6 col-md-3 cont-Fbtn1">
+
+                                <button class="filter-btns filter-btns-selected">
+                                    <p class="f-btn-title">Todos</p>
+                                    <div class="f-btn-container">
+                                        <p>578</p>
+                                        <span class="material-icons mI-todos notranslate">groups_2</span>
+                                    </div>
+                                </button>
+
+                            </div>
+
+                            <div class="col-6 col-md-3 cont-Fbtn2">
+
+                                <button class="filter-btns">
+                                    <p class="f-btn-title">Habilitados</p>
+                                    <div class="f-btn-container">
+                                        <p>578</p>
+                                        <span class="material-icons mI-habilitados notranslate">check_circle</span>
+                                    </div>
+                                </button>
+
+                            </div>
+
+                            <div class="col-6 col-md-3 cont-Fbtn3">
+
+                                <button class="filter-btns">
+                                    <p class="f-btn-title">Inactivos</p>
+                                    <div class="f-btn-container">
+                                        <p>578</p>
+                                        <span class="material-icons mI-inactivos notranslate">person_off</span>
+                                    </div>
+                                </button>
+
+                            </div>
+
+                            <div class="col-6 col-md-3 cont-Fbtn4">
+
+                                <button class="filter-btns">
+                                    <p class="f-btn-title">Interesados</p>
+                                    <div class="f-btn-container">
+                                        <p>578</p>
+                                        <span
+                                            class="material-symbols-outlined mI-interesados notranslate">clock_loader_60</span>
+                                    </div>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="search">
+                        <div class="btn-Asearch" id="toggleSearch">
+                            <span>Busqueda Avanzada</span>
+                            <span
+                                class="material-symbols-outlined mI-arrow  notranslate">keyboard_double_arrow_down</span>
+                        </div>
+
+                        <div class="container aSearch-container " style="display: none;" id="searchContainer">
+
+                            <div class="form-floating form-aSearch">
+                                <input id="aSName" type="text" class="form-control input-height" placeholder="Nombre">
+                                <label class="label-fButtons" for="aSName">Nombre</label>
+                            </div>
+
+                            <div class="form-floating form-aSearch ">
+                                <input id="aSLname" type="text" class="form-control input-height"
+                                    placeholder="Apellido">
+                                <label class="label-fButtons" for="aSLname">Apellido</label>
+                            </div>
+
+                            <div class="form-floating form-aSearch">
+                                <input id="aSDocument" type="text" class="form-control input-height"
+                                    placeholder="Nro Documento">
+                                <label class="label-fButtons" for="aSDocument">Nro Documento</label>
+                            </div>
+
+                            <div class="form-floating form-aSearch">
+                                <input id="aSEmail" type="email" class="form-control input-height" placeholder="Email">
+                                <label class="label-fButtons" for="aSEmail">Email</label>
+                            </div>
+
+                            <button class="btn-Asearch2 btn btn-success"><span>Buscar</span></button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="table-container table-subClass">
+
+                        <table id="tpaTable" class="table display nowrap table-hover dataTable" cellspacing="0"
+                            style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Fecha de Alta</th>
+                                    <th>Nombre</th>
+                                    <th>Email</th>
+                                    <th>Teléfono</th>
+                                    <th>Estado</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">30/07/2023</td>
+                                    <td class="td-web-nombre">Laura Gómez</td>
+                                    <td class="td-web-mail">lgomez@example.com</td>
+                                    <td class="td-web-cel">0223-55555555</td>
+                                    <td class="td-web-status"><span class="span-interesado">Interesado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Rechazar"><span
+                                                class="material-icons notranslate mI-table">cancel</span></button>
+
+
+
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Reenviar">
+                                            <span
+                                                class="material-icons notranslate mI-table">forward_to_inbox</span></button>
+
+
+
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr class="data-tr">
+
+                                    <td class="td-web-fecha">15/01/2021</td>
+                                    <td class="td-web-nombre">María López</td>
+                                    <td class="td-web-mail">mlopez@example.com</td>
+                                    <td class="td-web-cel">0351-15432109</td>
+                                    <td class="td-web-status"><span class="span-activo">Activo</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Bloquear"><span
+                                                class="material-icons notranslate mI-table">lock</span></button>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">22/03/2021</td>
+                                    <td class="td-web-nombre">Juan Pérez</td>
+                                    <td class="td-web-mail">jperez@example.com</td>
+                                    <td class="td-web-cel">011-12345678</td>
+                                    <td class="td-web-status"><span class="span-vencido">Vencido</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">10/06/2020</td>
+                                    <td class="td-web-nombre">Carlos García</td>
+                                    <td class="td-web-mail">cgarcia@example.com</td>
+                                    <td class="td-web-cel">0221-98765432</td>
+                                    <td class="td-web-status"><span class="span-porVencer">Por vencer</span></td>
+                                    <td class="acciones">
+                                        <button class="btn btn-renovation" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                            data-bs-title="Renovar"><span
+                                                class="material-icons notranslate mI-table">autorenew</span></button>
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Bloquear"><span
+                                                class="material-icons notranslate mI-table">lock</span></button>
+
+
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">05/11/2019</td>
+                                    <td class="td-web-nombre">Ana Martínez</td>
+                                    <td class="td-web-mail">amartinez@example.com</td>
+                                    <td class="td-web-cel">0341-87654321</td>
+                                    <td class="td-web-status"><span class="span-rechazado">Rechazado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">05/11/2017</td>
+                                    <td class="td-web-nombre">Ana Perez</td>
+                                    <td class="td-web-mail">amartinez@example.com</td>
+                                    <td class="td-web-cel">0341-87654366</td>
+                                    <td class="td-web-status"><span class="span-pendiente">Pendiente</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+
+
+
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Rechazar"><span
+                                                class="material-icons notranslate mI-table">cancel</span></button>
+
+
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">18/09/2022</td>
+                                    <td class="td-web-nombre">Javier Rodríguez</td>
+                                    <td class="td-web-mail">jrodriguez@example.com</td>
+                                    <td class="td-web-cel">0299-65432109</td>
+                                    <td class="td-web-status"><span class="span-bloqueado">Bloqueado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Desbloquear"><span
+                                                class="material-icons notranslate mI-table">lock_open</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+
+                                </tr>
+
+
+
+                                <tr class="data-tr">
+
+                                    <td class="td-web-fecha">15/01/2021</td>
+                                    <td class="td-web-nombre">María López</td>
+                                    <td class="td-web-mail">mlopez@example.com</td>
+                                    <td class="td-web-cel">0351-15432109</td>
+                                    <td class="td-web-status"><span class="span-activo">Activo</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Bloquear"><span
+                                                class="material-icons notranslate mI-table">lock</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+
+                                    </td>
+
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">22/03/2021</td>
+                                    <td class="td-web-nombre">Juan Pérez</td>
+                                    <td class="td-web-mail">jperez@example.com</td>
+                                    <td class="td-web-cel">011-12345678</td>
+                                    <td class="td-web-status"><span class="span-bloqueado">Deshabilitado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Habiltar"><span
+                                                class="material-icons notranslate mI-table">lock_open</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr class="data-tr">
+
+                                    <td class="td-web-fecha">01/02/2021</td>
+                                    <td class="td-web-nombre">Andrea Ramírez</td>
+                                    <td class="td-web-mail">aramirez@example.com</td>
+                                    <td class="td-web-cel">0343-65432123</td>
+                                    <td class="td-web-status"><span class="span-activo">Activo</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Bloquear"><span
+                                                class="material-icons notranslate mI-table">lock</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">14/04/2021</td>
+                                    <td class="td-web-nombre">Lucía Fernández</td>
+                                    <td class="td-web-mail">lfernandez@example.com</td>
+                                    <td class="td-web-cel">011-87654321</td>
+                                    <td class="td-web-status"><span class="span-vencido">Vencido</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">25/06/2020</td>
+                                    <td class="td-web-nombre">Daniel Torres</td>
+                                    <td class="td-web-mail">dtorres@example.com</td>
+                                    <td class="td-web-cel">0387-23456789</td>
+                                    <td class="td-web-status"><span class="span-porVencer">Por vencer</span></td>
+                                    <td class="acciones">
+                                        <button class="btn btn-renovation" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                            data-bs-title="Renovar"><span
+                                                class="material-icons notranslate mI-table">autorenew</span></button>
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Bloquear"><span
+                                                class="material-icons notranslate mI-table">lock</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">07/10/2019</td>
+                                    <td class="td-web-nombre">Sofía Castro</td>
+                                    <td class="td-web-mail">scastro@example.com</td>
+                                    <td class="td-web-cel">0291-34567890</td>
+                                    <td class="td-web-status"><span class="span-rechazado">Rechazado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">19/11/2022</td>
+                                    <td class="td-web-nombre">Miguel Díaz</td>
+                                    <td class="td-web-mail">mdiaz@example.com</td>
+                                    <td class="td-web-cel">0379-45678901</td>
+                                    <td class="td-web-status"><span class="span-bloqueado">Bloqueado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Desbloquear"><span
+                                                class="material-icons notranslate mI-table">lock_open</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">21/08/2023</td>
+                                    <td class="td-web-nombre">Gabriela Suárez</td>
+                                    <td class="td-web-mail">gsuarez@example.com</td>
+                                    <td class="td-web-cel">011-23456789</td>
+                                    <td class="td-web-status"><span class="span-interesado">Interesado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Rechazar"><span
+                                                class="material-icons notranslate mI-table">cancel</span></button>
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">12/01/2021</td>
+                                    <td class="td-web-nombre">Pedro Gómez</td>
+                                    <td class="td-web-mail">pgomez@example.com</td>
+                                    <td class="td-web-cel">0221-87654321</td>
+                                    <td class="td-web-status"><span class="span-activo">Activo</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Bloquear"><span
+                                                class="material-icons notranslate mI-table">lock</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">11/03/2021</td>
+                                    <td class="td-web-nombre">Clara Rivas</td>
+                                    <td class="td-web-mail">crivas@example.com</td>
+                                    <td class="td-web-cel">011-12345679</td>
+                                    <td class="td-web-status"><span class="span-vencido">Vencido</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">30/06/2020</td>
+                                    <td class="td-web-nombre">Raúl López</td>
+                                    <td class="td-web-mail">rlopez@example.com</td>
+                                    <td class="td-web-cel">0387-98765432</td>
+                                    <td class="td-web-status"><span class="span-porVencer">Por vencer</span></td>
+                                    <td class="acciones">
+                                        <button class="btn btn-renovation" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" data-bs-custom-class="custom-tooltip"
+                                            data-bs-title="Renovar"><span
+                                                class="material-icons notranslate mI-table">autorenew</span></button>
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Bloquear"><span
+                                                class="material-icons notranslate mI-table">lock</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">25/11/2019</td>
+                                    <td class="td-web-nombre">Felipe Navarro</td>
+                                    <td class="td-web-mail">fnavarro@example.com</td>
+                                    <td class="td-web-cel">0291-34567890</td>
+                                    <td class="td-web-status"><span class="span-rechazado">Rechazado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">14/12/2022</td>
+                                    <td class="td-web-nombre">Elena Ortiz</td>
+                                    <td class="td-web-mail">eortiz@example.com</td>
+                                    <td class="td-web-cel">0379-45678901</td>
+                                    <td class="td-web-status"><span class="span-bloqueado">Bloqueado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Desbloquear"><span
+                                                class="material-icons notranslate mI-table">lock_open</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">08/09/2023</td>
+                                    <td class="td-web-nombre">Ignacio Silva</td>
+                                    <td class="td-web-mail">isilva@example.com</td>
+                                    <td class="td-web-cel">011-23456780</td>
+                                    <td class="td-web-status"><span class="span-interesado">Interesado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Rechazar"><span
+                                                class="material-icons notranslate mI-table">cancel</span></button>
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">15/01/2021</td>
+                                    <td class="td-web-nombre">María López</td>
+                                    <td class="td-web-mail">mlopez@example.com</td>
+                                    <td class="td-web-cel">0351-15432109</td>
+                                    <td class="td-web-status"><span class="span-activo">Activo</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Bloquear"><span
+                                                class="material-icons notranslate mI-table">lock</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">22/03/2021</td>
+                                    <td class="td-web-nombre">Juan Pérez</td>
+                                    <td class="td-web-mail">jperez@example.com</td>
+                                    <td class="td-web-cel">011-12345678</td>
+                                    <td class="td-web-status"><span class="span-vencido">Vencido</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">05/11/2019</td>
+                                    <td class="td-web-nombre">Ana Martínez</td>
+                                    <td class="td-web-mail">amartinez@example.com</td>
+                                    <td class="td-web-cel">0341-87654321</td>
+                                    <td class="td-web-status"><span class="span-rechazado">Rechazado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">18/09/2022</td>
+                                    <td class="td-web-nombre">Javier Rodríguez</td>
+                                    <td class="td-web-mail">jrodriguez@example.com</td>
+                                    <td class="td-web-cel">0299-65432109</td>
+                                    <td class="td-web-status"><span class="span-bloqueado">Bloqueado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Desbloquear"><span
+                                                class="material-icons notranslate mI-table">lock_open</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">30/07/2023</td>
+                                    <td class="td-web-nombre">Laura Gómez</td>
+                                    <td class="td-web-mail">lgomez@example.com</td>
+                                    <td class="td-web-cel">0223-55555555</td>
+                                    <td class="td-web-status"><span class="span-interesado">Interesado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Rechazar"><span
+                                                class="material-icons notranslate mI-table">cancel</span></button>
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">12/04/2022</td>
+                                    <td class="td-web-nombre">Diego Mendoza</td>
+                                    <td class="td-web-mail">dmendoza@example.com</td>
+                                    <td class="td-web-cel">011-87654322</td>
+                                    <td class="td-web-status"><span class="span-bloqueado">Bloqueado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Desbloquear"><span
+                                                class="material-icons notranslate mI-table">lock_open</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">12/04/2022</td>
+                                    <td class="td-web-nombre">Pablo Perez</td>
+                                    <td class="td-web-mail">pperez@example.com</td>
+                                    <td class="td-web-cel">011-87654322</td>
+                                    <td class="td-web-status"><span class="span-bloqueado">Deshabilitado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Habiltar"><span
+                                                class="material-icons notranslate mI-table">lock_open</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">17/07/2021</td>
+                                    <td class="td-web-nombre">Valeria Costa</td>
+                                    <td class="td-web-mail">vcosta@example.com</td>
+                                    <td class="td-web-cel">0388-54321678</td>
+                                    <td class="td-web-status"><span class="span-rechazado">Rechazado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip " data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Activar"><span
+                                                class="material-icons notranslate mI-table">how_to_reg</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+                                <tr class="data-tr">
+                                    <td class="td-web-fecha">20/03/2022</td>
+                                    <td class="td-web-nombre">Ricardo Soto</td>
+                                    <td class="td-web-mail">rsoto@example.com</td>
+                                    <td class="td-web-cel">011-23456781</td>
+                                    <td class="td-web-status"><span class="span-bloqueado">Deshabilitado</span></td>
+                                    <td class="acciones">
+                                        <button class="btn toTooltip" data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Habiltar"><span
+                                                class="material-icons notranslate mI-table">lock_open</span></button>
+                                        <a href="./admin.modalPage.tpa.html" class="btn btn-user-info"
+                                            data-bs-toggle="tooltip" data-bs-placement="top"
+                                            data-bs-custom-class="custom-tooltip" data-bs-title="Info"><span
+                                                class="material-icons notranslate mI-table">visibility</span></a>
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+                        <!-- Modal Description -->
+                        <div class="modal " id="modalDescription" data-bs-keyboard="false" tabindex="-1"
+                            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+
+                            <div class="modal-dialog modalDialogD">
+                                <div class="modal-content contentWidht">
+
+                                    <div class="modal-body mbody-class">
+
+
+                                        <div class="btn-modal">
+
+                                            <button class="btn-modal-pages btn-active" data-content="1"><span
+                                                    class="material-symbols-outlined notranslate mI-modal-buttons">person</span></button>
+
+                                            <button class="btn-modal-pages" data-content="2"><span
+                                                    class="material-symbols-outlined  notranslate mI-modal-buttons">
+                                                    deployed_code</span></button>
+
+                                            <button class="btn-modal-pages" data-content="3"><span
+                                                    class="material-symbols-outlined notranslate mI-modal-buttons">id_card</span></button>
+
+                                            <button class="btn-modal-pages" data-content="4"><span
+                                                    class="material-symbols-outlined notranslate mI-modal-buttons">info</span></button>
+
+                                        </div>
+
+                                        <div id="content-1" class="dto-contacto content active">
+
+
+
+
+
+                                            <div class="close-button-container">
+                                                <button type="button" class="btn-close btn-close-class"
+                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+
+
+
+                                            <div class="header-dto">
+                                                <h4 class="header-nav-title">Datos de contacto</h4>
+
+                                                <button class="btn-edit beEdit-1 mI-Edit" id="editButton-1"
+                                                    data-button="1"><span
+                                                        class="material-icons notranslate ">edit</span></button>
+
+                                                <div class="user-profile">
+
+                                                    <div class="form-floating">
+
+                                                        <span id="userName" class="editable-1">Pedro Roberto</span>
+
+                                                        <label class="active-label-1 class-hidden-none"
+                                                            for="userName">Nombre/s:</label>
+                                                    </div>
+
+                                                    <div class="form-floating">
+
+                                                        <span id="userLastName" class="editable-1">Diaz</span>
+
+                                                        <label class="active-label-1 class-hidden-none"
+                                                            for="userLastName">Apellido/s:</label>
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="user-contact">
+
+
+
+
+                                                    <div class="form-floating input-width-1">
+                                                        <span class="fab fa-whatsapp mIcons-1 mI-2 mI-wp"></span>
+                                                        <a href="" id="userPhone" class="editable-a-1">3514567893</a>
+                                                        <label for="userPhone"
+                                                            class="active-label-1 class-hidden-none">Telefono:</label>
+                                                    </div>
+
+
+                                                    <div class="form-floating input-width-2">
+                                                        <span
+                                                            class="material-symbols-outlined notranslate mIcons-1 mI-2">mail</span>
+                                                        <a href="" id="userEmail"
+                                                            class="editable-a-1">pedrodiaz@gmail.com</a>
+                                                        <label for="userEmail"
+                                                            class="active-label-1 class-hidden-none">Email:</label>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <hr class="under-header">
+
+                                            <div class="user-dto">
+
+                                                <div class="form-floating">
+                                                    <p class="dto-title-1">Tipo de Documento</p>
+                                                    <span class="editable-select-1" id="documentType">Tipo de
+                                                        Documento*</span>
+                                                    <label class="active-label-1 class-hidden-none al-2"
+                                                        for="documentType">Tipo de
+                                                        Documento</label>
+                                                    <hr class="hr-dto">
+                                                </div>
+
+
+
+                                                <div class="form-floating">
+
+
+                                                    <p class="dto-title-1">Nro de Documento</p>
+                                                    <span id="UserDNI" class="editable-1">23456789</span>
+                                                    <label class="active-label-1 class-hidden-none al-2"
+                                                        for="UserDNI">Nro de Documento</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+                                                <div class="form-floating">
+
+
+                                                    <p class="dto-title-1">Profesión</p>
+                                                    <span id="UserProfession" class="editable-select-prof-1">Tipo de
+                                                        Documento*</span>
+                                                    <label class="active-label-1 class-hidden-none al-2"
+                                                        for="UserProfession">Profesión</label>
+                                                    <hr class="hr-dto">
+                                                </div>
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-1">MP</p>
+                                                    <span id="UserMp" class="editable-1">34567890</span>
+                                                    <label class="active-label-1 class-hidden-none al-2"
+                                                        for="UserMp">MP</label>
+                                                    <hr class="hr-dto">
+                                                </div>
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-1">Dirección</p>
+                                                    <span id="UserAddress" class="editable-1"> Av. Corrientes
+                                                        1234</span>
+                                                    <label class="active-label-1 class-hidden-none al-2"
+                                                        for="UserAddress">Direccion</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-1">Código Postal</p>
+                                                    <span id="UserCp" class="editable-1">B1228</span>
+                                                    <label class="active-label-1 class-hidden-none al-2"
+                                                        for="UserCp">Código Postal</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-1">Barrio</p>
+                                                    <span id="UserNeighborhood" class="editable-1">Palermo</span>
+                                                    <label class="active-label-1 class-hidden-none al-2"
+                                                        for="UserNeighborhood">Barrio</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-1">Localidad</p>
+                                                    <span id="UserLocation" class="editable-1">CABA</span>
+                                                    <label class="active-label-1 class-hidden-none al-2"
+                                                        for="UserLocation">Localidad</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-1">Provincia</p>
+                                                    <span id="UserState" class="editable-1">Buenos Aires</span>
+                                                    <label class="active-label-1 class-hidden-none al-2"
+                                                        for="UserState">Provincia</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-1">País</p>
+                                                    <span id="UserCountry" class="editable-1">Argentina</span>
+                                                    <label class="active-label-1 class-hidden-none al-2"
+                                                        for="UserCountry">País</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+
+
+
+                                                <div class="sc-buttons-1" id="actionButtons" style="display: none;">
+                                                    <button class="btn-cancel" id="cancelButton"
+                                                        data-cancel="1">Cancelar</button>
+                                                    <button class="btn-save btn btn-success" id="saveButton"
+                                                        data-save="1">Guardar</button>
+                                                </div>
+
+
+                                            </div>
+
+
+
+
+                                        </div>
+
+
+
+
+
+                                        <div id="content-2" class="dto-contacto content ">
+
+                                            <div class="close-button-container">
+                                                <button type="button" class="btn-close btn-close-class"
+                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="header-dto">
+                                                <h4 class="header-nav-title">Envio de Kit</h4>
+
+
+                                                <div class="user-profile">
+
+                                                    <div class="form-floating">
+
+                                                        <span id="userName" class="">Pedro Roberto</span>
+
+
+                                                    </div>
+
+                                                    <div class="form-floating">
+
+                                                        <span id="userLastName" class="">Diaz</span>
+
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="user-contact">
+
+                                                    <div class="form-floating input-width-1">
+                                                        <span class="fab fa-whatsapp mIcons-1 mI-2 mI-wp"></span>
+                                                        <a href="" id="userPhone" class="a-content-2">3514567893</a>
+
+                                                    </div>
+
+                                                    <div class="form-floating input-width-2">
+                                                        <span
+                                                            class="material-symbols-outlined notranslate mI-2">mail</span>
+                                                        <a href="" id="userEmail"
+                                                            class="a-content-2">pedrodiaz@gmail.com</a>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <hr class="under-header">
+
+                                            <div class="user-dto d-flex">
+                                                <button class="btn-edit bt-2 mI-Edit" id="editButton-2"
+                                                    data-button="2"><span
+                                                        class="material-icons notranslate ">edit</span></button>
+
+
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-2">Dirección</p>
+                                                    <span id="UserAddress" class="editable-2"> Av. Corrientes
+                                                        1234</span>
+                                                    <label class="active-label-2 class-hidden-none al-2"
+                                                        for="UserAddress">Direccion</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-2">Código Postal</p>
+                                                    <span id="UserCp" class="editable-2">B1228</span>
+                                                    <label class="active-label-2 class-hidden-none al-2"
+                                                        for="UserCp">Código Postal</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-2">Barrio</p>
+                                                    <span id="UserNeighborhood" class="editable-2">Palermo</span>
+                                                    <label class="active-label-2 class-hidden-none al-2"
+                                                        for="UserNeighborhood">Barrio</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-2">Localidad</p>
+                                                    <span id="UserLocation" class="editable-2">CABA</span>
+                                                    <label class="active-label-2 class-hidden-none al-2"
+                                                        for="UserLocation">Localidad</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-2">Provincia</p>
+                                                    <span id="UserState" class="editable-2">Buenos Aires</span>
+                                                    <label class="active-label-2 class-hidden-none al-2"
+                                                        for="UserState">Provincia</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+                                                <div class="form-floating">
+
+                                                    <p class="dto-title-2">País</p>
+                                                    <span id="UserCountry" class="editable-2">Argentina</span>
+                                                    <label class="active-label-2 class-hidden-none al-2"
+                                                        for="UserCountry">País</label>
+                                                    <hr class="hr-dto">
+
+                                                </div>
+
+
+
+
+
+                                                <div class="sc-buttons-2" id="actionButtons" style="display: none;">
+                                                    <button class="btn-cancel" id="cancelButton"
+                                                        data-cancel="2">Cancelar</button>
+                                                    <button class="btn-save btn btn-success" id="saveButton"
+                                                        data-save="2">Guardar</button>
+                                                </div>
+
+
+                                            </div>
+
+                                            <div class="user-dto d-none">
+
+                                                <div class="retirement-tpa">
+
+                                                    <div class="iRetirement-container">
+                                                        <span
+                                                            class="material-symbols-outlined notranslate mI-subscription">store</span>
+                                                    </div>
+
+
+                                                    <div class="store-container">
+                                                        <p class="p-store-title">Retiro por Instituto Vianett® en
+                                                            Córdoba Capital</p>
+                                                        <hr>
+                                                        <p class="p-store">Cosquín 1222, X5000 Córdoba</p>
+                                                    </div>
+
+                                                </div>
+
+
+
+                                            </div>
+
+
+                                        </div>
+
+
+
+
+
+
+                                        <div id="content-3" class="dto-contacto content ">
+
+                                            <div class="close-button-container">
+                                                <button type="button" class="btn-close btn-close-class"
+                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+
+
+                                            <div class="header-dto">
+                                                <h4 class="header-nav-title">Suscripciones</h4>
+
+
+                                                <div class="user-profile">
+
+                                                    <div class="form-floating">
+
+                                                        <span id="userName" class="">Pedro Roberto</span>
+
+
+                                                    </div>
+
+                                                    <div class="form-floating">
+
+                                                        <span id="userLastName" class="">Diaz</span>
+
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="user-contact">
+
+                                                    <div class="form-floating input-width-1">
+                                                        <span class="fab fa-whatsapp mIcons-1 mI-2 mI-wp"></span>
+                                                        <a href="" id="userPhone" class="a-content-3">3514567893</a>
+
+                                                    </div>
+
+                                                    <div class="form-floating input-width-2">
+                                                        <span
+                                                            class="material-symbols-outlined notranslate  mI-2">mail</span>
+                                                        <a href="" id="userEmail"
+                                                            class="a-content-3">pedrodiaz@gmail.com</a>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                            <hr class="under-header">
+
+                                            <div class="user-dto udto-2">
+
+
+
+                                                <article class="code-status">
+
+
+                                                    <div class="user-status-title">
+                                                        <p class="status-title">Estado</p>
+                                                        <span class="span-activo">Activo</span>
+                                                    </div>
+
+                                                    <div class="member-code">
+                                                        <p class="member-title">Codigo de Membresia</p>
+                                                        <p class="code-number">34569UV</p>
+                                                    </div>
+
+
+                                                </article>
+
+                                                <p class="header-nav-Subtitle ">Historial de Suscripciones</p>
+
+                                                <div class="dates">
+                                                    <p class="start-date">Fecha de Inicio</p>
+                                                    <p class="expiration-date">Fecha de Expiracion</p>
+
+                                                </div>
+
+                                                <hr class="hr-dto-date">
+
+                                                <div class="dates-1">
+                                                    <span class="start-number">15/03/2024</span>
+                                                    <span class="expiration-number">15/03/2025</span>
+                                                </div>
+
+                                                <div class="dates-2">
+                                                    <span class="start-number">04/10/2022</span>
+                                                    <span class="expiration-number">04/10/2023</span>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+                                        <div id="content-4" class="dto-contacto content ">
+
+                                            <div class="close-button-container">
+                                                <button type="button" class="btn-close btn-close-class"
+                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+
+
+                                            <div class="header-dto">
+                                                <h4 class="header-nav-title">Mas Información</h4>
+
+
+                                                <div class="user-profile">
+
+                                                    <div class="form-floating">
+
+                                                        <span id="userName" class="">Pedro Roberto</span>
+
+
+                                                    </div>
+
+                                                    <div class="form-floating">
+
+                                                        <span id="userLastName" class="">Diaz</span>
+
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="user-contact">
+
+                                                    <div class="form-floating input-width-1">
+                                                        <span class="fab fa-whatsapp mIcons-1 mI-2 mI-wp"></span>
+                                                        <a href="" id="userPhone" class="a-content-4">3514567893</a>
+
+                                                    </div>
+
+                                                    <div class="form-floating input-width-2">
+                                                        <span
+                                                            class="material-symbols-outlined notranslate  mI-2">mail</span>
+                                                        <a href="" id="userEmail"
+                                                            class="a-content-4">pedrodiaz@gmail.com</a>
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <hr class="under-header">
+
+                                            <div class="user-dto d-flex">
+
+
+                                                <div class="modal-info-container">
+
+                                                    <div class="knowing-tpa">
+                                                        <div class="iHandshake-container">
+                                                            <span
+                                                                class="material-symbols-outlined notranslate mI-subscription">handshake</span>
+                                                        </div>
+                                                        <div class="knowing-info">
+                                                            <p class="p-knowing-title">Cómo Conociste TPA® y Decidiste
+                                                                Unirte</p>
+                                                            <hr>
+                                                            <p class="p-how">Lorem ipsum dolor sit amet. Eos consequatur
+                                                                omnis ut veritatis aliquam
+                                                                quo quis voluptatibus. Ut veritatis aliquam quo quis
+                                                                voluptatibus.</p>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="location-tpa">
+                                                        <div class="iLocation-container">
+                                                            <span
+                                                                class="material-symbols-outlined notranslate mI-subscription">location_on</span>
+                                                        </div>
+
+                                                        <div class="infoLocation-container">
+                                                            <p class="p-location-title">Ubicaciones Preferidas para la
+                                                                Fase Presencial</p>
+                                                            <hr>
+                                                            <p class="p-ubication">* Mendoza (Instituto VIANETT® sede
+                                                                Mendoza)</p>
+                                                            <p class="p-ubication">* Córdoba (Instituto VIANETT® sede
+                                                                Córdoba)</p>
+                                                            <p class="p-ubication">* Buenos Aires (Instituto VIANETT®
+                                                                sede Buenos Aires)</p>
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+
+
+
+
+                                            </div>
+
+                                            <div class="user-dto d-none">
+
+                                                <div class="today-tpa">
+
+                                                    <div class="iToday-container">
+                                                        <span
+                                                            class="material-symbols-outlined notranslate mI-subscription">today</span>
+                                                    </div>
+
+
+                                                    <div class="year-container">
+                                                        <p class="p-year-title">Año en el que realizó la Formación
+                                                            Profesional TPA®</p>
+                                                        <hr>
+                                                        <p class="p-year">2021</p>
+                                                    </div>
+
+                                                </div>
+
+
+
+                                            </div>
+
+                                        </div>
+
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal renovacion -->
+                        <div class="modal mf-center" id="modalRenovation" data-bs-keyboard="false" tabindex="-1"
+                            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+                            <div class="modal-dialog modalDialogR">
+                                <div class="modal-content contentWidhtRenovation">
+                                    <div class="modal-body mbodyR-class">
+
+                                        <div class="spanW-container">
+                                            <span class="material-symbols-outlined mI-warning">warning</span>
+                                        </div>
+
+
+
+                                        <p class="renovation-title">
+                                            ¿Quieres renovar la Suscripción?
+                                        </p>
+
+                                        <p class="renovation-text">
+                                            Lorem ipsum dolor sit amet. Eos consequatur omnis ut veritatis aliquam quo
+                                            quis voluptatibus. 
+                                        </p>
+
+                                        <div class="btns-cancel-renovation">
+                                            <button class="btn-cancel btn-sr-cancel" data-bs-dismiss="modal"
+                                                aria-label="Close" id="cancelButton">Cancelar</button>
+                                            <button class="btn-sr btn-sr-width btn btn-success" id="saveButton"
+                                                data-bs-dismiss="modal" aria-label="Close">Si, Habilitar</button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <header class="header-main">
+
+                        <span class="material-symbols-outlined mI-User mp-mI-U2 notranslate" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasWithBothOptions"
+                            aria-controls="offcanvasWithBothOptions">home</span>
+
+                        <span
+                            class="material-symbols-outlined mI-User mI-U2 notranslate modalSesionClose">account_circle</span>
+
+
+                    </header>
+
+                </main>
+
+            </div>
+
+
+
+            <div class="offcanvas offcanvas-start oC-max-width" data-bs-scroll="true" tabindex="-1"
+                id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header oFC-width">
+                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Menú</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body bOC-width">
+
+                    <ul class="nav flex-column nav-canva">
+
+
+                        <li class="oc-li-menu ">
+                            <a class="oc-a-management" href="./admin.tpa.html"><span
+                                    class="material-symbols-outlined notranslate">dashboard_customize</span>
+                                <p class="oc-p-management">Gestion de Miembros</p>
+                            </a>
+                        </li>
+
+                        <li class="oc-li-menu">
+                            <a class="oc-a-profession" href="#"><span
+                                    class="material-symbols-outlined notranslate">video_library</span>
+                                <p class="oc-p-profession ">Biblioteca TPA</p>
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </div>
+
+            <!-- Modal Sesion -->
+
+            <div class="modal fade m-show-sesion" id="modalSesionClose" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog classModelDialogS">
+                    <div class="modal-content contentWidhtSesion">
+
+                        <div class="modal-body ModalBodyStyleSesion">
+
+                            <hr class="hr-session-top" data-bs-dismiss="modal" aria-label="Close">
+
+                            <div class="user-icon-session">
+                                <div class="circle-icon-container">
+                                    <span class="material-symbols-outlined mI-session notranslate">account_circle</span>
+                                </div>
+
+                                <div class="user-data-session">
+                                    <p class="session-name">Silvina Lambertini</p>
+                                    <p class="session-email">silvinalambertini@gmail.com</p>
+                                </div>
+
+                            </div>
+
+                            <hr class="hr-session">
+
+                            <a class="a-session " href=""><span class="material-symbols-outlined">exit_to_app</span>
+                                <p>Cerrar Sesión</p>
+                            </a>
+
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.bootstrap5.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.2/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/3.0.2/js/responsive.bootstrap5.min.js"></script>
+    <script src="../../../plugins/toastr/toastr.min.js"></script>
+    <script src="../../../public/logica.admin.js"></script>
+
+    <script>
+        var tooltips = document.querySelectorAll('.btn[data-bs-toggle="tooltip"]');
+        tooltips.forEach(function (tooltip) {
+            new bootstrap.Tooltip(tooltip);
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+
+
+
+
+            const modal = new bootstrap.Modal(document.getElementById('modalRenovation'))
+
+            modal.show()
+
+
+        })
+    </script>
+
+
+
+
+
+
+</body>
+
+</html>
