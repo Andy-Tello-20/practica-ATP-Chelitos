@@ -1312,14 +1312,15 @@ span.select2-search.select2-search--inline {
 
 .section-info {
     display: flex;
-    height: 550px;
+    height: 480px;
     background: #ffff;
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
-    max-width: 70%;
+    max-width: 450px;
+    min-width: 40%;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
 }
 
@@ -1329,14 +1330,13 @@ span.select2-search.select2-search--inline {
 }
 
 .section-info >*{
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .bi-class-okay {
-    color: #4caf50;
-    /* color: #da5a5a; */
-    font-size: 10rem;
-    margin-bottom: 4rem !important;
+    color: #33955A;
+    font-size: 7rem;
+    margin-bottom: 2rem !important;
 }
 
 
@@ -1636,6 +1636,7 @@ footer p {
         border-radius: 0px;
         height: 100%;
         max-width: 100%;
+        justify-content: center;
     }
 
     .bi-class-okay {
