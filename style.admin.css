@@ -301,7 +301,7 @@
     align-items: center;
     justify-content: center;
     height: 80px;
-    width: 70%;
+    width: 100%;
     background: #ffff;
     margin: auto;
     padding: 0px 20px;
@@ -318,6 +318,11 @@
     padding: 6px 0px 0px 8px !important;
     height: 30px !important;
     font-size: 15px;
+    display: block; 
+    overflow: hidden; 
+    white-space: nowrap; 
+    text-overflow: ellipsis; 
+    width: 100%;
 }
 
 .input-height {
@@ -331,10 +336,23 @@
 }
 
 .btn-Asearch2 {
-    width: 88px;
-    height: 34px;
+    width: 100px;
+    height: 40px;
     /* background: rgb(13, 161, 108, 70%); */
     border-radius: 8px;
+}
+
+.btn-Asearch2 span{
+    font-weight: 600;
+}
+
+.decoration-none {
+    text-decoration: none;
+}
+
+.color-gray {
+    font-weight: bold;
+    color: #7A7777;
 }
 
 
@@ -727,7 +745,7 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    height: 80%;
+    height: 100%;
 }
 
 .location-tpa, .retirement-tpa, .today-tpa {
@@ -852,8 +870,8 @@ hr {
 
 .hr-dto-date {
     margin-top: 0px;
-    width: 100%;
-    color: #a19d9d;
+    width: 80%;
+    color: #bebebe;
     opacity: 100%;
     margin: 0px !important;
 }
@@ -868,18 +886,23 @@ hr {
 
 }
 
+/* .e1-userName, .e1-lastName{
+    font-weight: 700;
+} */
+
 .user-contact {
     display: flex;
     gap: 15px;
     font-size: 18px;
     font-weight: 500;
     color: #7A7777;
+    align-items: center;
 
 }
 
 .input-width-1 {
     display: flex;
-    width: 40%
+    /* width: 40% */
 }
 
 .input-width-2 {
@@ -911,6 +934,9 @@ hr {
     cursor: pointer;
 }
 
+.editable-a-1{
+    text-align: center;
+}
 
 input.editable-input-1.form-control,
 input.editable-input-2.form-control,
@@ -1049,13 +1075,12 @@ input.editable-a-input-2.form-control {
 
 
 
-.member-title {
+.member-title, 
+.status-title  {
     margin-bottom: 5px !important;
+    font-weight: 600;
 }
 
-.status-title {
-    margin-bottom: 5px !important;
-}
 
 .code-number {
     font-weight: 600;
@@ -1114,48 +1139,48 @@ input.editable-a-input-2.form-control {
 .spanS-container,
 .spanI-container,
 .spanE-container {
-    width: 83px;
+    /* width: 83px;
     height: 83px;
-    border-radius: 50%;
+    border-radius: 50%; */
     display: flex;
     align-items: center;
     justify-content: center;
     
 }
 
-.spanW-container{
+/* .spanW-container{
     background: #f9d9d9;
-}
+} */
 .mI-warning {
     color: #E17040;
-    font-size: 55px !important;
+    font-size: 80px !important;
 }
 
 
-.spanS-container{
+/* .spanS-container{
     background: #42a05c54
-}
+} */
 .mI-succes {
     color: #33955A;
-    font-size: 55px !important;
+    font-size: 80px !important;
 }
 
 
-.spanI-container{
+/* .spanI-container{
     background:#88d1e975
-}
+} */
 .mI-info{
     color: #689FB0;
-    font-size: 55px !important;
+    font-size: 80px !important;
 }
 
 
-.spanE-container{
+/* .spanE-container{
     background:#ECDADA
-}
+} */
 .mI-error{
     color: #AF5027;
-    font-size: 55px !important;
+    font-size: 80px !important;
 }
 
 
@@ -1283,19 +1308,20 @@ font-size: 25px;
     
 }
 
-.mp-location-tpa{
+
+
+.mp-knowing-tpa,
+ .mp-location-tpa,
+ .mp-today-tpa,
+ .mp-retirement-tpa{
     display: flex;
-    height: 120px;
     gap: 26px;
     border-radius: 8px;
-
 }
 
-.mp-knowing-tpa,.mp-today-tpa,.mp-retirement-tpa{
-    display: flex;
-    height: 190px;
-    gap: 26px;
-    border-radius: 8px;
+
+.knowing-info, .infoLocation-container{
+    padding: 0px 10px 10px 0px;
 }
 
 .mp-code-status{
@@ -1522,6 +1548,7 @@ font-size: 25px;
     text-decoration: none;
     align-items: center;
     gap: 10px;
+    color: #808080;
 
 }
 
@@ -1529,7 +1556,7 @@ font-size: 25px;
 .oc-p-management{
     margin-bottom: 0px !important;
     font-weight: 600;
-    color: rgb(13, 110, 253) !important;
+    color: #808080 !important;
 }
 
 .oC-max-width{
@@ -1698,7 +1725,7 @@ font-size: 25px;
     }
 
     .filter-btns-selected:hover {
-        background: #c3cbd7;
+        background: #c5c1c1;
     }
 
 
@@ -1807,7 +1834,7 @@ font-size: 25px;
 
     .contentWidhtRenovation {
         width: 94%;
-        /* height: 80vh; */
+        height: 80vh;
         margin: auto;
     }
 
